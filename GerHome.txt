@@ -1,0 +1,10 @@
+Application de fiche d'entretien de la maison pour locataires
+
+Taches à faire:
+
+Page (se connecter / s'inscrire)
+Page créer un compte
+Page connexion
+Maquettes du logiciel (écran de connexion, inscription...)
+Logo style mascotte (lama)
+Desc de l'application
