@@ -1,10 +1,10 @@
 Table user :
-1) nom d'utilisateur
-2) mot de passe
+1) username
+2) password
 3) version (essai|free|premium) // a penser pour free essai
 4) date d'expiration (if essai -> free) | (if free -> free) | (if premium -> free) // a checker a chaque conn
 5) nom 
-6) prénom
+6) prenom
 7) Image ? // facultatif
 8) programssub // identifiants des programmes rejoinds
 9) programscreated // identifiants des programmes créés
