@@ -20,3 +20,4 @@ Table programmes :
 
 
 // a finir
+A l'inscription, free et s'il créé un programme alors il passe en trial avec un mois d'essai.
