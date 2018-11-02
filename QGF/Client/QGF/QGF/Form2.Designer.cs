@@ -32,6 +32,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.SuspendLayout();
             // 
             // timer1
@@ -60,6 +62,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "QUICK GAME FINDER";
             // 
+            // timer2
+            // 
+            this.timer2.Interval = 3500;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,5 +93,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

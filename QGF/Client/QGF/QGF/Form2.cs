@@ -16,6 +16,7 @@ namespace QGF
         {
             InitializeComponent();
             timer1.Start();
+            timer2.Start();
         }
 
         int opacity = 0;
@@ -76,6 +77,17 @@ namespace QGF
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            this.Hide();
+            timer1.Stop();
+            timer2.Stop();
+            Form1 frm = new Form1();
+            frm.ShowDialog();
+            this.Close();
+            
         }
     }
 }

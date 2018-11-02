@@ -20,3 +20,16 @@ F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.csproj.GenerateResource.cache
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.csproj.CoreCompileInputs.cache
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.exe
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.pdb
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\bin\Debug\QGF.exe.config
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\bin\Debug\QGF.exe
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\bin\Debug\QGF.pdb
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.csprojAssemblyReference.cache
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form1.resources
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form2.resources
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Properties.Resources.resources
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.csproj.GenerateResource.cache
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.csproj.CoreCompileInputs.cache
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.exe
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.pdb
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.csproj.CopyComplete
