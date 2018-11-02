@@ -1,0 +1,7 @@
+Quick Game Finder
+QGF
+
+Logiciel de création de groupe de jeu rapide
+
+flat design avec une liste de parties, nombre de joueur actuel | nombre de joueur recherché etc.
+Selection jeu

@@ -1,0 +1,11 @@
+C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\bin\Debug\QGF.exe.config
+C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\bin\Debug\QGF.exe
+C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\bin\Debug\QGF.pdb
+C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\obj\Debug\QGF.csprojAssemblyReference.cache
+C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\obj\Debug\QGF.Form1.resources
+C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\obj\Debug\QGF.Properties.Resources.resources
+C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\obj\Debug\QGF.csproj.GenerateResource.cache
+C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\obj\Debug\QGF.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\obj\Debug\QGF.exe
+C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\obj\Debug\QGF.pdb
+C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\obj\Debug\QGF.Form2.resources

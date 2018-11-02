@@ -1,0 +1,22 @@
+Phase connexion:
+_______________________________________________________________________
+<--Connexion
+<--AuthRequest|id|mdp    ||  RegisterRequest|email|username|password
+
+//Serveur check id mdp et ban | Serveur check si deja pris 
+-->success(free/premium)|fail
+
+_______________________________________________________________________
+
+
+Phase Créer&Rejoindre:
+_______________________________________________________________________
+
+[Créer un groupe]
+<--RoomCreateRequest|gameid|username|roomtitle|desiredplayers|roomdesc
+--> success|fail
+
+[Rejoindre un groupe]
+<--RoomJoinRequest|roomid (a reflechir)
+--> success|fail
+
