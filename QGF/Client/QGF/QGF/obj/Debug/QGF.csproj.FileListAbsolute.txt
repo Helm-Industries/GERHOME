@@ -9,3 +9,14 @@ C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\obj\Debug\QGF.csproj.CoreCompileInputs.
 C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\obj\Debug\QGF.exe
 C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\obj\Debug\QGF.pdb
 C:\Users\Alex\Desktop\QGF\Client\QGF\QGF\obj\Debug\QGF.Form2.resources
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\QGF.exe.config
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\QGF.exe
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\QGF.pdb
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.csprojAssemblyReference.cache
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form1.resources
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form2.resources
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Properties.Resources.resources
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.csproj.GenerateResource.cache
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.csproj.CoreCompileInputs.cache
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.exe
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.pdb
