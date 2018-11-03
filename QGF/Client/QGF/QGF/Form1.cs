@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Threading;
+using QGF.Network;
 
 namespace QGF
 {
@@ -18,11 +19,8 @@ namespace QGF
         public Form1()
         {
             InitializeComponent();
+          
         }
-    
-        
-
-        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -34,6 +32,45 @@ namespace QGF
             Form3 frm = new Form3();
             this.Hide();
             frm.ShowDialog();
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            
+            if (username_text.Text != "" && password_text.Text != "")
+            {
+                string msg = "AuthRequest|" + username + "|" + password;
+                byte[] bmsg = Encoding.ASCII.GetBytes(msg);
+                SocketMain.SendData(bmsg, SocketMain.ns);
+
+            }
+        }
+
+        private void bunifuCheckBox2_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+
+        }
+        string username;
+        string password;
+        private void username_text_TextChange(object sender, EventArgs e)
+        {
+            username = username_text.Text;
+        }
+
+        private void password_text_TextChange(object sender, EventArgs e)
+        {
+            password = password_text.Text;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            SocketMain.CloseSocket();
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

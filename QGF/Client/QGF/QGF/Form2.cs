@@ -1,10 +1,12 @@
-﻿using System;
+﻿using QGF.Network;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,8 +19,10 @@ namespace QGF
             InitializeComponent();
             timer1.Start();
             timer2.Start();
+            timer3.Start();
         }
 
+        
         int opacity = 0;
         bool inout = false;
         private void timer1_Tick(object sender, EventArgs e)
@@ -81,13 +85,24 @@ namespace QGF
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            this.Hide();
-            timer1.Stop();
-            timer2.Stop();
-            Form1 frm = new Form1();
-            frm.ShowDialog();
-            this.Close();
-            
+            if (SocketMain.connected == true)
+            {
+                this.Hide();
+                timer1.Stop();
+                timer2.Stop();
+                Form1 frm = new Form1();
+                frm.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            new Thread(() =>
+            {
+                SocketMain.Connect();
+            }).Start();
+            timer3.Stop();
         }
     }
 }
