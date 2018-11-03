@@ -28,5 +28,12 @@ namespace QGF
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Form3 frm = new Form3();
+            this.Hide();
+            frm.ShowDialog();
+        }
     }
 }
