@@ -28,9 +28,9 @@ namespace QGF.Network
                     client.Connect(ip, port);
                     connected = true;
                 }
-                catch
+                catch(Exception e)
                 {
-                    MessageBox.Show("Le serveur est actuellement indisponible");
+                    MessageBox.Show("Le serveur est actuellement indisponible: " + e.ToString());
                     Application.Exit();
                 }
                 try

@@ -12,19 +12,28 @@ using System.Net;
 using System.Threading;
 using QGF.Network;
 using System.IO;
-using QGF.IO;
 
 namespace QGF
 {
     public partial class Form1 : Form
     {
+        public void GetData()
+        {
+            if(Properties.Settings.Default.check == true)
+            {
+                
+                password_text.Text = Properties.Settings.Default.password;
+                password = Properties.Settings.Default.password;
+                password_text.Text = password;
+                username = Properties.Settings.Default.username;
+                username_text.Text = username;
+            }
+        }
         public Form1()
         {
             InitializeComponent();
-            string msg = IO.IO.GetSavedData();
-            string[] splitter = msg.Split('|');
-            username_text.Text = splitter[0];
-            password_text.Text = splitter[1];
+            GetData();
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -43,17 +52,10 @@ namespace QGF
         {
             if (bunifuCheckBox2.Checked == true)
             {
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/qgfconfig";
-                string msg = "";
-               
-                File.Create(path);
-                string txtpath = path + "/config.txt";
-                StreamWriter strm = File.CreateText(txtpath);
-                
-                    strm.Flush();
-                    strm.WriteLine(username_text.Text);
-                    strm.WriteLine(password_text.Text);
-                
+                Properties.Settings.Default.check = true;
+                Properties.Settings.Default.username = username_text.Text;
+                Properties.Settings.Default.password = password_text.Text;
+                Properties.Settings.Default.Save();
             }
             if (username_text.Text != "" && password_text.Text != "")
             {
