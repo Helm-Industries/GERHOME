@@ -92,5 +92,17 @@ namespace QGF
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void bunifuButton3_Click(object sender, EventArgs e)
+        {
+            Form3 frm = new Form3();
+            this.Hide();
+            frm.ShowDialog();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
