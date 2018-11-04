@@ -33,7 +33,7 @@ namespace QGF
         {
             InitializeComponent();
             GetData();
-           
+            panel1.Select();
         }
 
         private void Form1_Load(object sender, EventArgs e)

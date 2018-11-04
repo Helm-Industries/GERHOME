@@ -22,7 +22,7 @@ namespace QGF
         public Form3()
         {
             InitializeComponent();
-           
+            panel1.Select();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
