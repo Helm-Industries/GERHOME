@@ -67,23 +67,27 @@ namespace QGF.Network
                 {
                     SendToConnect();
                 }
-                if (data.Contains("regfailed"))
+                else if (data.Contains("regfailed"))
                 {
                     MessageBox.Show("Identifiants / Email déjà pris");
                 }
-                if (data.Contains("authsuccess"))
+                else if (data.Contains("authsuccess"))
                 {
                      MessageBox.Show("Connecté avec succès");
                 }
-                if (data.Contains("authbanned"))
+                else if (data.Contains("authbanned"))
                 {
                     
                     MessageBox.Show("Ce compte à été banni de façon permanente de la plateforme QGF");
                 }
-                if (data.Contains("authfailed"))
+                else if (data.Contains("authfailed"))
                 {
                     
                     MessageBox.Show("Impossible de se connecter avec ces identifiants");
+                }
+                else
+                {
+                    MessageBox.Show("Message inconnu: " + data);
                 }
             }
         }
