@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.Net;
 using System.Threading;
 using QGF.Network;
+using System.IO;
+using QGF.IO;
 
 namespace QGF
 {
@@ -19,7 +21,10 @@ namespace QGF
         public Form1()
         {
             InitializeComponent();
-          
+            string msg = IO.IO.GetSavedData();
+            string[] splitter = msg.Split('|');
+            username_text.Text = splitter[0];
+            password_text.Text = splitter[1];
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -36,7 +41,20 @@ namespace QGF
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            
+            if (bunifuCheckBox2.Checked == true)
+            {
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/qgfconfig";
+                string msg = "";
+               
+                File.Create(path);
+                string txtpath = path + "/config.txt";
+                StreamWriter strm = File.CreateText(txtpath);
+                
+                    strm.Flush();
+                    strm.WriteLine(username_text.Text);
+                    strm.WriteLine(password_text.Text);
+                
+            }
             if (username_text.Text != "" && password_text.Text != "")
             {
                 string msg = "AuthRequest|" + username + "|" + password;
@@ -48,7 +66,7 @@ namespace QGF
 
         private void bunifuCheckBox2_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
         {
-
+            
         }
         string username;
         string password;
