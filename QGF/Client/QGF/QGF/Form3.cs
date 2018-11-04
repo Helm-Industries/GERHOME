@@ -131,10 +131,14 @@ namespace QGF
 
         private void label5_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void bunifuButton3_Click(object sender, EventArgs e)
+        {
             Form1 frm = new Form1();
             this.Hide();
             frm.ShowDialog();
         }
-
     }
 }
