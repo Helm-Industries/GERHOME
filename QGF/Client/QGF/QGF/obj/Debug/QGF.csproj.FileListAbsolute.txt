@@ -39,3 +39,4 @@ F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuButton.d
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form3.resources
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form3.resources
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form4.resources
