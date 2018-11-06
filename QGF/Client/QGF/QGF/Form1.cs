@@ -62,7 +62,7 @@ namespace QGF
                 string msg = "AuthRequest|" + username + "|" + password;
                 byte[] bmsg = Encoding.ASCII.GetBytes(msg);
                 SocketMain.SendData(bmsg, SocketMain.ns);
-
+             
             }
         }
 
@@ -84,7 +84,10 @@ namespace QGF
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            
+            
             SocketMain.CloseSocket();
+            
             Application.Exit();
         }
 

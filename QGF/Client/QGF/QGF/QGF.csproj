@@ -85,6 +85,7 @@
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
     <Compile Include="Network\Main.cs" />
+    <Compile Include="Network\Me.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

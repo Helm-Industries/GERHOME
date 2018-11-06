@@ -13,7 +13,7 @@ namespace QGF.Network
     public class SocketMain
     {
         public static string username;
-        public static IPAddress ip = IPAddress.Parse("78.114.55.200");
+        public static IPAddress ip = IPAddress.Parse("78.114.52.238");
         public static int port = 5000;
         public static TcpClient client = new TcpClient();
         public static Thread thread = new Thread(o => ReceiveData((TcpClient)o));
@@ -73,7 +73,10 @@ namespace QGF.Network
                 }
                 else if (data.Contains("authsuccess"))
                 {
-                     MessageBox.Show("Connecté avec succès");
+                    Form4 frm = new Form4();
+                    OpenForm(frm);
+                    Form1 frms = new Form1();
+                    HideForm(frms);
                 }
                 else if (data.Contains("authbanned"))
                 {
@@ -91,13 +94,24 @@ namespace QGF.Network
                 }
             }
         }
+        public static void OpenForm(Form frm)
+        {
+            frm.ShowDialog();
+        }
+        public static void HideForm(Form frm)
+        {
+            frm.Hide();
+        }
         static void SendToConnect()
         {
             MessageBox.Show("Inscription réussie, retournez à la connexion pour continuer");
         }
+        static int counter;
         public static void SendData(byte[] b, NetworkStream nss)
         {
-            nss.Write(b, 0, b.Length);
+          
+                nss.Write(b, 0, b.Length);
+           
         }
          public static void CloseSocket()
         {

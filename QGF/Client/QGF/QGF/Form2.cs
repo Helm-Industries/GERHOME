@@ -98,6 +98,7 @@ namespace QGF
 
         private void timer3_Tick(object sender, EventArgs e)
         {
+      
             new Thread(() =>
             {
                 SocketMain.Connect();
