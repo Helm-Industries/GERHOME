@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,17 @@ namespace QGF
 {
     public partial class Form4 : Form
     {
+        private const int CS_dropshadow = 0x00020000;
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle = CS_dropshadow;
+                return cp;
+            }
+        }
         public Form4()
         {
             InitializeComponent();
@@ -26,7 +38,7 @@ namespace QGF
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             string msg = "DisconnectRequest";
-            SocketMain.SendData(Encoding.ASCII.GetBytes(msg), SocketMain.ns);
+            //SocketMain.SendData(Encoding.ASCII.GetBytes(msg), SocketMain.ns);
             
             
         }
@@ -73,7 +85,7 @@ namespace QGF
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
+            Process.Start("https://twitter.com/T_Jze");
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -82,6 +94,11 @@ namespace QGF
         }
 
         private void disconect_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
         {
 
         }

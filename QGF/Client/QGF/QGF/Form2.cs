@@ -14,6 +14,17 @@ namespace QGF
 {
     public partial class Form2 : Form
     {
+        private const int CS_dropshadow = 0x00020000;
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle = CS_dropshadow;
+                return cp;
+            }
+        }
         public Form2()
         {
             InitializeComponent();

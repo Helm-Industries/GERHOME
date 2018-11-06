@@ -158,7 +158,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(525, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 21);
+            this.label2.Size = new System.Drawing.Size(231, 19);
             this.label2.TabIndex = 27;
             this.label2.Text = "Vous avez déjà un compte ?";
             // 
