@@ -129,5 +129,10 @@ namespace QGF
             this.Hide();
             frm.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SocketMain.SendData(Encoding.ASCII.GetBytes("SendNotif|yoloswagi every1"), SocketMain.ns);
+        }
     }
 }

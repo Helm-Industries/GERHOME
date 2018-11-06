@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QGF.Network;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,10 @@ namespace QGF
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            string msg = "DisconnectRequest";
+            SocketMain.SendData(Encoding.ASCII.GetBytes(msg), SocketMain.ns);
+            
+            
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
