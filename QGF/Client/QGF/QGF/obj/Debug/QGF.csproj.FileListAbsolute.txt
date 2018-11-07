@@ -53,3 +53,4 @@ F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuColorTra
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Room.resources
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Room.resources

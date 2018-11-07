@@ -63,18 +63,28 @@ namespace QGF.Network
             while ((byte_count = ns.Read(receivedBytes, 0, receivedBytes.Length)) > 0)
             {
                 data = (Encoding.ASCII.GetString(receivedBytes, 0, byte_count));
-                if (data.Contains("Notif"))
+                if (data.Contains("UuUUUUUuUUuu"))
+                {
+                    string[] splitter = data.Split('|');
+                    MessageBox.Show(splitter[1]);
+                }
+                 else  if (data.Contains("UuUuUUuUUUUu"))
                 {
                     string[] splitter = data.Split('|');
                     string msg = splitter[1];
                     MessageBox.Show(msg);
                 }
-                if (data.Contains("disconnectsuccess"))
+                else if(data.Contains("UUuUUUuUuu") || data.Contains("UUUuuUUuuuUU"))
+                {
+                    Application.Exit();
+                }
+
+                else if(data.Contains("disconnectsuccess"))
                 {
                     SocketMain.CloseSocket();
                     Application.Exit();
                 }
-                if (data.Contains("regsuccess"))
+                else if(data.Contains("regsuccess"))
                 {
                     SendToConnect();
                 }
