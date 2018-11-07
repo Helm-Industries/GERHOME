@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -39,13 +38,13 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.uprank_label = new System.Windows.Forms.Label();
             this.disconect_button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.creategroup_button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.searchgame_button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.created_label = new System.Windows.Forms.Label();
             this.online_label = new System.Windows.Forms.Label();
             this.rank_label = new System.Windows.Forms.Label();
@@ -106,17 +105,18 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(951, 668);
             this.flowLayoutPanel1.TabIndex = 2;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.bunifuTextBox1);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.uprank_label);
             this.panel2.Controls.Add(this.disconect_button);
             this.panel2.Controls.Add(this.creategroup_button);
-            this.panel2.Controls.Add(this.searchgame_button);
             this.panel2.Controls.Add(this.created_label);
             this.panel2.Controls.Add(this.online_label);
             this.panel2.Controls.Add(this.rank_label);
@@ -126,6 +126,51 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(329, 668);
             this.panel2.TabIndex = 1;
+            // 
+            // bunifuTextBox1
+            // 
+            this.bunifuTextBox1.AcceptsReturn = false;
+            this.bunifuTextBox1.AcceptsTab = false;
+            this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.bunifuTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
+            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(101)))), ((int)(((byte)(141)))));
+            this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.DarkGray;
+            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.Silver;
+            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.White;
+            this.bunifuTextBox1.BorderRadius = 34;
+            this.bunifuTextBox1.BorderThickness = 1;
+            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTextBox1.DefaultText = "";
+            this.bunifuTextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.bunifuTextBox1.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextBox1.HideSelection = true;
+            this.bunifuTextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.IconLeft")));
+            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuTextBox1.IconPadding = 10;
+            this.bunifuTextBox1.IconRight = null;
+            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuTextBox1.Location = new System.Drawing.Point(60, 291);
+            this.bunifuTextBox1.MaxLength = 32767;
+            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(100, 35);
+            this.bunifuTextBox1.Modified = false;
+            this.bunifuTextBox1.Name = "bunifuTextBox1";
+            this.bunifuTextBox1.PasswordChar = '\0';
+            this.bunifuTextBox1.ReadOnly = false;
+            this.bunifuTextBox1.SelectedText = "";
+            this.bunifuTextBox1.SelectionLength = 0;
+            this.bunifuTextBox1.SelectionStart = 0;
+            this.bunifuTextBox1.ShortcutsEnabled = true;
+            this.bunifuTextBox1.Size = new System.Drawing.Size(210, 38);
+            this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.bunifuTextBox1.TabIndex = 1;
+            this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBox1.TextMarginLeft = 15;
+            this.bunifuTextBox1.TextPlaceholder = "RECHERCHER UN JEU";
+            this.bunifuTextBox1.UseSystemPasswordChar = false;
+            this.bunifuTextBox1.TextChange += new System.EventHandler(this.bunifuTextBox1_TextChange);
             // 
             // pictureBox6
             // 
@@ -176,7 +221,7 @@
             this.uprank_label.Location = new System.Drawing.Point(82, 452);
             this.uprank_label.Name = "uprank_label";
             this.uprank_label.Size = new System.Drawing.Size(171, 50);
-            this.uprank_label.TabIndex = 7;
+            this.uprank_label.TabIndex = 4;
             this.uprank_label.Text = "Passer à la version\r\npremium\r\n";
             this.uprank_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.uprank_label.Click += new System.EventHandler(this.uprank_label_Click);
@@ -204,15 +249,15 @@
             this.disconect_button.IdleIconRightImage = null;
             this.disconect_button.Location = new System.Drawing.Point(60, 598);
             this.disconect_button.Name = "disconect_button";
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            stateProperties4.BorderRadius = 30;
-            stateProperties4.BorderThickness = 1;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            stateProperties4.IconLeftImage = null;
-            stateProperties4.IconRightImage = null;
-            this.disconect_button.onHoverState = stateProperties4;
+            stateProperties5.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties5.BorderRadius = 30;
+            stateProperties5.BorderThickness = 1;
+            stateProperties5.FillColor = System.Drawing.Color.DarkGray;
+            stateProperties5.IconLeftImage = null;
+            stateProperties5.IconRightImage = null;
+            this.disconect_button.onHoverState = stateProperties5;
             this.disconect_button.Size = new System.Drawing.Size(210, 35);
-            this.disconect_button.TabIndex = 6;
+            this.disconect_button.TabIndex = 3;
             this.disconect_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.disconect_button.Click += new System.EventHandler(this.disconect_button_Click);
             // 
@@ -239,52 +284,17 @@
             this.creategroup_button.IdleIconRightImage = null;
             this.creategroup_button.Location = new System.Drawing.Point(60, 347);
             this.creategroup_button.Name = "creategroup_button";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties5.BorderRadius = 34;
-            stateProperties5.BorderThickness = 1;
-            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties5.IconLeftImage = null;
-            stateProperties5.IconRightImage = null;
-            this.creategroup_button.onHoverState = stateProperties5;
-            this.creategroup_button.Size = new System.Drawing.Size(210, 35);
-            this.creategroup_button.TabIndex = 5;
-            this.creategroup_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.creategroup_button.Click += new System.EventHandler(this.creategroup_button_Click);
-            // 
-            // searchgame_button
-            // 
-            this.searchgame_button.BackColor = System.Drawing.Color.Transparent;
-            this.searchgame_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchgame_button.BackgroundImage")));
-            this.searchgame_button.ButtonText = "RECHERCHER UN JEU";
-            this.searchgame_button.ButtonTextMarginLeft = 0;
-            this.searchgame_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchgame_button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.searchgame_button.DisabledFillColor = System.Drawing.Color.Gray;
-            this.searchgame_button.DisabledForecolor = System.Drawing.Color.White;
-            this.searchgame_button.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchgame_button.ForeColor = System.Drawing.Color.White;
-            this.searchgame_button.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.searchgame_button.IconPadding = 10;
-            this.searchgame_button.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.searchgame_button.IdleBorderColor = System.Drawing.Color.White;
-            this.searchgame_button.IdleBorderRadius = 34;
-            this.searchgame_button.IdleBorderThickness = 0;
-            this.searchgame_button.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            this.searchgame_button.IdleIconLeftImage = null;
-            this.searchgame_button.IdleIconRightImage = null;
-            this.searchgame_button.Location = new System.Drawing.Point(60, 291);
-            this.searchgame_button.Name = "searchgame_button";
-            stateProperties6.BorderColor = System.Drawing.Color.Gold;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties6.BorderRadius = 34;
             stateProperties6.BorderThickness = 1;
-            stateProperties6.FillColor = System.Drawing.Color.Gold;
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties6.IconLeftImage = null;
             stateProperties6.IconRightImage = null;
-            this.searchgame_button.onHoverState = stateProperties6;
-            this.searchgame_button.Size = new System.Drawing.Size(210, 35);
-            this.searchgame_button.TabIndex = 4;
-            this.searchgame_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.searchgame_button.Click += new System.EventHandler(this.searchgame_button_Click);
+            this.creategroup_button.onHoverState = stateProperties6;
+            this.creategroup_button.Size = new System.Drawing.Size(210, 35);
+            this.creategroup_button.TabIndex = 2;
+            this.creategroup_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.creategroup_button.Click += new System.EventHandler(this.creategroup_button_Click);
             // 
             // created_label
             // 
@@ -414,7 +424,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton searchgame_button;
         private System.Windows.Forms.Label created_label;
         private System.Windows.Forms.Label online_label;
         private System.Windows.Forms.Label rank_label;
@@ -426,5 +435,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
     }
 }

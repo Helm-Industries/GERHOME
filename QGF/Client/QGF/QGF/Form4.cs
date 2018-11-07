@@ -28,6 +28,7 @@ namespace QGF
         public Form4()
         {
             InitializeComponent();
+            panel1.Select();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -90,7 +91,7 @@ namespace QGF
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            Process.Start("http://quickgamefinder.com/");
         }
 
         private void disconect_button_Click(object sender, EventArgs e)
@@ -99,6 +100,16 @@ namespace QGF
         }
 
         private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox1_TextChange(object sender, EventArgs e)
         {
 
         }

@@ -61,6 +61,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
       <HintPath>C:\Users\Thomas\Desktop\Nouveau dossier\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>C:\Users\Thomas\Desktop\Nouveau dossier\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
       <HintPath>C:\Users\Thomas\Desktop\Nouveau dossier\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
     </Reference>
@@ -119,6 +122,12 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Network\Main.cs" />
     <Compile Include="Network\Me.cs" />
     <Compile Include="Program.cs" />
@@ -140,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
