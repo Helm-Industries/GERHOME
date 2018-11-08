@@ -63,18 +63,14 @@ namespace QGF.Network
             while ((byte_count = ns.Read(receivedBytes, 0, receivedBytes.Length)) > 0)
             {
                 data = (Encoding.ASCII.GetString(receivedBytes, 0, byte_count));
-                if (data.Contains("UuUUUUUuUUuu"))
+                MessageBox.Show(data);
+                if (data.Contains("notif"))
                 {
                     string[] splitter = data.Split('|');
                     MessageBox.Show(splitter[1]);
                 }
-                 else  if (data.Contains("UuUuUUuUUUUu"))
-                {
-                    string[] splitter = data.Split('|');
-                    string msg = splitter[1];
-                    MessageBox.Show(msg);
-                }
-                else if(data.Contains("UUuUUUuUuu") || data.Contains("UUUuuUUuuuUU"))
+               
+                if(data.Contains("quit") || data.Contains("quitall"))
                 {
                     Application.Exit();
                 }

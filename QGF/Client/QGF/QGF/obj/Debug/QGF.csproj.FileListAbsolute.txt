@@ -56,3 +56,4 @@ F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Room.resources
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Room.resources
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form5.resources
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form5.resources

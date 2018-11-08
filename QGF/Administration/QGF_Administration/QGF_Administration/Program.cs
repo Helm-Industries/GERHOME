@@ -47,7 +47,6 @@ namespace QGF_Administration
                             Console.WriteLine("unban|username <- unban");
                             Console.WriteLine("kick|username <- ferme le logiciel d'un membre");
                             Console.WriteLine("kickall <- Ferme le logiciel de tout les membres");
-                            Console.WriteLine("forcediscord|username|raison <- Force un membre a rejoindre le discord");
                             Console.WriteLine("----------------------------------------------------------------------------------");
                 }
                 else if(sw.Contains("sendnotif"))
@@ -96,11 +95,9 @@ namespace QGF_Administration
                     byte[] buffer = Encoding.ASCII.GetBytes(s);
                     ns.Write(buffer, 0, buffer.Length);
                 }
-                else if (sw.Contains("forcediscord"))
+                else
                 {
-                    s = sw + "|" + password;
-                    byte[] buffer = Encoding.ASCII.GetBytes(s);
-                    ns.Write(buffer, 0, buffer.Length);
+                    Console.WriteLine("Mauvaise commande");
                 }
             }
 
@@ -114,7 +111,7 @@ namespace QGF_Administration
 
             while ((byte_count = ns.Read(receivedBytes, 0, receivedBytes.Length)) > 0)
             {
-                Console.Write(Encoding.ASCII.GetString(receivedBytes, 0, byte_count));
+             //   Console.Write(Encoding.ASCII.GetString(receivedBytes, 0, byte_count));
             }
         }
     }
