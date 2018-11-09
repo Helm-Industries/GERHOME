@@ -43,18 +43,18 @@ namespace QGF
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            
         }
 
         private void bunifuTextBox1_TextChange(object sender, EventArgs e) // identifiant
         {
             if(bunifuTextBox1.Text.Length == 0)
             {
-                bunifuTextBox1.IconRight = Properties.Resources.cancel;
+                bunifuTextBox1.IconRight = Properties.Resources.erreur;
             }
             else
             {
-                bunifuTextBox1.IconRight = Properties.Resources.checkmark__1_;
+                bunifuTextBox1.IconRight = Properties.Resources.ok;
             }
         }
 
@@ -62,11 +62,11 @@ namespace QGF
         {
             if (bunifuTextBox3.Text.Length == 0 || !bunifuTextBox3.Text.Contains('@') || !bunifuTextBox3.Text.Contains('.'))
             {
-                bunifuTextBox3.IconRight = Properties.Resources.cancel;
+                bunifuTextBox3.IconRight = Properties.Resources.erreur;
             }
             else
             {
-                bunifuTextBox3.IconRight = Properties.Resources.checkmark__1_;
+                bunifuTextBox3.IconRight = Properties.Resources.ok;
             }
         }
 
@@ -74,11 +74,11 @@ namespace QGF
         {
             if (bunifuTextBox2.Text.Length == 0)
             {
-                bunifuTextBox2.IconRight = Properties.Resources.cancel;
+                bunifuTextBox2.IconRight = Properties.Resources.erreur;
             }
             else
             {
-                bunifuTextBox2.IconRight = Properties.Resources.checkmark__1_;
+                bunifuTextBox2.IconRight = Properties.Resources.ok;
             }
         }
 
@@ -86,11 +86,11 @@ namespace QGF
         {
             if (bunifuTextBox4.Text != bunifuTextBox2.Text)
             {
-                bunifuTextBox4.IconRight = Properties.Resources.cancel;
+                bunifuTextBox4.IconRight = Properties.Resources.erreur;
             }
             else
             {
-                bunifuTextBox4.IconRight = Properties.Resources.checkmark__1_;
+                bunifuTextBox4.IconRight = Properties.Resources.ok;
             }
         }
 
@@ -143,6 +143,18 @@ namespace QGF
         private void button1_Click(object sender, EventArgs e)
         {
         
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            SocketMain.CloseSocket();
+
+            Application.Exit();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

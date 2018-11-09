@@ -116,5 +116,10 @@ namespace QGF
             }).Start();
             timer3.Stop();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -57,3 +57,5 @@ D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.R
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form5.resources
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form5.resources
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.ToggleSwitch.dll

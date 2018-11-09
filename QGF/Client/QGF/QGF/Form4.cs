@@ -33,13 +33,12 @@ namespace QGF
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            string msg = "DisconnectRequest";
-            //SocketMain.SendData(Encoding.ASCII.GetBytes(msg), SocketMain.ns);
+            
             
             
         }
@@ -86,12 +85,12 @@ namespace QGF
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Process.Start("https://twitter.com/T_Jze");
+            
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Process.Start("http://quickgamefinder.com/");
+            
         }
 
         private void disconect_button_Click(object sender, EventArgs e)
@@ -112,6 +111,61 @@ namespace QGF
         private void bunifuTextBox1_TextChange(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            string msg = "DisconnectRequest";
+            SocketMain.SendData(Encoding.ASCII.GetBytes(msg),SocketMain.ns);
+            Application.Exit();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://twitter.com/T_Jze");
+        }
+
+        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://quickgamefinder.com/");
+        }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuSlider1_ValueChanged(object sender, EventArgs e)
+        {
+            slidertext.Text = bunifuSlider1.Value.ToString();
+            //slidertext.Location = new Point(bunifuSlider1.HorizontalScroll.Value, slidertext.Location.Y);
+        }
+
+        private void slidertext_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_changer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuToggleSwitch1_OnValuechange(object sender, EventArgs e)
+        {
+            if(bunifuToggleSwitch1.Value == false)
+            {
+                label_changer.Text = "Groupe public";
+            }
+            else
+            {
+                label_changer.Text = "Groupe privé";
+            }
         }
     }
 }

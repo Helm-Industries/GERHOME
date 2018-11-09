@@ -127,8 +127,19 @@
     <value>191, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>63</value>
+    <value>29</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuProgressBar1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAfIAAAAKCAYAAABPJ9wQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADXSURBVHhe7ds7bsJAFAVQL4MyJSVLSOmSkjIlS0jJZix/
+        NsCSYAehInlje2QL0TNE50pHmvGM66tnyZWIiIj8kwzDsGnb9rPv+xMAUKQ6uvpjru4lUeK7rusuceEX
+        ACjaT5T511zh0yQeJX5Nh7F+9gIA8GLrjo7evqUhfCzy2OzXFwGAcuVCj6n8eyzy2KRv7qZxAHgDMYDn
+        9SkX+TEfAgBvYyrypmm2+aGpHADKFhP5fV7XY5GnpO/s60sAQLmizM9zhS+Jgzo8/q8GABQkSvwwNXdV
+        /QF7z+1bSsg81AAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="timer3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>315, 17</value>
   </metadata>

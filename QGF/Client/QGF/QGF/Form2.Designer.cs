@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.label3 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.bunifuProgressBar1 = new Bunifu.UI.Winforms.BunifuProgressBar();
             this.SuspendLayout();
             // 
             // timer1
@@ -80,16 +81,6 @@
             this.timer3.Interval = 500;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("UniSansLightItalic", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(462, 682);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(356, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tentative de connexion au serveur en cours...";
-            // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
@@ -97,13 +88,32 @@
             this.bunifuDragControl1.TargetControl = this;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // bunifuProgressBar1
+            // 
+            this.bunifuProgressBar1.Animation = 0;
+            this.bunifuProgressBar1.AnimationStep = 10;
+            this.bunifuProgressBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuProgressBar1.BackgroundImage")));
+            this.bunifuProgressBar1.BorderColor = System.Drawing.Color.DarkGray;
+            this.bunifuProgressBar1.BorderRadius = 5;
+            this.bunifuProgressBar1.BorderThickness = 2;
+            this.bunifuProgressBar1.Location = new System.Drawing.Point(391, 698);
+            this.bunifuProgressBar1.MaximumValue = 100;
+            this.bunifuProgressBar1.MinimumValue = 0;
+            this.bunifuProgressBar1.Name = "bunifuProgressBar1";
+            this.bunifuProgressBar1.ProgressBackColor = System.Drawing.Color.DarkGray;
+            this.bunifuProgressBar1.ProgressColorLeft = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.bunifuProgressBar1.ProgressColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.bunifuProgressBar1.Size = new System.Drawing.Size(498, 10);
+            this.bunifuProgressBar1.TabIndex = 7;
+            this.bunifuProgressBar1.Value = 10;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.bunifuProgressBar1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -124,7 +134,7 @@
         private System.Windows.Forms.Timer timer2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Timer timer3;
-        private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private Bunifu.UI.Winforms.BunifuProgressBar bunifuProgressBar1;
     }
 }

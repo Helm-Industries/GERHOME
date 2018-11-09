@@ -97,14 +97,12 @@ namespace QGF
         {
             
             
-            SocketMain.CloseSocket();
-            
-            Application.Exit();
+           
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            
         }
 
         private void bunifuButton3_Click(object sender, EventArgs e)
@@ -117,6 +115,18 @@ namespace QGF
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            SocketMain.CloseSocket();
+
+            Application.Exit();
         }
     }
 }
