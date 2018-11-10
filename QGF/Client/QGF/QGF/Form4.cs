@@ -16,7 +16,7 @@ namespace QGF
     public partial class Form4 : Form
     {
         private const int CS_dropshadow = 0x00020000;
-
+        public List<Room> roomlist = new List<Room>();
         protected override CreateParams CreateParams
         {
             get
@@ -30,6 +30,22 @@ namespace QGF
         {
             InitializeComponent();
             panel1.Select();
+            if(Me.rank == "premium")
+            {
+                maxplayer_slider.MaximumValue = 15;
+            }
+            else
+            {
+                maxplayer_slider.MaximumValue = 5;
+            }
+            int counter = 10;
+            while(counter != 0)
+            {
+                Room room = new Room();
+                flowLayoutPanel1.Controls.Add(room);
+                roomlist.Add(room);
+                counter--;
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -154,8 +170,12 @@ namespace QGF
 
         private void bunifuSlider1_ValueChanged(object sender, EventArgs e)
         {
-            slidertext.Text = bunifuSlider1.Value.ToString();
+            maxplayer_label.Text = maxplayer_slider.Value.ToString();
             //slidertext.Location = new Point(bunifuSlider1.HorizontalScroll.Value, slidertext.Location.Y);
+            if(maxplayer_slider.Value == 0)
+            {
+                maxplayer_slider.Value = 1;
+            }
         }
 
         private void slidertext_Click(object sender, EventArgs e)
@@ -186,6 +206,11 @@ namespace QGF
         }
 
         private void create_group_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void username_text_TextChange(object sender, EventArgs e)
         {
 
         }

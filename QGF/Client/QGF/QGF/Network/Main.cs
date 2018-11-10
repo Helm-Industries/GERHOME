@@ -71,7 +71,7 @@ namespace QGF.Network
             while ((byte_count = ns.Read(receivedBytes, 0, receivedBytes.Length)) > 0)
             {
                 data = (Encoding.ASCII.GetString(receivedBytes, 0, byte_count));
-                MessageBox.Show(data);
+                
                 if (data.Contains("notif"))
                 {
                     string[] splitter = data.Split('|');

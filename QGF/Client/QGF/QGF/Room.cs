@@ -15,9 +15,37 @@ namespace QGF
         public Room()
         {
             InitializeComponent();
+            if(currentplayers == maxplayers)
+            {
+                join_button.Enabled = false;
+            }
+            else
+            {
+                join_button.Enabled = true;
+            }
         }
+        public static string gameID;
+        public static int currentplayers;
+        public static int maxplayers;
+        public bool isPremium;
+        public bool isPublic;
 
         private void Room_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
         {
 
         }

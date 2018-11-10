@@ -63,9 +63,9 @@
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.slidertext = new System.Windows.Forms.Label();
-            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.bunifuSlider1 = new Bunifu.Framework.UI.BunifuSlider();
+            this.maxplayer_label = new System.Windows.Forms.Label();
+            this.combobox_game = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.maxplayer_slider = new Bunifu.Framework.UI.BunifuSlider();
             this.bunifuToggleSwitch1 = new Bunifu.ToggleSwitch.BunifuToggleSwitch();
             this.username_text = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.panel1.SuspendLayout();
@@ -503,9 +503,9 @@
             this.create_group_panel.Controls.Add(this.bunifuButton1);
             this.create_group_panel.Controls.Add(this.bunifuButton2);
             this.create_group_panel.Controls.Add(this.bunifuLabel1);
-            this.create_group_panel.Controls.Add(this.slidertext);
-            this.create_group_panel.Controls.Add(this.bunifuDropdown1);
-            this.create_group_panel.Controls.Add(this.bunifuSlider1);
+            this.create_group_panel.Controls.Add(this.maxplayer_label);
+            this.create_group_panel.Controls.Add(this.combobox_game);
+            this.create_group_panel.Controls.Add(this.maxplayer_slider);
             this.create_group_panel.Controls.Add(this.bunifuToggleSwitch1);
             this.create_group_panel.Controls.Add(this.username_text);
             this.create_group_panel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -655,43 +655,43 @@
             this.bunifuLabel1.Text = "Créer ton groupe";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             // 
-            // slidertext
+            // maxplayer_label
             // 
-            this.slidertext.AutoSize = true;
-            this.slidertext.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.slidertext.Location = new System.Drawing.Point(144, 266);
-            this.slidertext.Name = "slidertext";
-            this.slidertext.Size = new System.Drawing.Size(15, 17);
-            this.slidertext.TabIndex = 8;
-            this.slidertext.Text = "0";
-            this.slidertext.Click += new System.EventHandler(this.slidertext_Click);
+            this.maxplayer_label.AutoSize = true;
+            this.maxplayer_label.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maxplayer_label.Location = new System.Drawing.Point(144, 266);
+            this.maxplayer_label.Name = "maxplayer_label";
+            this.maxplayer_label.Size = new System.Drawing.Size(15, 17);
+            this.maxplayer_label.TabIndex = 8;
+            this.maxplayer_label.Text = "0";
+            this.maxplayer_label.Click += new System.EventHandler(this.slidertext_Click);
             // 
-            // bunifuDropdown1
+            // combobox_game
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuDropdown1.BorderRadius = 0;
-            this.bunifuDropdown1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.bunifuDropdown1.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
-            this.bunifuDropdown1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bunifuDropdown1.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown1.FillDropDown = false;
-            this.bunifuDropdown1.FillIndicator = true;
-            this.bunifuDropdown1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            this.bunifuDropdown1.FormattingEnabled = true;
-            this.bunifuDropdown1.Icon = null;
-            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.bunifuDropdown1.ItemHeight = 26;
-            this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(220)))), ((int)(((byte)(233)))));
-            this.bunifuDropdown1.Items.AddRange(new object[] {
+            this.combobox_game.BackColor = System.Drawing.SystemColors.Control;
+            this.combobox_game.BorderRadius = 0;
+            this.combobox_game.Color = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.combobox_game.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.combobox_game.DisabledColor = System.Drawing.Color.Gray;
+            this.combobox_game.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combobox_game.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.combobox_game.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_game.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.combobox_game.FillDropDown = false;
+            this.combobox_game.FillIndicator = true;
+            this.combobox_game.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.combobox_game.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combobox_game.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.combobox_game.FormattingEnabled = true;
+            this.combobox_game.Icon = null;
+            this.combobox_game.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.combobox_game.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.combobox_game.ItemBackColor = System.Drawing.Color.White;
+            this.combobox_game.ItemBorderColor = System.Drawing.Color.White;
+            this.combobox_game.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.combobox_game.ItemHeight = 26;
+            this.combobox_game.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(220)))), ((int)(((byte)(233)))));
+            this.combobox_game.Items.AddRange(new object[] {
             "Counter Strike Global Offensive",
             "Fortnite: Battle Royale",
             "Grand Theft Auto V",
@@ -702,26 +702,26 @@
             "Roblox",
             "Rocket League",
             "Tom Clancy\'s Rainbow Six Siege"});
-            this.bunifuDropdown1.Location = new System.Drawing.Point(147, 224);
-            this.bunifuDropdown1.MaxDropDownItems = 100;
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.Size = new System.Drawing.Size(649, 32);
-            this.bunifuDropdown1.TabIndex = 7;
-            this.bunifuDropdown1.Text = "Jeu";
+            this.combobox_game.Location = new System.Drawing.Point(147, 224);
+            this.combobox_game.MaxDropDownItems = 100;
+            this.combobox_game.Name = "combobox_game";
+            this.combobox_game.Size = new System.Drawing.Size(649, 32);
+            this.combobox_game.TabIndex = 7;
+            this.combobox_game.Text = "Jeu";
             // 
-            // bunifuSlider1
+            // maxplayer_slider
             // 
-            this.bunifuSlider1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSlider1.BackgroudColor = System.Drawing.Color.DarkGray;
-            this.bunifuSlider1.BorderRadius = 5;
-            this.bunifuSlider1.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.bunifuSlider1.Location = new System.Drawing.Point(147, 286);
-            this.bunifuSlider1.MaximumValue = 5;
-            this.bunifuSlider1.Name = "bunifuSlider1";
-            this.bunifuSlider1.Size = new System.Drawing.Size(649, 30);
-            this.bunifuSlider1.TabIndex = 6;
-            this.bunifuSlider1.Value = 0;
-            this.bunifuSlider1.ValueChanged += new System.EventHandler(this.bunifuSlider1_ValueChanged);
+            this.maxplayer_slider.BackColor = System.Drawing.Color.Transparent;
+            this.maxplayer_slider.BackgroudColor = System.Drawing.Color.DarkGray;
+            this.maxplayer_slider.BorderRadius = 5;
+            this.maxplayer_slider.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.maxplayer_slider.Location = new System.Drawing.Point(147, 286);
+            this.maxplayer_slider.MaximumValue = 5;
+            this.maxplayer_slider.Name = "maxplayer_slider";
+            this.maxplayer_slider.Size = new System.Drawing.Size(649, 30);
+            this.maxplayer_slider.TabIndex = 6;
+            this.maxplayer_slider.Value = 0;
+            this.maxplayer_slider.ValueChanged += new System.EventHandler(this.bunifuSlider1_ValueChanged);
             // 
             // bunifuToggleSwitch1
             // 
@@ -805,6 +805,7 @@
             this.username_text.TextMarginLeft = 5;
             this.username_text.TextPlaceholder = "Nom du groupe";
             this.username_text.UseSystemPasswordChar = false;
+            this.username_text.TextChange += new System.EventHandler(this.username_text_TextChange);
             // 
             // Form4
             // 
@@ -856,9 +857,9 @@
         private System.Windows.Forms.Panel create_group_panel;
         private Bunifu.ToggleSwitch.BunifuToggleSwitch bunifuToggleSwitch1;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox username_text;
-        private Bunifu.Framework.UI.BunifuSlider bunifuSlider1;
-        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
-        private System.Windows.Forms.Label slidertext;
+        private Bunifu.Framework.UI.BunifuSlider maxplayer_slider;
+        private Bunifu.UI.WinForms.BunifuDropdown combobox_game;
+        private System.Windows.Forms.Label maxplayer_label;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
