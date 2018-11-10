@@ -49,5 +49,10 @@ namespace QGF
         {
 
         }
+
+        private void rank_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
