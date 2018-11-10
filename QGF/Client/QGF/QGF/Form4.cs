@@ -30,7 +30,7 @@ namespace QGF
         {
             InitializeComponent();
             panel1.Select();
-            if(Me.rank == "premium")
+            if (Me.rank == "premium")
             {
                 maxplayer_slider.MaximumValue = 15;
             }
@@ -38,14 +38,8 @@ namespace QGF
             {
                 maxplayer_slider.MaximumValue = 5;
             }
-            int counter = 10;
-            while(counter != 0)
-            {
-                Room room = new Room();
-                flowLayoutPanel1.Controls.Add(room);
-                roomlist.Add(room);
-                counter--;
-            }
+            byte[] b = Encoding.ASCII.GetBytes("GetGroups");
+            SocketMain.SendData(b, SocketMain.ns);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -172,10 +166,7 @@ namespace QGF
         {
             maxplayer_label.Text = maxplayer_slider.Value.ToString();
             //slidertext.Location = new Point(bunifuSlider1.HorizontalScroll.Value, slidertext.Location.Y);
-            if(maxplayer_slider.Value == 0)
-            {
-                maxplayer_slider.Value = 1;
-            }
+
         }
 
         private void slidertext_Click(object sender, EventArgs e)
@@ -193,6 +184,7 @@ namespace QGF
             if(bunifuToggleSwitch1.Value == false)
             {
                 label_changer.Text = "Groupe public";
+                
             }
             else
             {
@@ -211,6 +203,44 @@ namespace QGF
         }
 
         private void username_text_TextChange(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combobox_game_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            string groupname = groupname_text.Text;
+            string gameID = gameid_combobox.Text;
+            int maxplayers = maxplayer_slider.Value;
+            bool ispublic = bunifuToggleSwitch1.Value;
+            if(bunifuToggleSwitch1.Value == false)
+            {
+                ispublic = true;
+            }
+            else
+            {
+                ispublic = false;
+            }
+            string groupdesc = groupdescription_text.Text;
+            string ispb = "";
+            if(ispublic == true)
+            {
+                ispb = "public";
+            }
+            else
+            {
+                ispb = "private";
+            }
+            string msg = "CreateGroupRequest|" + Me.username + "|" + "1" + "|" + maxplayers.ToString() + "|" + ispb + "|" + gameID + "|" + groupname + "|" + groupdesc;
+            SocketMain.SendData(Encoding.ASCII.GetBytes(msg),SocketMain.ns);
+        }
+
+        private void bunifuTextBox2_TextChange(object sender, EventArgs e)
         {
 
         }

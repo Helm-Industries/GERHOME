@@ -72,8 +72,25 @@ namespace QGF
             {
                 string msg = "AuthRequest|" + username + "|" + password;
                 byte[] bmsg = Encoding.ASCII.GetBytes(msg);
+                Me.username = username_text.Text;
                 SocketMain.SendData(bmsg, SocketMain.ns);
-             
+                while (true)
+                {
+                    try
+                    {
+
+                        if (SocketMain.data.Contains("authsuccess"))
+                        {
+                            this.Hide();
+                            this.Close();
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+                }
+                
             }
         }
 
@@ -86,6 +103,7 @@ namespace QGF
         private void username_text_TextChange(object sender, EventArgs e)
         {
             username = username_text.Text;
+            Me.username = username;
         }
 
         private void password_text_TextChange(object sender, EventArgs e)
@@ -95,9 +113,7 @@ namespace QGF
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            
-            
-           
+                     
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

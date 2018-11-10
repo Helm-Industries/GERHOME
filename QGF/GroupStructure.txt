@@ -1,0 +1,1 @@
+Group|author|actualplayers|desiredplayers|public|gameid|roomname|roomdesc

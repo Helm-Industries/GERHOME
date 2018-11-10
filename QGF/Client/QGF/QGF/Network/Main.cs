@@ -12,6 +12,7 @@ namespace QGF.Network
 {
     public class SocketMain
     {
+        public static Form frm { get; set; }
         public static string username;
         public static IPAddress ip = IPAddress.Parse("78.114.52.238");
         public static int port = 5000;
@@ -21,6 +22,7 @@ namespace QGF.Network
         public static int loadingstate = 0;
         public static bool connected = false;
         public static void Connect()
+            
         {
             if (connected == false)
             {
@@ -67,65 +69,80 @@ namespace QGF.Network
             NetworkStream ns = client.GetStream();
             byte[] receivedBytes = new byte[1024];
             int byte_count;
-
-            while ((byte_count = ns.Read(receivedBytes, 0, receivedBytes.Length)) > 0)
+            try
             {
-                data = (Encoding.ASCII.GetString(receivedBytes, 0, byte_count));
-                
-                if (data.Contains("notif"))
+                while ((byte_count = ns.Read(receivedBytes, 0, receivedBytes.Length)) > 0)
                 {
-                    string[] splitter = data.Split('|');
-                    MessageBox.Show(splitter[1]);
-                }
-               
-                if(data.Contains("quit") || data.Contains("quitall"))
-                {
-                    Application.Exit();
-                }
+                    data = (Encoding.ASCII.GetString(receivedBytes, 0, byte_count));
 
-                else if(data.Contains("disconnectsuccess"))
-                {
-                    SocketMain.CloseSocket();
-                    Application.Exit();
-                }
-                else if(data.Contains("regsuccess"))
-                {
-                    SendToConnect();
-                }
-                else if (data.Contains("regfailed"))
-                {
-                    MessageBox.Show("Identifiants / Email déjà pris");
-                }
-                else if (data.Contains("authsuccess"))
-                {
-                    Form4 frm = new Form4();
-                    OpenForm(frm);
-                    Form1 frms = new Form1();
-                    HideForm(frms);
-                }
-                else if (data.Contains("authbanned"))
-                {
-                    
-                    MessageBox.Show("Ce compte à été banni de façon permanente de la plateforme QGF");
-                }
-                else if (data.Contains("authfailed"))
-                {
-                    
-                    MessageBox.Show("Impossible de se connecter avec ces identifiants");
-                }
-                else
-                {
-                    MessageBox.Show("Message inconnu: " + data);
+                    if (data.Contains("notif"))
+                    {
+                        string[] splitter = data.Split('|');
+                        MessageBox.Show(splitter[1]);
+                    }
+
+                    if (data.Contains("quit") || data.Contains("quitall"))
+                    {
+                        Application.Exit();
+                    }
+
+                    else if (data.Contains("disconnectsuccess"))
+                    {
+                        SocketMain.CloseSocket();
+                        Application.Exit();
+                    }
+                    else if (data.Contains("regsuccess"))
+                    {
+                        SendToConnect();
+                    }
+                    else if (data.Contains("regfailed"))
+                    {
+                        MessageBox.Show("Identifiants / Email déjà pris");
+                    }
+                    else if (data.Contains("authsuccess"))
+                    {
+                        string[] ss = data.Split('|');
+                        Me.rank = ss[1];
+                        Form4 frms = new Form4();
+                        OpenForm(frms);
+                        HideForm();
+                    }
+                    else if (data.Contains("authbanned"))
+                    {
+
+                        MessageBox.Show("Ce compte à été banni de façon permanente de la plateforme QGF");
+                    }
+                    else if (data.Contains("authfailed"))
+                    {
+
+                        MessageBox.Show("Impossible de se connecter avec ces identifiants");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Message inconnu: " + data);
+                    }
                 }
             }
+            catch
+            {
+                MessageBox.Show("Connexion au serveur perdue");
+                Application.Exit();
+            }
         }
-        public static void OpenForm(Form frm)
+        public static void OpenForm(Form frms)
         {
-            frm.ShowDialog();
+            frms.ShowDialog();
         }
-        public static void HideForm(Form frm)
+        internal static void HideForm()
         {
-            frm.Hide();
+            try
+            {
+                frm.Hide();
+            }
+            catch
+            {
+
+            }
         }
         static void SendToConnect()
         {
