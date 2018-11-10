@@ -31,6 +31,7 @@ namespace QGF
             timer1.Start();
             timer2.Start();
             timer3.Start();
+            bunifuProgressBar1.Value = 0;
         }
 
         
@@ -38,6 +39,24 @@ namespace QGF
         bool inout = false;
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (bunifuProgressBar1.Value >= 20)
+            {
+                bunifuProgressBar1.Value = SocketMain.loadingstate;
+            }
+            else
+            {
+                new Thread(() =>
+                {
+                    while (bunifuProgressBar1.Value < 20)
+                    {
+                        bunifuProgressBar1.Value++;
+                        Thread.Sleep(75);
+                    }
+                }).Start();
+
+            }
+
+
             if (inout == false)
             {
                 FadeIn();
@@ -96,7 +115,7 @@ namespace QGF
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            if (SocketMain.connected == true)
+            if (SocketMain.connected == true && bunifuProgressBar1.Value == 100)
             {
                 this.Hide();
                 timer1.Stop();
@@ -105,6 +124,7 @@ namespace QGF
                 frm.ShowDialog();
                 this.Close();
             }
+
         }
 
         private void timer3_Tick(object sender, EventArgs e)
@@ -118,6 +138,11 @@ namespace QGF
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuProgressBar1_onValueChange(object sender, EventArgs e)
         {
 
         }

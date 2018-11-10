@@ -68,7 +68,7 @@
             // 
             // timer2
             // 
-            this.timer2.Interval = 3500;
+            this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // bunifuElipse1
@@ -106,6 +106,7 @@
             this.bunifuProgressBar1.Size = new System.Drawing.Size(498, 10);
             this.bunifuProgressBar1.TabIndex = 7;
             this.bunifuProgressBar1.Value = 10;
+            this.bunifuProgressBar1.onValueChange += new System.EventHandler(this.bunifuProgressBar1_onValueChange);
             // 
             // Form2
             // 
