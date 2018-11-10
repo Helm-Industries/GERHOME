@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.ToggleSwitch.ToggleState toggleState1 = new Bunifu.ToggleSwitch.ToggleState();
-            Bunifu.ToggleSwitch.ToggleState toggleState2 = new Bunifu.ToggleSwitch.ToggleState();
-            Bunifu.ToggleSwitch.ToggleState toggleState3 = new Bunifu.ToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.ToggleSwitch.ToggleState toggleState7 = new Bunifu.ToggleSwitch.ToggleState();
+            Bunifu.ToggleSwitch.ToggleState toggleState8 = new Bunifu.ToggleSwitch.ToggleState();
+            Bunifu.ToggleSwitch.ToggleState toggleState9 = new Bunifu.ToggleSwitch.ToggleState();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -67,7 +67,7 @@
             this.maxplayer_slider = new Bunifu.Framework.UI.BunifuSlider();
             this.bunifuToggleSwitch1 = new Bunifu.ToggleSwitch.BunifuToggleSwitch();
             this.groupname_text = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.groupdescription_text = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.groupdescription_text = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -393,13 +393,13 @@
             this.disconect_button.IdleIconRightImage = null;
             this.disconect_button.Location = new System.Drawing.Point(60, 598);
             this.disconect_button.Name = "disconect_button";
-            stateProperties3.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties3.BorderRadius = 30;
-            stateProperties3.BorderThickness = 1;
-            stateProperties3.FillColor = System.Drawing.Color.DarkGray;
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.disconect_button.onHoverState = stateProperties3;
+            stateProperties11.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties11.BorderRadius = 30;
+            stateProperties11.BorderThickness = 1;
+            stateProperties11.FillColor = System.Drawing.Color.DarkGray;
+            stateProperties11.IconLeftImage = null;
+            stateProperties11.IconRightImage = null;
+            this.disconect_button.onHoverState = stateProperties11;
             this.disconect_button.Size = new System.Drawing.Size(210, 35);
             this.disconect_button.TabIndex = 3;
             this.disconect_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -428,13 +428,13 @@
             this.creategroup_button.IdleIconRightImage = null;
             this.creategroup_button.Location = new System.Drawing.Point(60, 347);
             this.creategroup_button.Name = "creategroup_button";
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties4.BorderRadius = 34;
-            stateProperties4.BorderThickness = 1;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties4.IconLeftImage = null;
-            stateProperties4.IconRightImage = null;
-            this.creategroup_button.onHoverState = stateProperties4;
+            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties12.BorderRadius = 34;
+            stateProperties12.BorderThickness = 1;
+            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties12.IconLeftImage = null;
+            stateProperties12.IconRightImage = null;
+            this.creategroup_button.onHoverState = stateProperties12;
             this.creategroup_button.Size = new System.Drawing.Size(210, 35);
             this.creategroup_button.TabIndex = 2;
             this.creategroup_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -499,8 +499,8 @@
             // 
             // create_group_panel
             // 
-            this.create_group_panel.Controls.Add(this.label_changer);
             this.create_group_panel.Controls.Add(this.groupdescription_text);
+            this.create_group_panel.Controls.Add(this.label_changer);
             this.create_group_panel.Controls.Add(this.bunifuButton1);
             this.create_group_panel.Controls.Add(this.bunifuButton2);
             this.create_group_panel.Controls.Add(this.bunifuLabel1);
@@ -554,13 +554,13 @@
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.Location = new System.Drawing.Point(488, 618);
             this.bunifuButton1.Name = "bunifuButton1";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
-            stateProperties1.BorderRadius = 20;
-            stateProperties1.BorderThickness = 1;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties1;
+            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            stateProperties9.BorderRadius = 20;
+            stateProperties9.BorderThickness = 1;
+            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            stateProperties9.IconLeftImage = null;
+            stateProperties9.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties9;
             this.bunifuButton1.Size = new System.Drawing.Size(414, 35);
             this.bunifuButton1.TabIndex = 5;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -589,13 +589,13 @@
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.Location = new System.Drawing.Point(50, 618);
             this.bunifuButton2.Name = "bunifuButton2";
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(33)))));
-            stateProperties2.BorderRadius = 20;
-            stateProperties2.BorderThickness = 1;
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(33)))));
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.bunifuButton2.onHoverState = stateProperties2;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(33)))));
+            stateProperties10.BorderRadius = 20;
+            stateProperties10.BorderThickness = 1;
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(33)))));
+            stateProperties10.IconLeftImage = null;
+            stateProperties10.IconRightImage = null;
+            this.bunifuButton2.onHoverState = stateProperties10;
             this.bunifuButton2.Size = new System.Drawing.Size(414, 35);
             this.bunifuButton2.TabIndex = 4;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -679,7 +679,8 @@
             this.maxplayer_slider.MaximumValue = 5;
             this.maxplayer_slider.Name = "maxplayer_slider";
             this.maxplayer_slider.Size = new System.Drawing.Size(649, 30);
-            this.maxplayer_slider.TabIndex = 3;
+            this.maxplayer_slider.TabIndex = 0;
+            this.maxplayer_slider.TabStop = false;
             this.maxplayer_slider.Value = 0;
             this.maxplayer_slider.ValueChanged += new System.EventHandler(this.bunifuSlider1_ValueChanged);
             // 
@@ -693,33 +694,34 @@
             this.bunifuToggleSwitch1.Name = "bunifuToggleSwitch1";
             this.bunifuToggleSwitch1.Size = new System.Drawing.Size(35, 20);
             this.bunifuToggleSwitch1.TabIndex = 4;
-            toggleState1.BackColor = System.Drawing.Color.Empty;
-            toggleState1.BackColorInner = System.Drawing.Color.Empty;
-            toggleState1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            toggleState1.BorderColorInner = System.Drawing.Color.Empty;
-            toggleState1.BorderRadius = 1;
-            toggleState1.BorderRadiusInner = 1;
-            toggleState1.BorderThickness = 1;
-            toggleState1.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateDisabled = toggleState1;
-            toggleState2.BackColor = System.Drawing.Color.DarkGray;
-            toggleState2.BackColorInner = System.Drawing.Color.White;
-            toggleState2.BorderColor = System.Drawing.Color.DarkGray;
-            toggleState2.BorderColorInner = System.Drawing.Color.White;
-            toggleState2.BorderRadius = 17;
-            toggleState2.BorderRadiusInner = 15;
-            toggleState2.BorderThickness = 1;
-            toggleState2.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateOff = toggleState2;
-            toggleState3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            toggleState3.BackColorInner = System.Drawing.Color.White;
-            toggleState3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            toggleState3.BorderColorInner = System.Drawing.Color.White;
-            toggleState3.BorderRadius = 17;
-            toggleState3.BorderRadiusInner = 15;
-            toggleState3.BorderThickness = 1;
-            toggleState3.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateOn = toggleState3;
+            this.bunifuToggleSwitch1.TabStop = false;
+            toggleState7.BackColor = System.Drawing.Color.Empty;
+            toggleState7.BackColorInner = System.Drawing.Color.Empty;
+            toggleState7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            toggleState7.BorderColorInner = System.Drawing.Color.Empty;
+            toggleState7.BorderRadius = 1;
+            toggleState7.BorderRadiusInner = 1;
+            toggleState7.BorderThickness = 1;
+            toggleState7.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateDisabled = toggleState7;
+            toggleState8.BackColor = System.Drawing.Color.DarkGray;
+            toggleState8.BackColorInner = System.Drawing.Color.White;
+            toggleState8.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState8.BorderColorInner = System.Drawing.Color.White;
+            toggleState8.BorderRadius = 17;
+            toggleState8.BorderRadiusInner = 15;
+            toggleState8.BorderThickness = 1;
+            toggleState8.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateOff = toggleState8;
+            toggleState9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            toggleState9.BackColorInner = System.Drawing.Color.White;
+            toggleState9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            toggleState9.BorderColorInner = System.Drawing.Color.White;
+            toggleState9.BorderRadius = 17;
+            toggleState9.BorderRadiusInner = 15;
+            toggleState9.BorderThickness = 1;
+            toggleState9.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateOn = toggleState9;
             this.bunifuToggleSwitch1.Value = false;
             this.bunifuToggleSwitch1.OnValuechange += new System.EventHandler(this.bunifuToggleSwitch1_OnValuechange);
             // 
@@ -769,47 +771,21 @@
             // 
             // groupdescription_text
             // 
-            this.groupdescription_text.AcceptsReturn = false;
-            this.groupdescription_text.AcceptsTab = false;
-            this.groupdescription_text.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.groupdescription_text.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.groupdescription_text.BackColor = System.Drawing.Color.Transparent;
-            this.groupdescription_text.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupdescription_text.BackgroundImage")));
-            this.groupdescription_text.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.groupdescription_text.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.groupdescription_text.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(101)))), ((int)(((byte)(141)))));
-            this.groupdescription_text.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.groupdescription_text.BorderRadius = 5;
-            this.groupdescription_text.BorderThickness = 2;
-            this.groupdescription_text.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.groupdescription_text.DefaultFont = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupdescription_text.DefaultText = "";
-            this.groupdescription_text.FillColor = System.Drawing.Color.White;
-            this.groupdescription_text.HideSelection = true;
-            this.groupdescription_text.IconLeft = null;
-            this.groupdescription_text.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.groupdescription_text.IconPadding = 10;
-            this.groupdescription_text.IconRight = null;
-            this.groupdescription_text.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.groupdescription_text.AutoCompleteCustomSource.AddRange(new string[] {
+            "edrfq"});
+            this.groupdescription_text.BackColor = System.Drawing.Color.White;
+            this.groupdescription_text.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.groupdescription_text.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupdescription_text.ForeColor = System.Drawing.Color.DimGray;
+            this.groupdescription_text.ImeMode = System.Windows.Forms.ImeMode.On;
             this.groupdescription_text.Location = new System.Drawing.Point(147, 384);
-            this.groupdescription_text.MaxLength = 32767;
-            this.groupdescription_text.MinimumSize = new System.Drawing.Size(100, 35);
-            this.groupdescription_text.Modified = false;
+            this.groupdescription_text.MaxLength = 240;
+            this.groupdescription_text.Multiline = true;
             this.groupdescription_text.Name = "groupdescription_text";
-            this.groupdescription_text.PasswordChar = '\0';
-            this.groupdescription_text.ReadOnly = false;
-            this.groupdescription_text.SelectedText = "";
-            this.groupdescription_text.SelectionLength = 0;
-            this.groupdescription_text.SelectionStart = 0;
-            this.groupdescription_text.ShortcutsEnabled = true;
+            this.groupdescription_text.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.groupdescription_text.Size = new System.Drawing.Size(649, 190);
-            this.groupdescription_text.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.groupdescription_text.TabIndex = 3;
-            this.groupdescription_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.groupdescription_text.TextMarginLeft = 5;
-            this.groupdescription_text.TextPlaceholder = "Description";
-            this.groupdescription_text.UseSystemPasswordChar = false;
-            this.groupdescription_text.TextChange += new System.EventHandler(this.bunifuTextBox2_TextChange);
+            this.groupdescription_text.Text = "Description";
             // 
             // Form4
             // 
@@ -868,6 +844,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
         private Bunifu.UI.WinForms.BunifuLabel label_changer;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox3;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox groupdescription_text;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox groupdescription_text;
     }
 }

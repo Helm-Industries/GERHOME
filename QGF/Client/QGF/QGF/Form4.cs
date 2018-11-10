@@ -159,7 +159,7 @@ namespace QGF
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
         {
-
+            Process.Start("https://discord.gg/UzbmRGJ");
         }
 
         private void bunifuSlider1_ValueChanged(object sender, EventArgs e)
