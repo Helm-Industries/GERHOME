@@ -184,5 +184,10 @@ namespace QGF
         {
             create_group_panel.Visible = false;
         }
+
+        private void create_group_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

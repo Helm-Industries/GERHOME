@@ -39,22 +39,7 @@ namespace QGF
         bool inout = false;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (bunifuProgressBar1.Value >= 20)
-            {
-                bunifuProgressBar1.Value = SocketMain.loadingstate;
-            }
-            else
-            {
-                new Thread(() =>
-                {
-                    while (bunifuProgressBar1.Value < 20)
-                    {
-                        bunifuProgressBar1.Value++;
-                        Thread.Sleep(75);
-                    }
-                }).Start();
-
-            }
+            bunifuProgressBar1.Value = SocketMain.loadingstate;
 
 
             if (inout == false)

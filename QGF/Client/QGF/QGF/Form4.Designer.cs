@@ -514,6 +514,7 @@
             this.create_group_panel.Size = new System.Drawing.Size(951, 668);
             this.create_group_panel.TabIndex = 0;
             this.create_group_panel.Visible = false;
+            this.create_group_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.create_group_panel_Paint);
             // 
             // label_changer
             // 

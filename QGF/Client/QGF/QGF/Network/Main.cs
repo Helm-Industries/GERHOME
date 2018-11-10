@@ -18,7 +18,7 @@ namespace QGF.Network
         public static TcpClient client = new TcpClient();
         public static Thread thread = new Thread(o => ReceiveData((TcpClient)o));
         public static NetworkStream ns;
-        public static int loadingstate = 20;
+        public static int loadingstate = 0;
         public static bool connected = false;
         public static void Connect()
         {
@@ -28,7 +28,12 @@ namespace QGF.Network
                 {
                     client.Connect(ip, port);
                     connected = true;
-                    loadingstate = 40;
+                    while (loadingstate != 100)
+                    {
+                        loadingstate = loadingstate + 1;
+                        Thread.Sleep(25);
+                    }
+                   
                 }
                 catch(Exception e)
                 {
@@ -39,7 +44,7 @@ namespace QGF.Network
                 {
                     ns = client.GetStream();
                     thread.Start(client);
-                    loadingstate = 100;
+                    
                 }
                 catch
                 {
