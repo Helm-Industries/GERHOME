@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Room));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.join_button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.rank = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.rankpic = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rank)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rankpic)).BeginInit();
             this.SuspendLayout();
             // 
             // join_button
@@ -62,13 +62,13 @@
             this.join_button.IdleIconRightImage = null;
             this.join_button.Location = new System.Drawing.Point(742, 39);
             this.join_button.Name = "join_button";
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(101)))), ((int)(((byte)(141)))));
-            stateProperties3.BorderRadius = 25;
-            stateProperties3.BorderThickness = 1;
-            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(101)))), ((int)(((byte)(141)))));
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.join_button.onHoverState = stateProperties3;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(101)))), ((int)(((byte)(141)))));
+            stateProperties2.BorderRadius = 25;
+            stateProperties2.BorderThickness = 1;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(101)))), ((int)(((byte)(141)))));
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.join_button.onHoverState = stateProperties2;
             this.join_button.Size = new System.Drawing.Size(175, 33);
             this.join_button.TabIndex = 1;
             this.join_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -104,21 +104,21 @@
             this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             this.bunifuPictureBox1.Click += new System.EventHandler(this.bunifuPictureBox1_Click);
             // 
-            // rank
+            // rankpic
             // 
-            this.rank.AllowFocused = false;
-            this.rank.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rank.BorderRadius = 25;
-            this.rank.Image = ((System.Drawing.Image)(resources.GetObject("rank.Image")));
-            this.rank.IsCircle = true;
-            this.rank.Location = new System.Drawing.Point(469, 52);
-            this.rank.Name = "rank";
-            this.rank.Size = new System.Drawing.Size(50, 50);
-            this.rank.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.rank.TabIndex = 11;
-            this.rank.TabStop = false;
-            this.rank.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            this.rank.Click += new System.EventHandler(this.rank_Click);
+            this.rankpic.AllowFocused = false;
+            this.rankpic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rankpic.BorderRadius = 25;
+            this.rankpic.Image = global::QGF.Properties.Resources.premium;
+            this.rankpic.IsCircle = true;
+            this.rankpic.Location = new System.Drawing.Point(469, 52);
+            this.rankpic.Name = "rankpic";
+            this.rankpic.Size = new System.Drawing.Size(50, 50);
+            this.rankpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.rankpic.TabIndex = 11;
+            this.rankpic.TabStop = false;
+            this.rankpic.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.rankpic.Click += new System.EventHandler(this.rank_Click);
             // 
             // bunifuLabel2
             // 
@@ -142,7 +142,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.bunifuLabel2);
-            this.Controls.Add(this.rank);
+            this.Controls.Add(this.rankpic);
             this.Controls.Add(this.bunifuPictureBox1);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.join_button);
@@ -151,7 +151,7 @@
             this.Size = new System.Drawing.Size(951, 112);
             this.Load += new System.EventHandler(this.Room_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rank)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rankpic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,7 +162,7 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton join_button;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
-        private Bunifu.UI.WinForms.BunifuPictureBox rank;
+        private Bunifu.UI.WinForms.BunifuPictureBox rankpic;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
     }
 }

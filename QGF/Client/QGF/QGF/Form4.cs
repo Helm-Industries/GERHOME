@@ -1,4 +1,6 @@
 ﻿using QGF.Network;
+using QGF.Network.Groups;
+using QGF.Traitement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,10 +40,43 @@ namespace QGF
             {
                 maxplayer_slider.MaximumValue = 5;
             }
-            byte[] b = Encoding.ASCII.GetBytes("GetGroups");
-            SocketMain.SendData(b, SocketMain.ns);
-        }
 
+            username_label.Text = Me.username;
+            rank_label.Text = Me.rank;
+            timer1.Start();
+
+            //bunifuVScrollBar1.Maximum = flowLayoutPanel1.VerticalScroll.Maximum;
+
+
+            //bunifuVScrollBar1.ThumbLength = 40;
+            // Create();
+        }
+        int GroupCount = Group.g.Count();
+        public void Handler()
+        {         
+            if(GroupCount != Group.g.Count())
+            {
+                
+                flowLayoutPanel1.Controls.Clear();
+                foreach(Group group in Group.g)
+                {
+                    if (group.ranks == "premium")
+                    {
+                        Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomID, group.ranks);
+                        flowLayoutPanel1.Controls.Add(room);
+                    }
+                }
+                foreach (Group group in Group.g)
+                {
+                    if (group.ranks == "free")
+                    {
+                        Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomID, group.ranks);
+                        flowLayoutPanel1.Controls.Add(room);
+                    }
+                }
+                GroupCount = Group.g.Count();
+            }
+        }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             
@@ -126,20 +161,20 @@ namespace QGF
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            new Thread(() =>
-            {
-                try
-                {
+            //new Thread(() =>
+            //{
+            //    try
+            //    {
                     string msg = "DisconnectRequest";
                     SocketMain.SendData(Encoding.ASCII.GetBytes(msg), SocketMain.ns);
-                }
-                catch
-                {
+            //    }
+            //    catch
+            //    {
 
-                }
-            }).Start();
+            //    }
+            //}).Start();
            
-            Application.Exit();
+            
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
@@ -215,7 +250,7 @@ namespace QGF
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
             string groupname = groupname_text.Text;
-            string gameID = gameid_combobox.Text;
+            string gameID = Game.GetIDByGame(gameid_combobox.Text);
             int maxplayers = maxplayer_slider.Value;
             bool ispublic = bunifuToggleSwitch1.Value;
             if(bunifuToggleSwitch1.Value == false)
@@ -236,13 +271,56 @@ namespace QGF
             {
                 ispb = "private";
             }
-            string msg = "CreateGroupRequest|" + Me.username + "|" + "1" + "|" + maxplayers.ToString() + "|" + ispb + "|" + gameID + "|" + groupname + "|" + groupdesc;
-            SocketMain.SendData(Encoding.ASCII.GetBytes(msg),SocketMain.ns);
-        }
+            if (gameID != "")
+            {
+                string msg = "CreateGroupRequest|" + Me.username + "|" + "1" + "|" + maxplayers.ToString() + "|" + ispb + "|" + gameID + "|" + groupname + "|" + groupdesc;
+                SocketMain.SendData(Encoding.ASCII.GetBytes(msg), SocketMain.ns);
+            }
+            else
+            {
+                MessageBox.Show("Impossible de créer un groupe pour ce jeu, merci de contacter un administrateur");
+            }
+            this.Hide();
+            Form4 frm = new Form4();
+            foreach (Group group in Group.g)
+            {
+                if (group.ranks == "premium")
+                {
+                    Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomID, group.ranks);
+                    frm.flowLayoutPanel1.Controls.Add(room);
+                }
+            }
+            foreach (Group group in Group.g)
+            {
+                if (group.ranks == "free")
+                {
+                    Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomID, group.ranks);
+                    frm.flowLayoutPanel1.Controls.Add(room);
+                }
+            }
+            frm.ShowDialog();
+
+            this.Close();
+                }
 
         private void bunifuTextBox2_TextChange(object sender, EventArgs e)
         {
 
         }
+        public static void CreateGroup(string author, int currentplayer, int maxplayer, string ispublic, string roomname, string roomdesc, string game)
+        {
+         MessageBox.Show("groupe créé");
+            //   MessageBox.Show(author + "|" + currentplayer.ToString() + "|" + maxplayer.ToString() + "|" + ispublic.ToString() + "|" + roomname + "|" + roomdesc + "|" + game);
+      
+            
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Handler();
+        }
+
+
     }
 }

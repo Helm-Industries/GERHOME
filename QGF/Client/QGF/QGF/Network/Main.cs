@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QGF.Network.Groups;
+using QGF.Traitement;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -12,16 +14,19 @@ namespace QGF.Network
 {
     public class SocketMain
     {
-        public static Form frm { get; set; }
+ 
         public static string username;
-        public static IPAddress ip = IPAddress.Parse("78.114.52.238");
-        public static int port = 5000;
-        public static TcpClient client = new TcpClient();
-        public static Thread thread = new Thread(o => ReceiveData((TcpClient)o));
+        static IPAddress ip = IPAddress.Parse("78.114.52.238");
+        static int port = 5000;
+        TcpClient client = new TcpClient();
+        Thread thread = new Thread(o => ReceiveData((TcpClient)o));
         public static NetworkStream ns;
         public static int loadingstate = 0;
         public static bool connected = false;
-        public static void Connect()
+        public static string todo = "keep";
+    
+
+        public  void Connect()
             
         {
             if (connected == false)
@@ -63,87 +68,162 @@ namespace QGF.Network
             
         }
         public static string data;
+
         static void ReceiveData(TcpClient client)
         {
-            
             NetworkStream ns = client.GetStream();
             byte[] receivedBytes = new byte[1024];
             int byte_count;
-            try
+            while (ns.CanRead == true)
             {
-                while ((byte_count = ns.Read(receivedBytes, 0, receivedBytes.Length)) > 0)
+                while (ns.DataAvailable)
                 {
-                    data = (Encoding.ASCII.GetString(receivedBytes, 0, byte_count));
-
-                    if (data.Contains("notif"))
-                    {
-                        string[] splitter = data.Split('|');
-                        MessageBox.Show(splitter[1]);
-                    }
-
-                    if (data.Contains("quit") || data.Contains("quitall"))
-                    {
-                        Application.Exit();
-                    }
-
-                    else if (data.Contains("disconnectsuccess"))
-                    {
-                        SocketMain.CloseSocket();
-                        Application.Exit();
-                    }
-                    else if (data.Contains("regsuccess"))
-                    {
-                        SendToConnect();
-                    }
-                    else if (data.Contains("regfailed"))
-                    {
-                        MessageBox.Show("Identifiants / Email déjà pris");
-                    }
-                    else if (data.Contains("authsuccess"))
-                    {
-                        string[] ss = data.Split('|');
-                        Me.rank = ss[1];
-                        Form4 frms = new Form4();
-                        OpenForm(frms);
-                        HideForm();
-                    }
-                    else if (data.Contains("authbanned"))
+                    //MessageBox.Show("New data");
+                    while ((byte_count = ns.Read(receivedBytes, 0, receivedBytes.Length)) > 0)
                     {
 
-                        MessageBox.Show("Ce compte à été banni de façon permanente de la plateforme QGF");
-                    }
-                    else if (data.Contains("authfailed"))
-                    {
+                        string data = Encoding.ASCII.GetString(receivedBytes, 0, byte_count);
+                        
 
-                        MessageBox.Show("Impossible de se connecter avec ces identifiants");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Message inconnu: " + data);
+                        if (data.Contains("notif"))
+                        {
+                            string[] splitter = data.Split('|');
+                            MessageBox.Show(splitter[1]);
+                        }
+
+                        if (data.Contains("quit") || data.Contains("quitall"))
+                        {
+                            Application.Exit();
+                        }
+
+                        else if (data.Contains("disconnectsuccess"))
+                        {
+
+                            Application.Exit();
+                        }
+                        else if (data.Contains("regsuccess"))
+                        {
+                            SendToConnect();
+                        }
+                        else if (data.Contains("regfailed"))
+                        {
+                            MessageBox.Show("Identifiants / Email déjà pris");
+                        }
+
+                        else if (data.Contains("authsuccess"))
+                        {
+                            string[] splitter = data.Split('|');
+                            Me.rank = splitter[1];
+                            new Thread(() =>
+                            {
+                                Form4 frm = new Form4();
+                                frm.ShowDialog();
+                            }).Start();
+                            byte[] b = Encoding.ASCII.GetBytes("GetGroups");
+                            SocketMain.SendData(b, SocketMain.ns);
+                            todo = "destroy";
+
+                        }
+                        else if (data.Contains("authbanned"))
+                        {
+
+                            MessageBox.Show("Ce compte à été banni de façon permanente de la plateforme QGF");
+                        }
+                        else if (data.Contains("authfailed"))
+                        {
+
+                            MessageBox.Show("Impossible de se connecter avec ces identifiants");
+                        }
+                        else if (data.Contains("Groups"))
+                        {
+                            try {
+                                string[] splitter = data.Split(';'); // sépare les groupes
+                                if (splitter[0] != "Groups|")
+                                {
+                                    splitter[0].Replace("Groups|", "");
+
+                                    foreach (string s in splitter)
+                                    {
+
+
+                                        if (s.Contains("Groups|"))
+                                        {
+
+                                            // MessageBox.Show(s);
+                                            string[] split = s.Split('|');
+                                            string author = split[1];
+                                            int actualplayer = int.Parse(split[2]);
+                                            int maxplayers = int.Parse(split[3]);
+                                            string _public = split[4];
+
+                                            string gameID = split[8];
+                                            string roomname = split[5];
+                                            string roomdesc = split[6];
+                                            int roomid = int.Parse(split[7]);
+                                            string game = Game.GetNameByID(gameID);
+                                            try
+                                            {
+                                                string rank = split[9];
+                                                Group g = new Group(roomname, roomdesc, author, actualplayer, maxplayers, game, _public, roomid, rank);
+
+                                                Group.g.Add(g);
+                                            }
+                                            catch
+                                            {
+                                                Group g = new Group(roomname, roomdesc, author, actualplayer, maxplayers, game, _public, roomid, "free");
+
+                                                Group.g.Add(g);
+                                            }
+
+
+                                        }
+                                        if (!s.Contains("Groups|") && s != "")
+                                        {
+                                        
+                                            string[] split = s.Split('|');
+                                            string author = split[0];
+                                            int actualplayer = int.Parse(split[1]);
+                                            int maxplayers = int.Parse(split[2]);
+                                            string ispublic = split[3];
+                                            string roomname = split[4];
+                                            string roomdesc = split[5];
+                                            int roomid = int.Parse(split[6]);
+                                            string gameID = split[7];
+                                            string rank = split[8];
+                                            string game = Game.GetNameByID(gameID);
+                                            Group g = new Group(roomname, roomdesc, author, actualplayer, maxplayers, game, ispublic, roomid, rank);
+                                            Group.g.Add(g);
+
+                                        }
+                                    }
+
+                                }
+                            }
+                            catch(Exception e)
+                            {
+                                MessageBox.Show(e.ToString());
+                            }
+                            }
+                        
+                        else
+                        {
+                            MessageBox.Show("Message inconnu: " + data);
+                        }
                     }
                 }
             }
-            catch
-            {
-                MessageBox.Show("Connexion au serveur perdue");
-                Application.Exit();
-            }
-        }
-        public static void OpenForm(Form frms)
-        {
-            frms.ShowDialog();
-        }
-        internal static void HideForm()
-        {
-            try
-            {
-                frm.Hide();
-            }
-            catch
-            {
 
-            }
         }
+        public static void HideForm(Form frm)
+        {
+            frm.Hide();
+        }
+        static void OpenForm(Form frms)
+        {
+            
+        }
+     
+
         static void SendToConnect()
         {
             MessageBox.Show("Inscription réussie, retournez à la connexion pour continuer");
@@ -151,24 +231,9 @@ namespace QGF.Network
         static int counter;
         public static void SendData(byte[] b, NetworkStream nss)
         {
-          
-                nss.Write(b, 0, b.Length);
-           
+                nss.Write(b, 0, b.Length);          
         }
-         public static void CloseSocket()
-        {
-            try
-            {
-                client.Client.Shutdown(SocketShutdown.Send);
-                thread.Join();
-                ns.Close();
-                client.Close();
-            }
-            catch
-            {
-                Application.Exit();
-            }
-        }
+
 
     }
 }

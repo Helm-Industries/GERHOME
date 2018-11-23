@@ -73,6 +73,16 @@ namespace QGF.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free {
+            get {
+                object obj = ResourceManager.GetObject("free", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ok {
             get {
                 object obj = ResourceManager.GetObject("ok", resourceCulture);
@@ -86,6 +96,16 @@ namespace QGF.Properties {
         internal static System.Drawing.Bitmap Plan_de_travail_1 {
             get {
                 object obj = ResourceManager.GetObject("Plan_de_travail_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap premium {
+            get {
+                object obj = ResourceManager.GetObject("premium", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

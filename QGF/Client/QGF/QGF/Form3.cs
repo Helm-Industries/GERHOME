@@ -37,7 +37,7 @@ namespace QGF
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            SocketMain.CloseSocket();
+           
             Application.Exit();
         }
 
@@ -147,7 +147,7 @@ namespace QGF
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            SocketMain.CloseSocket();
+           
 
             Application.Exit();
         }

@@ -12,23 +12,31 @@ namespace QGF
 {
     public partial class Room : UserControl
     {
-        public Room()
+        public Room(string author, int currentplayer, int maxplayer, string isprivate, string roomname, string roomdesc, string game, int RoomID, string rank)
         {
             InitializeComponent();
-            if(currentplayers == maxplayers)
+            if(rank == "free")
             {
-                join_button.Enabled = false;
+                rankpic.Image = Properties.Resources.free;
+                bunifuLabel2.ForeColor = Color.Gray;
+                bunifuLabel2.Text = "Free";
             }
             else
             {
-                join_button.Enabled = true;
+                rankpic.Image = Properties.Resources.premium;
+                bunifuLabel2.ForeColor = Color.Goldenrod;
+                bunifuLabel2.Text = "Premium";
             }
+            string ispublic = isprivate;
+
+            bunifuLabel1.Text = "Jeu: " + game + "\r\n" + currentplayers.ToString() + "/" + maxplayer.ToString() + " joueurs - " ;
         }
         public static string gameID;
         public static int currentplayers;
         public static int maxplayers;
         public bool isPremium;
-        public bool isPublic;
+        
+        public string isPublic;
 
         private void Room_Load(object sender, EventArgs e)
         {

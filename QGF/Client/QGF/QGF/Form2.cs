@@ -109,15 +109,14 @@ namespace QGF
                 frm.ShowDialog();
                 this.Close();
             }
-
         }
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-      
+            SocketMain sock = new SocketMain();
             new Thread(() =>
             {
-                SocketMain.Connect();
+                sock.Connect();
             }).Start();
             timer3.Stop();
         }

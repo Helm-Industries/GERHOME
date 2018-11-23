@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.ToggleSwitch.ToggleState toggleState7 = new Bunifu.ToggleSwitch.ToggleState();
-            Bunifu.ToggleSwitch.ToggleState toggleState8 = new Bunifu.ToggleSwitch.ToggleState();
-            Bunifu.ToggleSwitch.ToggleState toggleState9 = new Bunifu.ToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.ToggleSwitch.ToggleState toggleState1 = new Bunifu.ToggleSwitch.ToggleState();
+            Bunifu.ToggleSwitch.ToggleState toggleState2 = new Bunifu.ToggleSwitch.ToggleState();
+            Bunifu.ToggleSwitch.ToggleState toggleState3 = new Bunifu.ToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -45,6 +45,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.create_group_panel = new System.Windows.Forms.Panel();
+            this.groupdescription_text = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.label_changer = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.maxplayer_label = new System.Windows.Forms.Label();
+            this.gameid_combobox = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.maxplayer_slider = new Bunifu.Framework.UI.BunifuSlider();
+            this.bunifuToggleSwitch1 = new Bunifu.ToggleSwitch.BunifuToggleSwitch();
+            this.groupname_text = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuTextBox3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuImageButton5 = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -57,21 +69,10 @@
             this.online_label = new System.Windows.Forms.Label();
             this.rank_label = new System.Windows.Forms.Label();
             this.username_label = new System.Windows.Forms.Label();
-            this.create_group_panel = new System.Windows.Forms.Panel();
-            this.label_changer = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.maxplayer_label = new System.Windows.Forms.Label();
-            this.gameid_combobox = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.maxplayer_slider = new Bunifu.Framework.UI.BunifuSlider();
-            this.bunifuToggleSwitch1 = new Bunifu.ToggleSwitch.BunifuToggleSwitch();
-            this.groupname_text = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.groupdescription_text = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.create_group_panel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -193,6 +194,320 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(951, 668);
             this.flowLayoutPanel1.TabIndex = 2;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // create_group_panel
+            // 
+            this.create_group_panel.Controls.Add(this.groupdescription_text);
+            this.create_group_panel.Controls.Add(this.label_changer);
+            this.create_group_panel.Controls.Add(this.bunifuButton1);
+            this.create_group_panel.Controls.Add(this.bunifuButton2);
+            this.create_group_panel.Controls.Add(this.bunifuLabel1);
+            this.create_group_panel.Controls.Add(this.maxplayer_label);
+            this.create_group_panel.Controls.Add(this.gameid_combobox);
+            this.create_group_panel.Controls.Add(this.maxplayer_slider);
+            this.create_group_panel.Controls.Add(this.bunifuToggleSwitch1);
+            this.create_group_panel.Controls.Add(this.groupname_text);
+            this.create_group_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.create_group_panel.Location = new System.Drawing.Point(329, 52);
+            this.create_group_panel.Name = "create_group_panel";
+            this.create_group_panel.Size = new System.Drawing.Size(951, 668);
+            this.create_group_panel.TabIndex = 0;
+            this.create_group_panel.Visible = false;
+            this.create_group_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.create_group_panel_Paint);
+            // 
+            // groupdescription_text
+            // 
+            this.groupdescription_text.AutoCompleteCustomSource.AddRange(new string[] {
+            "edrfq"});
+            this.groupdescription_text.BackColor = System.Drawing.Color.White;
+            this.groupdescription_text.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.groupdescription_text.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupdescription_text.ForeColor = System.Drawing.Color.DimGray;
+            this.groupdescription_text.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.groupdescription_text.Location = new System.Drawing.Point(147, 384);
+            this.groupdescription_text.MaxLength = 240;
+            this.groupdescription_text.Multiline = true;
+            this.groupdescription_text.Name = "groupdescription_text";
+            this.groupdescription_text.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.groupdescription_text.Size = new System.Drawing.Size(649, 190);
+            this.groupdescription_text.TabIndex = 3;
+            this.groupdescription_text.Text = "Description";
+            // 
+            // label_changer
+            // 
+            this.label_changer.AutoEllipsis = false;
+            this.label_changer.CursorType = null;
+            this.label_changer.Font = new System.Drawing.Font("UniSansRegular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_changer.Location = new System.Drawing.Point(188, 333);
+            this.label_changer.Name = "label_changer";
+            this.label_changer.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_changer.Size = new System.Drawing.Size(91, 21);
+            this.label_changer.TabIndex = 20;
+            this.label_changer.Text = "Groupe public";
+            this.label_changer.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.label_changer.Click += new System.EventHandler(this.label_changer_Click);
+            // 
+            // bunifuButton1
+            // 
+            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
+            this.bunifuButton1.ButtonText = "Retour";
+            this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Gray;
+            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton1.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IconPadding = 10;
+            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.bunifuButton1.IdleBorderRadius = 20;
+            this.bunifuButton1.IdleBorderThickness = 0;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.bunifuButton1.IdleIconLeftImage = null;
+            this.bunifuButton1.IdleIconRightImage = null;
+            this.bunifuButton1.Location = new System.Drawing.Point(488, 618);
+            this.bunifuButton1.Name = "bunifuButton1";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            stateProperties1.BorderRadius = 20;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties1;
+            this.bunifuButton1.Size = new System.Drawing.Size(414, 35);
+            this.bunifuButton1.TabIndex = 5;
+            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
+            // 
+            // bunifuButton2
+            // 
+            this.bunifuButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.BackgroundImage")));
+            this.bunifuButton2.ButtonText = "Créer";
+            this.bunifuButton2.ButtonTextMarginLeft = 0;
+            this.bunifuButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton2.DisabledFillColor = System.Drawing.Color.Gray;
+            this.bunifuButton2.DisabledForecolor = System.Drawing.Color.White;
+            this.bunifuButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton2.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton2.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton2.IconPadding = 10;
+            this.bunifuButton2.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton2.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.bunifuButton2.IdleBorderRadius = 20;
+            this.bunifuButton2.IdleBorderThickness = 0;
+            this.bunifuButton2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.bunifuButton2.IdleIconLeftImage = null;
+            this.bunifuButton2.IdleIconRightImage = null;
+            this.bunifuButton2.Location = new System.Drawing.Point(50, 618);
+            this.bunifuButton2.Name = "bunifuButton2";
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(33)))));
+            stateProperties2.BorderRadius = 20;
+            stateProperties2.BorderThickness = 1;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(33)))));
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.bunifuButton2.onHoverState = stateProperties2;
+            this.bunifuButton2.Size = new System.Drawing.Size(414, 35);
+            this.bunifuButton2.TabIndex = 4;
+            this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton2.Click += new System.EventHandler(this.bunifuButton2_Click);
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuLabel1.Font = new System.Drawing.Font("UniSansRegular", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.Location = new System.Drawing.Point(383, 63);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(224, 42);
+            this.bunifuLabel1.TabIndex = 9;
+            this.bunifuLabel1.Text = "Créer ton groupe";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            // 
+            // maxplayer_label
+            // 
+            this.maxplayer_label.AutoSize = true;
+            this.maxplayer_label.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maxplayer_label.Location = new System.Drawing.Point(144, 266);
+            this.maxplayer_label.Name = "maxplayer_label";
+            this.maxplayer_label.Size = new System.Drawing.Size(15, 17);
+            this.maxplayer_label.TabIndex = 8;
+            this.maxplayer_label.Text = "0";
+            this.maxplayer_label.Click += new System.EventHandler(this.slidertext_Click);
+            // 
+            // gameid_combobox
+            // 
+            this.gameid_combobox.BackColor = System.Drawing.SystemColors.Control;
+            this.gameid_combobox.BorderRadius = 0;
+            this.gameid_combobox.Color = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.gameid_combobox.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.gameid_combobox.DisabledColor = System.Drawing.Color.Gray;
+            this.gameid_combobox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gameid_combobox.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.gameid_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gameid_combobox.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.gameid_combobox.FillDropDown = false;
+            this.gameid_combobox.FillIndicator = true;
+            this.gameid_combobox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gameid_combobox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameid_combobox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.gameid_combobox.FormattingEnabled = true;
+            this.gameid_combobox.Icon = null;
+            this.gameid_combobox.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.gameid_combobox.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.gameid_combobox.ItemBackColor = System.Drawing.Color.White;
+            this.gameid_combobox.ItemBorderColor = System.Drawing.Color.White;
+            this.gameid_combobox.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.gameid_combobox.ItemHeight = 26;
+            this.gameid_combobox.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(220)))), ((int)(((byte)(233)))));
+            this.gameid_combobox.Items.AddRange(new object[] {
+            "ARMA 3",
+            "BATTLEFIELD 4",
+            "BATTLEFIELD 5",
+            "BLACK OPS 2",
+            "BLACK OPS 3",
+            "BLACK OPS 4",
+            "BUSINESS TOUR ",
+            "COUNTER STRIKE GLOBAL OFFENSIVE",
+            "DESTINY 2 ",
+            "DIABLO",
+            "DOOM",
+            "FALLOUT 4",
+            "FIFA 18",
+            "FIFA 19",
+            "FORTNITE",
+            "GARRY\'S MOD ",
+            "GRAND THEFT AUTO 5",
+            "LEAGUE OF LEGEND",
+            "MINECRAFT",
+            "NBA 2K18",
+            "OVERWATCH ",
+            "PAYDAY 2",
+            "PLAYER UNKNOWN\'S BATLLEGROUNDS ",
+            "RED DEAD REDEMPTION 2",
+            "ROCKET LEAGUE",
+            "SPEEDRUNNERS",
+            "THE CREW 2",
+            "TOM CLANCY\'S RAINBOW SIX SIEGE ",
+            "WORLD OF WARCRAFT"});
+            this.gameid_combobox.Location = new System.Drawing.Point(147, 224);
+            this.gameid_combobox.MaxDropDownItems = 100;
+            this.gameid_combobox.Name = "gameid_combobox";
+            this.gameid_combobox.Size = new System.Drawing.Size(649, 32);
+            this.gameid_combobox.TabIndex = 2;
+            this.gameid_combobox.Text = "Jeu";
+            this.gameid_combobox.SelectedIndexChanged += new System.EventHandler(this.combobox_game_SelectedIndexChanged);
+            // 
+            // maxplayer_slider
+            // 
+            this.maxplayer_slider.BackColor = System.Drawing.Color.Transparent;
+            this.maxplayer_slider.BackgroudColor = System.Drawing.Color.DarkGray;
+            this.maxplayer_slider.BorderRadius = 5;
+            this.maxplayer_slider.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.maxplayer_slider.Location = new System.Drawing.Point(147, 286);
+            this.maxplayer_slider.MaximumValue = 5;
+            this.maxplayer_slider.Name = "maxplayer_slider";
+            this.maxplayer_slider.Size = new System.Drawing.Size(649, 30);
+            this.maxplayer_slider.TabIndex = 0;
+            this.maxplayer_slider.TabStop = false;
+            this.maxplayer_slider.Value = 0;
+            this.maxplayer_slider.ValueChanged += new System.EventHandler(this.bunifuSlider1_ValueChanged);
+            // 
+            // bunifuToggleSwitch1
+            // 
+            this.bunifuToggleSwitch1.Animation = 5;
+            this.bunifuToggleSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuToggleSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuToggleSwitch1.BackgroundImage")));
+            this.bunifuToggleSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuToggleSwitch1.Location = new System.Drawing.Point(147, 334);
+            this.bunifuToggleSwitch1.Name = "bunifuToggleSwitch1";
+            this.bunifuToggleSwitch1.Size = new System.Drawing.Size(35, 20);
+            this.bunifuToggleSwitch1.TabIndex = 4;
+            this.bunifuToggleSwitch1.TabStop = false;
+            toggleState1.BackColor = System.Drawing.Color.Empty;
+            toggleState1.BackColorInner = System.Drawing.Color.Empty;
+            toggleState1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            toggleState1.BorderColorInner = System.Drawing.Color.Empty;
+            toggleState1.BorderRadius = 1;
+            toggleState1.BorderRadiusInner = 1;
+            toggleState1.BorderThickness = 1;
+            toggleState1.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateDisabled = toggleState1;
+            toggleState2.BackColor = System.Drawing.Color.DarkGray;
+            toggleState2.BackColorInner = System.Drawing.Color.White;
+            toggleState2.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState2.BorderColorInner = System.Drawing.Color.White;
+            toggleState2.BorderRadius = 17;
+            toggleState2.BorderRadiusInner = 15;
+            toggleState2.BorderThickness = 1;
+            toggleState2.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateOff = toggleState2;
+            toggleState3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            toggleState3.BackColorInner = System.Drawing.Color.White;
+            toggleState3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            toggleState3.BorderColorInner = System.Drawing.Color.White;
+            toggleState3.BorderRadius = 17;
+            toggleState3.BorderRadiusInner = 15;
+            toggleState3.BorderThickness = 1;
+            toggleState3.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateOn = toggleState3;
+            this.bunifuToggleSwitch1.Value = false;
+            this.bunifuToggleSwitch1.OnValuechange += new System.EventHandler(this.bunifuToggleSwitch1_OnValuechange);
+            // 
+            // groupname_text
+            // 
+            this.groupname_text.AcceptsReturn = false;
+            this.groupname_text.AcceptsTab = false;
+            this.groupname_text.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.groupname_text.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.groupname_text.BackColor = System.Drawing.SystemColors.Control;
+            this.groupname_text.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupname_text.BackgroundImage")));
+            this.groupname_text.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
+            this.groupname_text.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.groupname_text.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(101)))), ((int)(((byte)(141)))));
+            this.groupname_text.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.groupname_text.BorderRadius = 35;
+            this.groupname_text.BorderThickness = 2;
+            this.groupname_text.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.groupname_text.DefaultFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupname_text.DefaultText = "";
+            this.groupname_text.FillColor = System.Drawing.SystemColors.Control;
+            this.groupname_text.HideSelection = true;
+            this.groupname_text.IconLeft = ((System.Drawing.Image)(resources.GetObject("groupname_text.IconLeft")));
+            this.groupname_text.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.groupname_text.IconPadding = 10;
+            this.groupname_text.IconRight = null;
+            this.groupname_text.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.groupname_text.Location = new System.Drawing.Point(147, 155);
+            this.groupname_text.MaxLength = 32767;
+            this.groupname_text.MinimumSize = new System.Drawing.Size(100, 35);
+            this.groupname_text.Modified = false;
+            this.groupname_text.Name = "groupname_text";
+            this.groupname_text.PasswordChar = '\0';
+            this.groupname_text.ReadOnly = false;
+            this.groupname_text.SelectedText = "";
+            this.groupname_text.SelectionLength = 0;
+            this.groupname_text.SelectionStart = 0;
+            this.groupname_text.ShortcutsEnabled = true;
+            this.groupname_text.Size = new System.Drawing.Size(649, 42);
+            this.groupname_text.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.groupname_text.TabIndex = 1;
+            this.groupname_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.groupname_text.TextMarginLeft = 5;
+            this.groupname_text.TextPlaceholder = "Nom du groupe";
+            this.groupname_text.UseSystemPasswordChar = false;
+            this.groupname_text.TextChange += new System.EventHandler(this.username_text_TextChange);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panel2
             // 
@@ -393,13 +708,13 @@
             this.disconect_button.IdleIconRightImage = null;
             this.disconect_button.Location = new System.Drawing.Point(60, 598);
             this.disconect_button.Name = "disconect_button";
-            stateProperties11.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties11.BorderRadius = 30;
-            stateProperties11.BorderThickness = 1;
-            stateProperties11.FillColor = System.Drawing.Color.DarkGray;
-            stateProperties11.IconLeftImage = null;
-            stateProperties11.IconRightImage = null;
-            this.disconect_button.onHoverState = stateProperties11;
+            stateProperties3.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties3.BorderRadius = 30;
+            stateProperties3.BorderThickness = 1;
+            stateProperties3.FillColor = System.Drawing.Color.DarkGray;
+            stateProperties3.IconLeftImage = null;
+            stateProperties3.IconRightImage = null;
+            this.disconect_button.onHoverState = stateProperties3;
             this.disconect_button.Size = new System.Drawing.Size(210, 35);
             this.disconect_button.TabIndex = 3;
             this.disconect_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -428,13 +743,13 @@
             this.creategroup_button.IdleIconRightImage = null;
             this.creategroup_button.Location = new System.Drawing.Point(60, 347);
             this.creategroup_button.Name = "creategroup_button";
-            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties12.BorderRadius = 34;
-            stateProperties12.BorderThickness = 1;
-            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties12.IconLeftImage = null;
-            stateProperties12.IconRightImage = null;
-            this.creategroup_button.onHoverState = stateProperties12;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties4.BorderRadius = 34;
+            stateProperties4.BorderThickness = 1;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties4.IconLeftImage = null;
+            stateProperties4.IconRightImage = null;
+            this.creategroup_button.onHoverState = stateProperties4;
             this.creategroup_button.Size = new System.Drawing.Size(210, 35);
             this.creategroup_button.TabIndex = 2;
             this.creategroup_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -497,296 +812,6 @@
             this.username_label.Text = "Username";
             this.username_label.Click += new System.EventHandler(this.username_label_Click);
             // 
-            // create_group_panel
-            // 
-            this.create_group_panel.Controls.Add(this.groupdescription_text);
-            this.create_group_panel.Controls.Add(this.label_changer);
-            this.create_group_panel.Controls.Add(this.bunifuButton1);
-            this.create_group_panel.Controls.Add(this.bunifuButton2);
-            this.create_group_panel.Controls.Add(this.bunifuLabel1);
-            this.create_group_panel.Controls.Add(this.maxplayer_label);
-            this.create_group_panel.Controls.Add(this.gameid_combobox);
-            this.create_group_panel.Controls.Add(this.maxplayer_slider);
-            this.create_group_panel.Controls.Add(this.bunifuToggleSwitch1);
-            this.create_group_panel.Controls.Add(this.groupname_text);
-            this.create_group_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.create_group_panel.Location = new System.Drawing.Point(329, 52);
-            this.create_group_panel.Name = "create_group_panel";
-            this.create_group_panel.Size = new System.Drawing.Size(951, 668);
-            this.create_group_panel.TabIndex = 0;
-            this.create_group_panel.Visible = false;
-            this.create_group_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.create_group_panel_Paint);
-            // 
-            // label_changer
-            // 
-            this.label_changer.AutoEllipsis = false;
-            this.label_changer.CursorType = null;
-            this.label_changer.Font = new System.Drawing.Font("UniSansRegular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_changer.Location = new System.Drawing.Point(188, 333);
-            this.label_changer.Name = "label_changer";
-            this.label_changer.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label_changer.Size = new System.Drawing.Size(91, 21);
-            this.label_changer.TabIndex = 20;
-            this.label_changer.Text = "Groupe public";
-            this.label_changer.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.label_changer.Click += new System.EventHandler(this.label_changer_Click);
-            // 
-            // bunifuButton1
-            // 
-            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
-            this.bunifuButton1.ButtonText = "Retour";
-            this.bunifuButton1.ButtonTextMarginLeft = 0;
-            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.Gray;
-            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.White;
-            this.bunifuButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IconPadding = 10;
-            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            this.bunifuButton1.IdleBorderRadius = 20;
-            this.bunifuButton1.IdleBorderThickness = 0;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            this.bunifuButton1.IdleIconLeftImage = null;
-            this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.Location = new System.Drawing.Point(488, 618);
-            this.bunifuButton1.Name = "bunifuButton1";
-            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
-            stateProperties9.BorderRadius = 20;
-            stateProperties9.BorderThickness = 1;
-            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
-            stateProperties9.IconLeftImage = null;
-            stateProperties9.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties9;
-            this.bunifuButton1.Size = new System.Drawing.Size(414, 35);
-            this.bunifuButton1.TabIndex = 5;
-            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
-            // 
-            // bunifuButton2
-            // 
-            this.bunifuButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.BackgroundImage")));
-            this.bunifuButton2.ButtonText = "Créer";
-            this.bunifuButton2.ButtonTextMarginLeft = 0;
-            this.bunifuButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton2.DisabledFillColor = System.Drawing.Color.Gray;
-            this.bunifuButton2.DisabledForecolor = System.Drawing.Color.White;
-            this.bunifuButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuButton2.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton2.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton2.IconPadding = 10;
-            this.bunifuButton2.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton2.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.bunifuButton2.IdleBorderRadius = 20;
-            this.bunifuButton2.IdleBorderThickness = 0;
-            this.bunifuButton2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.bunifuButton2.IdleIconLeftImage = null;
-            this.bunifuButton2.IdleIconRightImage = null;
-            this.bunifuButton2.Location = new System.Drawing.Point(50, 618);
-            this.bunifuButton2.Name = "bunifuButton2";
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(33)))));
-            stateProperties10.BorderRadius = 20;
-            stateProperties10.BorderThickness = 1;
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(33)))));
-            stateProperties10.IconLeftImage = null;
-            stateProperties10.IconRightImage = null;
-            this.bunifuButton2.onHoverState = stateProperties10;
-            this.bunifuButton2.Size = new System.Drawing.Size(414, 35);
-            this.bunifuButton2.TabIndex = 4;
-            this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton2.Click += new System.EventHandler(this.bunifuButton2_Click);
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("UniSansRegular", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(383, 63);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(224, 42);
-            this.bunifuLabel1.TabIndex = 9;
-            this.bunifuLabel1.Text = "Créer ton groupe";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            // 
-            // maxplayer_label
-            // 
-            this.maxplayer_label.AutoSize = true;
-            this.maxplayer_label.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maxplayer_label.Location = new System.Drawing.Point(144, 266);
-            this.maxplayer_label.Name = "maxplayer_label";
-            this.maxplayer_label.Size = new System.Drawing.Size(15, 17);
-            this.maxplayer_label.TabIndex = 8;
-            this.maxplayer_label.Text = "0";
-            this.maxplayer_label.Click += new System.EventHandler(this.slidertext_Click);
-            // 
-            // gameid_combobox
-            // 
-            this.gameid_combobox.BackColor = System.Drawing.SystemColors.Control;
-            this.gameid_combobox.BorderRadius = 0;
-            this.gameid_combobox.Color = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            this.gameid_combobox.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.gameid_combobox.DisabledColor = System.Drawing.Color.Gray;
-            this.gameid_combobox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gameid_combobox.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
-            this.gameid_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gameid_combobox.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.gameid_combobox.FillDropDown = false;
-            this.gameid_combobox.FillIndicator = true;
-            this.gameid_combobox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gameid_combobox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameid_combobox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            this.gameid_combobox.FormattingEnabled = true;
-            this.gameid_combobox.Icon = null;
-            this.gameid_combobox.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            this.gameid_combobox.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.gameid_combobox.ItemBackColor = System.Drawing.Color.White;
-            this.gameid_combobox.ItemBorderColor = System.Drawing.Color.White;
-            this.gameid_combobox.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.gameid_combobox.ItemHeight = 26;
-            this.gameid_combobox.ItemHighLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(220)))), ((int)(((byte)(233)))));
-            this.gameid_combobox.Items.AddRange(new object[] {
-            "Counter Strike Global Offensive",
-            "Fortnite: Battle Royale",
-            "Grand Theft Auto V",
-            "League Of Legends",
-            "Minecraft",
-            "Overwatch",
-            "PlayerUnknown\'s Battlegrounds",
-            "Roblox",
-            "Rocket League",
-            "Tom Clancy\'s Rainbow Six Siege"});
-            this.gameid_combobox.Location = new System.Drawing.Point(147, 224);
-            this.gameid_combobox.MaxDropDownItems = 100;
-            this.gameid_combobox.Name = "gameid_combobox";
-            this.gameid_combobox.Size = new System.Drawing.Size(649, 32);
-            this.gameid_combobox.TabIndex = 2;
-            this.gameid_combobox.Text = "Jeu";
-            this.gameid_combobox.SelectedIndexChanged += new System.EventHandler(this.combobox_game_SelectedIndexChanged);
-            // 
-            // maxplayer_slider
-            // 
-            this.maxplayer_slider.BackColor = System.Drawing.Color.Transparent;
-            this.maxplayer_slider.BackgroudColor = System.Drawing.Color.DarkGray;
-            this.maxplayer_slider.BorderRadius = 5;
-            this.maxplayer_slider.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.maxplayer_slider.Location = new System.Drawing.Point(147, 286);
-            this.maxplayer_slider.MaximumValue = 5;
-            this.maxplayer_slider.Name = "maxplayer_slider";
-            this.maxplayer_slider.Size = new System.Drawing.Size(649, 30);
-            this.maxplayer_slider.TabIndex = 0;
-            this.maxplayer_slider.TabStop = false;
-            this.maxplayer_slider.Value = 0;
-            this.maxplayer_slider.ValueChanged += new System.EventHandler(this.bunifuSlider1_ValueChanged);
-            // 
-            // bunifuToggleSwitch1
-            // 
-            this.bunifuToggleSwitch1.Animation = 5;
-            this.bunifuToggleSwitch1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuToggleSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuToggleSwitch1.BackgroundImage")));
-            this.bunifuToggleSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuToggleSwitch1.Location = new System.Drawing.Point(147, 334);
-            this.bunifuToggleSwitch1.Name = "bunifuToggleSwitch1";
-            this.bunifuToggleSwitch1.Size = new System.Drawing.Size(35, 20);
-            this.bunifuToggleSwitch1.TabIndex = 4;
-            this.bunifuToggleSwitch1.TabStop = false;
-            toggleState7.BackColor = System.Drawing.Color.Empty;
-            toggleState7.BackColorInner = System.Drawing.Color.Empty;
-            toggleState7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            toggleState7.BorderColorInner = System.Drawing.Color.Empty;
-            toggleState7.BorderRadius = 1;
-            toggleState7.BorderRadiusInner = 1;
-            toggleState7.BorderThickness = 1;
-            toggleState7.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateDisabled = toggleState7;
-            toggleState8.BackColor = System.Drawing.Color.DarkGray;
-            toggleState8.BackColorInner = System.Drawing.Color.White;
-            toggleState8.BorderColor = System.Drawing.Color.DarkGray;
-            toggleState8.BorderColorInner = System.Drawing.Color.White;
-            toggleState8.BorderRadius = 17;
-            toggleState8.BorderRadiusInner = 15;
-            toggleState8.BorderThickness = 1;
-            toggleState8.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateOff = toggleState8;
-            toggleState9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            toggleState9.BackColorInner = System.Drawing.Color.White;
-            toggleState9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            toggleState9.BorderColorInner = System.Drawing.Color.White;
-            toggleState9.BorderRadius = 17;
-            toggleState9.BorderRadiusInner = 15;
-            toggleState9.BorderThickness = 1;
-            toggleState9.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateOn = toggleState9;
-            this.bunifuToggleSwitch1.Value = false;
-            this.bunifuToggleSwitch1.OnValuechange += new System.EventHandler(this.bunifuToggleSwitch1_OnValuechange);
-            // 
-            // groupname_text
-            // 
-            this.groupname_text.AcceptsReturn = false;
-            this.groupname_text.AcceptsTab = false;
-            this.groupname_text.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.groupname_text.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.groupname_text.BackColor = System.Drawing.SystemColors.Control;
-            this.groupname_text.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupname_text.BackgroundImage")));
-            this.groupname_text.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(58)))));
-            this.groupname_text.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.groupname_text.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(101)))), ((int)(((byte)(141)))));
-            this.groupname_text.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.groupname_text.BorderRadius = 35;
-            this.groupname_text.BorderThickness = 2;
-            this.groupname_text.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.groupname_text.DefaultFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupname_text.DefaultText = "";
-            this.groupname_text.FillColor = System.Drawing.SystemColors.Control;
-            this.groupname_text.HideSelection = true;
-            this.groupname_text.IconLeft = ((System.Drawing.Image)(resources.GetObject("groupname_text.IconLeft")));
-            this.groupname_text.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.groupname_text.IconPadding = 10;
-            this.groupname_text.IconRight = null;
-            this.groupname_text.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.groupname_text.Location = new System.Drawing.Point(147, 155);
-            this.groupname_text.MaxLength = 32767;
-            this.groupname_text.MinimumSize = new System.Drawing.Size(100, 35);
-            this.groupname_text.Modified = false;
-            this.groupname_text.Name = "groupname_text";
-            this.groupname_text.PasswordChar = '\0';
-            this.groupname_text.ReadOnly = false;
-            this.groupname_text.SelectedText = "";
-            this.groupname_text.SelectionLength = 0;
-            this.groupname_text.SelectionStart = 0;
-            this.groupname_text.ShortcutsEnabled = true;
-            this.groupname_text.Size = new System.Drawing.Size(649, 42);
-            this.groupname_text.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.groupname_text.TabIndex = 1;
-            this.groupname_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.groupname_text.TextMarginLeft = 5;
-            this.groupname_text.TextPlaceholder = "Nom du groupe";
-            this.groupname_text.UseSystemPasswordChar = false;
-            this.groupname_text.TextChange += new System.EventHandler(this.username_text_TextChange);
-            // 
-            // groupdescription_text
-            // 
-            this.groupdescription_text.AutoCompleteCustomSource.AddRange(new string[] {
-            "edrfq"});
-            this.groupdescription_text.BackColor = System.Drawing.Color.White;
-            this.groupdescription_text.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            this.groupdescription_text.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupdescription_text.ForeColor = System.Drawing.Color.DimGray;
-            this.groupdescription_text.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.groupdescription_text.Location = new System.Drawing.Point(147, 384);
-            this.groupdescription_text.MaxLength = 240;
-            this.groupdescription_text.Multiline = true;
-            this.groupdescription_text.Name = "groupdescription_text";
-            this.groupdescription_text.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.groupdescription_text.Size = new System.Drawing.Size(649, 190);
-            this.groupdescription_text.TabIndex = 3;
-            this.groupdescription_text.Text = "Description";
-            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -804,10 +829,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.create_group_panel.ResumeLayout(false);
             this.create_group_panel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -827,7 +852,6 @@
         private System.Windows.Forms.Label uprank_label;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton disconect_button;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton creategroup_button;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton2;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton3;
@@ -845,5 +869,7 @@
         private Bunifu.UI.WinForms.BunifuLabel label_changer;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox3;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox groupdescription_text;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

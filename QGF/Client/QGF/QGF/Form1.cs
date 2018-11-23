@@ -28,6 +28,7 @@ namespace QGF
                 return cp;
             }
         }
+        
         public void GetData()
         {
             if(Properties.Settings.Default.check == true)
@@ -45,11 +46,12 @@ namespace QGF
             InitializeComponent();
             GetData();
             panel1.Select();
+            timer1.Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -74,23 +76,6 @@ namespace QGF
                 byte[] bmsg = Encoding.ASCII.GetBytes(msg);
                 Me.username = username_text.Text;
                 SocketMain.SendData(bmsg, SocketMain.ns);
-                while (true)
-                {
-                    try
-                    {
-
-                        if (SocketMain.data.Contains("authsuccess"))
-                        {
-                            this.Hide();
-                            this.Close();
-                        }
-                    }
-                    catch
-                    {
-
-                    }
-                }
-                
             }
         }
 
@@ -140,9 +125,17 @@ namespace QGF
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            SocketMain.CloseSocket();
-
             Application.Exit();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(SocketMain.todo == "destroy")
+            {
+                this.Hide();
+                this.Close();
+            }
+            
         }
     }
 }
