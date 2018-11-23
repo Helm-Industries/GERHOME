@@ -260,6 +260,96 @@
   <ItemGroup>
     <None Include="Resources\premium.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO ARMA 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO BATTLEFIELD4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO BO2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO BO3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO BUSINESS TOUR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO CSGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO DESTINY 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO DOOM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO FALLOUT 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO FIFA18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO FIFA19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO FORTNITE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO GMOD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO GTA5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO LEAGUE OF LEGEND.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO MANQUANT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO MINECRAFT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO NBA 2K18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO OVERWTACH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO PAYDAY2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO PUBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO RAINBOW6SIEGE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO RDR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO ROCKET LEAUGE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO SPEED RUNNERS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO THE CREW2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO BATTLEFIELD5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO WORLD OF WARCRAFT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO BO4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO DIABLO.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\ILRepack.MSBuild.Task.1.0.9\build\ILRepack.MSBuild.Task.targets" Condition="Exists('..\packages\ILRepack.MSBuild.Task.1.0.9\build\ILRepack.MSBuild.Task.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

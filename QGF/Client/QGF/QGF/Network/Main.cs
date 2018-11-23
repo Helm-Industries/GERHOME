@@ -98,8 +98,8 @@ namespace QGF.Network
 
                         else if (data.Contains("disconnectsuccess"))
                         {
-
-                            Application.Exit();
+                            break;
+                            
                         }
                         else if (data.Contains("regsuccess"))
                         {
@@ -210,7 +210,9 @@ namespace QGF.Network
                             MessageBox.Show("Message inconnu: " + data);
                         }
                     }
+                    Application.Exit();
                 }
+              
             }
 
         }

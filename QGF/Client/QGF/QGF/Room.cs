@@ -28,8 +28,106 @@ namespace QGF
                 bunifuLabel2.Text = "Premium";
             }
             string ispublic = isprivate;
+            if(isprivate == "public")
+            {
+                ispublic = "Public";
+            }
+            else
+            {
+                ispublic = "Privé";
+            }
+            bunifuLabel1.Text = "Jeu: " + game + "\r\n" + currentplayers.ToString() + "/" + maxplayer.ToString() + " joueurs - " + ispublic ;
+            switch (game)
+            {
+                case "ARMA 3":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_ARMA_3;
+                    break;
+                case "BATTLEFIELD 4":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_BATTLEFIELD4;
+                    break;
+                case "BATTLEFIELD 5":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_BATTLEFIELD5;
+                    break;
+                case "BLACK OPS 2":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_BO2;
+                    break;
+                case "BLACK OPS 3":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_BO3;
+                    break;
+                case "BLACK OPS 4":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_BO4;
+                    break;
+                case "BUSINESS TOUR": // business tour
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_BUSINESS_TOUR;
+                    break;
+                case "COUNTER STRIKE: GLOBAL OFFENSIVE": // CSGO
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_CSGO;
+                    break;
+                case "DESTINY 2": // DESTINY 2
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_DESTINY_2;
+                    break;
+                case "DIABLO 3": // Diablo 3
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_DIABLO;
+                    break;
+                case "DOOM": // DOOM
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_DOOM;
+                    break;
+                case "FALLOUT4":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_FALLOUT_4;
+                    break;
+                case "FIFA 18":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_FIFA18;
+                    break;
+                case "FIFA 19":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_FIFA19;
+                    break;
+                case "FORTNITE":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_FORTNITE;
+                    break;
+                case "GARRY'S MOD":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_GMOD;
+                    break;
+                case "GRAND THEFT AUTO 5":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_GTA5;
+                    break;
+                case "LEAGUE OF LEGEND":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_LEAGUE_OF_LEGEND;
+                    break;
+                case "MINECRAFT":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_MINECRAFT;
+                    break;
+                case "NBA 2K18":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_NBA_2K18;
+                    break;
+                case "OVERWATCH":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_OVERWTACH;
+                    break;
+                case "PAYDAY 2":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_PAYDAY2;
+                    break;
+                case "PLAYER UNKNOWN'S BATLLEGROUNDS":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_PUBG;
+                    break;
+                case "RED DEAD REDEMPTION 2":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_RDR2;
+                    break;
+                case "ROCKET LEAGUE":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_ROCKET_LEAUGE;
+                    break;
+                case "SPEEDRUNNERS":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_SPEED_RUNNERS;
+                    break;
+                case "THE CREW 2":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_THE_CREW2;
+                    break;
+                case "TOM CLANCY'S RAINBOW SIX SIEGE":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_RAINBOW6SIEGE;
+                    break;
+                case "WORLD OF WARCRAFT":
+                    bunifuPictureBox1.Image = Properties.Resources.LOGO_WORLD_OF_WARCRAFT;
+                    break;
+            }
 
-            bunifuLabel1.Text = "Jeu: " + game + "\r\n" + currentplayers.ToString() + "/" + maxplayer.ToString() + " joueurs - " ;
         }
         public static string gameID;
         public static int currentplayers;

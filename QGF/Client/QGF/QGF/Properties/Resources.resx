@@ -118,19 +118,109 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LOGO NBA 2K18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO NBA 2K18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO BO4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO BO4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO FIFA18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO FIFA18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO THE CREW2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO THE CREW2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO GMOD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO GMOD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO BO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO BO2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO ARMA 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO ARMA 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO CSGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO CSGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO DOOM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO DOOM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO BUSINESS TOUR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO BUSINESS TOUR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO WORLD OF WARCRAFT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO WORLD OF WARCRAFT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="erreur" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\erreur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LOGO RAINBOW6SIEGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO RAINBOW6SIEGE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Plan_de_travail_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Plan_de_travail_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="free" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\free.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LOGO DESTINY 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO DESTINY 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO FIFA19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO FIFA19.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO BATTLEFIELD4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO BATTLEFIELD4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO FORTNITE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO FORTNITE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="premium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\premium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO PUBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO PUBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO MINECRAFT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO MINECRAFT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO LEAGUE OF LEGEND" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO LEAGUE OF LEGEND.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO RDR2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO RDR2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO OVERWTACH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO OVERWTACH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO GTA5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO GTA5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="erreur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\erreur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO PAYDAY2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO PAYDAY2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO MANQUANT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO MANQUANT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO BATTLEFIELD5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO BATTLEFIELD5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO BO3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO BO3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO ROCKET LEAUGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO ROCKET LEAUGE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO SPEED RUNNERS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO SPEED RUNNERS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO FALLOUT 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO FALLOUT 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO DIABLO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO DIABLO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

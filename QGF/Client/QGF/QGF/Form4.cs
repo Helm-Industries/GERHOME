@@ -45,10 +45,7 @@ namespace QGF
             rank_label.Text = Me.rank;
             timer1.Start();
 
-            //bunifuVScrollBar1.Maximum = flowLayoutPanel1.VerticalScroll.Maximum;
 
-
-            //bunifuVScrollBar1.ThumbLength = 40;
             // Create();
         }
         int GroupCount = Group.g.Count();
@@ -321,6 +318,9 @@ namespace QGF
             Handler();
         }
 
-
+        private void bunifuVScrollBar1_Scroll(object sender, Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs e)
+        {
+            flowLayoutPanel1.AutoScrollPosition = new Point(flowLayoutPanel1.AutoScrollPosition.X, e.Value);
+        }
     }
 }
