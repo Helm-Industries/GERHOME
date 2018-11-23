@@ -63,3 +63,7 @@ D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\bin\Debug\QGF.e
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\bin\Debug\QGF.application
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.exe.manifest
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.application
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\QGF.exe.manifest
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\QGF.application
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.exe.manifest
+F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.application
