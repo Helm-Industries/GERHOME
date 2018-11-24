@@ -50,7 +50,29 @@ namespace QGF
         }
         int GroupCount = Group.g.Count();
         public void Handler()
-        {         
+        {
+            online_label.Text = "Joueurs en ligne : " + SocketMain.onlineplayers.ToString();
+            created_label.Text = "Groupes créés : " + SocketMain.onlinegroups.ToString();
+            //if(flowLayoutPanel1.Controls.Count > Group.g.Count())
+            //{
+            //    flowLayoutPanel1.Controls.Clear();
+            //    foreach (Group group in Group.g)
+            //    {
+            //        if (group.ranks == "premium")
+            //        {
+            //            Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomID, group.ranks);
+            //            flowLayoutPanel1.Controls.Add(room);
+            //        }
+            //    }
+            //    foreach (Group group in Group.g)
+            //    {
+            //        if (group.ranks == "free")
+            //        {
+            //            Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomID, group.ranks);
+            //            flowLayoutPanel1.Controls.Add(room);
+            //        }
+            //    }
+            //}
             if(GroupCount != Group.g.Count())
             {
                 
@@ -72,8 +94,10 @@ namespace QGF
                     }
                 }
                 GroupCount = Group.g.Count();
+                
             }
         }
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             
@@ -138,7 +162,10 @@ namespace QGF
 
         private void disconect_button_Click(object sender, EventArgs e)
         {
-
+            byte[] b = Encoding.ASCII.GetBytes("DisconnectRequest");
+            SocketMain.SendData(b, SocketMain.ns);
+            Application.Exit();
+         
         }
 
         private void Form4_Load(object sender, EventArgs e)
@@ -250,66 +277,56 @@ namespace QGF
             string gameID = Game.GetIDByGame(gameid_combobox.Text);
             int maxplayers = maxplayer_slider.Value;
             bool ispublic = bunifuToggleSwitch1.Value;
-            if(bunifuToggleSwitch1.Value == false)
+            if(groupname == "" || groupname.Length < 4)
             {
-                ispublic = true;
+                MessageBox.Show("Nom de groupe trop court (4 charactères minimum)");
             }
             else
             {
-                ispublic = false;
-            }
-            string groupdesc = groupdescription_text.Text;
-            string ispb = "";
-            if(ispublic == true)
-            {
-                ispb = "public";
-            }
-            else
-            {
-                ispb = "private";
-            }
-            if (gameID != "")
-            {
-                string msg = "CreateGroupRequest|" + Me.username + "|" + "1" + "|" + maxplayers.ToString() + "|" + ispb + "|" + gameID + "|" + groupname + "|" + groupdesc;
-                SocketMain.SendData(Encoding.ASCII.GetBytes(msg), SocketMain.ns);
-            }
-            else
-            {
-                MessageBox.Show("Impossible de créer un groupe pour ce jeu, merci de contacter un administrateur");
-            }
-            this.Hide();
-            Form4 frm = new Form4();
-            foreach (Group group in Group.g)
-            {
-                if (group.ranks == "premium")
+                if (bunifuToggleSwitch1.Value == false)
                 {
-                    Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomID, group.ranks);
-                    frm.flowLayoutPanel1.Controls.Add(room);
+                    ispublic = true;
                 }
-            }
-            foreach (Group group in Group.g)
-            {
-                if (group.ranks == "free")
+                else
                 {
-                    Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomID, group.ranks);
-                    frm.flowLayoutPanel1.Controls.Add(room);
+                    ispublic = false;
                 }
-            }
-            frm.ShowDialog();
+                string groupdesc = groupdescription_text.Text;
+                string ispb = "";
+                if (ispublic == true)
+                {
+                    ispb = "public";
+                }
+                else
+                {
+                    ispb = "private";
+                }
+                if (gameID != "")
+                {
+                    Group.g.Clear();
+                    if (maxplayers < 2)
+                    {
 
-            this.Close();
+                        MessageBox.Show("Le nombre de places minimal est de 2 joueurs");
+                    }
+                    if (maxplayers >= 2)
+                    {
+                        string msg = "CreateGroupRequest|" + Me.username + "|" + "1" + "|" + maxplayers.ToString() + "|" + ispb + "|" + gameID + "|" + groupname + "|" + groupdesc;
+                        SocketMain.SendData(Encoding.ASCII.GetBytes(msg), SocketMain.ns);
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Impossible de créer un groupe pour ce jeu, merci de contacter un administrateur");
+                }
+
+            }
+
+
+        }
 
         private void bunifuTextBox2_TextChange(object sender, EventArgs e)
         {
-
-        }
-        public static void CreateGroup(string author, int currentplayer, int maxplayer, string ispublic, string roomname, string roomdesc, string game)
-        {
-         MessageBox.Show("groupe créé");
-            //   MessageBox.Show(author + "|" + currentplayer.ToString() + "|" + maxplayer.ToString() + "|" + ispublic.ToString() + "|" + roomname + "|" + roomdesc + "|" + game);
-      
-            
 
         }
 
@@ -321,6 +338,35 @@ namespace QGF
         private void bunifuVScrollBar1_Scroll(object sender, Bunifu.UI.WinForms.BunifuVScrollBar.ScrollEventArgs e)
         {
             flowLayoutPanel1.AutoScrollPosition = new Point(flowLayoutPanel1.AutoScrollPosition.X, e.Value);
+        }
+
+        private void bunifuTextBox3_TextChange(object sender, EventArgs e)
+        {
+         
+            flowLayoutPanel1.Controls.Clear();
+            foreach(Group g in Group.g)
+            {
+                if (g.gameID.Contains(bunifuTextBox3.Text) && g.ranks == "premium") 
+                {              
+                            Room room = new Room(g.author, g.playercounter, g.desiredplayers, g._public, g.roomname, g.roomdescription, g.gameID, g.roomID, g.ranks);
+                            flowLayoutPanel1.Controls.Add(room);                     
+                }
+                if (g.ranks == "free" && g.gameID.Contains(bunifuTextBox3.Text))
+                {
+                    Room room = new Room(g.author, g.playercounter, g.desiredplayers, g._public, g.roomname, g.roomdescription, g.gameID, g.roomID, g.ranks);
+                    flowLayoutPanel1.Controls.Add(room);
+                }
+            }
+
+            foreach (Group group in Group.g)
+            {
+
+            }
+        }
+
+        private void bunifuImageButton6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -24,7 +24,8 @@ namespace QGF.Network
         public static int loadingstate = 0;
         public static bool connected = false;
         public static string todo = "keep";
-    
+        public static int onlineplayers;
+        public static int onlinegroups;
 
         public  void Connect()
             
@@ -83,19 +84,24 @@ namespace QGF.Network
                     {
 
                         string data = Encoding.ASCII.GetString(receivedBytes, 0, byte_count);
-                        
 
+                 
                         if (data.Contains("notif"))
                         {
                             string[] splitter = data.Split('|');
                             MessageBox.Show(splitter[1]);
                         }
 
-                        if (data.Contains("quit") || data.Contains("quitall"))
+                        else if (data.Contains("quit") || data.Contains("quitall"))
                         {
                             Application.Exit();
                         }
-
+                        else if (data.Contains("OP"))
+                        {
+                            string[] splitter = data.Split('|');
+                            onlineplayers = int.Parse(splitter[1]);
+                            onlinegroups = int.Parse(splitter[2]);
+                        }
                         else if (data.Contains("disconnectsuccess"))
                         {
                             break;
@@ -136,6 +142,8 @@ namespace QGF.Network
                         }
                         else if (data.Contains("Groups"))
                         {
+                            Group.g.Clear();
+                            
                             try {
                                 string[] splitter = data.Split(';'); // sépare les groupes
                                 if (splitter[0] != "Groups|")
@@ -164,36 +172,75 @@ namespace QGF.Network
                                             try
                                             {
                                                 string rank = split[9];
-                                                Group g = new Group(roomname, roomdesc, author, actualplayer, maxplayers, game, _public, roomid, rank);
-
-                                                Group.g.Add(g);
+                                                Group g = new Group(roomname, roomdesc, author, actualplayer, maxplayers, game, _public, roomid, rank);                                                                           
+                                               Group.g.Add(g);
+                                                    
+                                          
                                             }
                                             catch
                                             {
                                                 Group g = new Group(roomname, roomdesc, author, actualplayer, maxplayers, game, _public, roomid, "free");
 
-                                                Group.g.Add(g);
+
+                                                        Group.g.Add(g);
+                                                    
+                                                
                                             }
 
 
                                         }
                                         if (!s.Contains("Groups|") && s != "")
                                         {
-                                        
-                                            string[] split = s.Split('|');
-                                            string author = split[0];
-                                            int actualplayer = int.Parse(split[1]);
-                                            int maxplayers = int.Parse(split[2]);
-                                            string ispublic = split[3];
-                                            string roomname = split[4];
-                                            string roomdesc = split[5];
-                                            int roomid = int.Parse(split[6]);
-                                            string gameID = split[7];
-                                            string rank = split[8];
-                                            string game = Game.GetNameByID(gameID);
-                                            Group g = new Group(roomname, roomdesc, author, actualplayer, maxplayers, game, ispublic, roomid, rank);
-                                            Group.g.Add(g);
+                                            try
+                                            {
+                                                string[] split = s.Split('|');
+                                                string author = split[0];
+                                                int actualplayer = int.Parse(split[1]);
+                                                int maxplayers = int.Parse(split[2]);
+                                                string ispublic = split[3];
+                                                string roomname = split[4];
+                                                string roomdesc = split[5];
+                                                int roomid = int.Parse(split[6]);
+                                                string gameID = split[7];
+                                                string rank = split[8];
+                                                string game = Game.GetNameByID(gameID);
+                                                Group g = new Group(roomname, roomdesc, author, actualplayer, maxplayers, game, ispublic, roomid, rank);
+                                                Group.g.Add(g);
+                                            }
+                                            catch
+                                            {
+                                                try
+                                                {
+                                                    string[] split = s.Split('|');
+                                                    string author = split[1];
+                                                    int actualplayer = int.Parse(split[2]);
+                                                    int maxplayers = int.Parse(split[3]);
+                                                    string _public = split[4];
 
+                                                    string gameID = split[8];
+                                                    string roomname = split[5];
+                                                    string roomdesc = split[6];
+                                                    int roomid = int.Parse(split[7]);
+                                                    string game = Game.GetNameByID(gameID);
+                                                    try
+                                                    {
+                                                        string rank = split[9];
+                                                        Group g = new Group(roomname, roomdesc, author, actualplayer, maxplayers, game, _public, roomid, rank);
+
+                                                        Group.g.Add(g);
+                                                    }
+                                                    catch
+                                                    {
+                                                        Group g = new Group(roomname, roomdesc, author, actualplayer, maxplayers, game, _public, roomid, "free");
+
+                                                        Group.g.Add(g);
+                                                    }
+                                                }
+                                                catch
+                                                {
+                                                   
+                                                }
+                                            }
                                         }
                                     }
 

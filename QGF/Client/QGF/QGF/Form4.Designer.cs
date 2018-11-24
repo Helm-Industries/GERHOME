@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.ToggleSwitch.ToggleState toggleState1 = new Bunifu.ToggleSwitch.ToggleState();
@@ -37,6 +36,7 @@
             Bunifu.ToggleSwitch.ToggleState toggleState3 = new Bunifu.ToggleSwitch.ToggleState();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -69,6 +69,7 @@
             this.online_label = new System.Windows.Forms.Label();
             this.rank_label = new System.Windows.Forms.Label();
             this.username_label = new System.Windows.Forms.Label();
+            this.bunifuImageButton6 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.create_group_panel.SuspendLayout();
@@ -197,6 +198,7 @@
             // 
             // create_group_panel
             // 
+            this.create_group_panel.Controls.Add(this.bunifuImageButton6);
             this.create_group_panel.Controls.Add(this.groupdescription_text);
             this.create_group_panel.Controls.Add(this.label_changer);
             this.create_group_panel.Controls.Add(this.bunifuButton1);
@@ -576,6 +578,7 @@
             this.bunifuTextBox3.TextMarginLeft = 15;
             this.bunifuTextBox3.TextPlaceholder = "RECHERCHER UN JEU";
             this.bunifuTextBox3.UseSystemPasswordChar = false;
+            this.bunifuTextBox3.TextChange += new System.EventHandler(this.bunifuTextBox3_TextChange);
             // 
             // bunifuImageButton5
             // 
@@ -815,6 +818,38 @@
             this.username_label.Text = "Username";
             this.username_label.Click += new System.EventHandler(this.username_label_Click);
             // 
+            // bunifuImageButton6
+            // 
+            this.bunifuImageButton6.ActiveImage = null;
+            this.bunifuImageButton6.AllowAnimations = true;
+            this.bunifuImageButton6.AllowZooming = true;
+            this.bunifuImageButton6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton6.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton6.ErrorImage")));
+            this.bunifuImageButton6.FadeWhenInactive = true;
+            this.bunifuImageButton6.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.bunifuImageButton6.ForeColor = System.Drawing.Color.Black;
+            this.bunifuImageButton6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton6.Image")));
+            this.bunifuImageButton6.ImageActive = null;
+            this.bunifuImageButton6.ImageLocation = null;
+            this.bunifuImageButton6.ImageMargin = 10;
+            this.bunifuImageButton6.ImageSize = new System.Drawing.Size(22, 22);
+            this.bunifuImageButton6.ImageZoomSize = new System.Drawing.Size(32, 32);
+            this.bunifuImageButton6.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton6.InitialImage")));
+            this.bunifuImageButton6.Location = new System.Drawing.Point(808, 224);
+            this.bunifuImageButton6.Name = "bunifuImageButton6";
+            this.bunifuImageButton6.Rotation = 0;
+            this.bunifuImageButton6.ShowActiveImage = true;
+            this.bunifuImageButton6.ShowCursorChanges = true;
+            this.bunifuImageButton6.ShowImageBorders = false;
+            this.bunifuImageButton6.ShowSizeMarkers = false;
+            this.bunifuImageButton6.Size = new System.Drawing.Size(32, 32);
+            this.bunifuImageButton6.TabIndex = 12;
+            this.bunifuImageButton6.ToolTipText = "Un jeu manquant?";
+            this.bunifuImageButton6.WaitOnLoad = false;
+            this.bunifuImageButton6.Zoom = 10;
+            this.bunifuImageButton6.ZoomSpeed = 10;
+            this.bunifuImageButton6.Click += new System.EventHandler(this.bunifuImageButton6_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -874,5 +909,6 @@
         private WindowsFormsControlLibrary1.BunifuCustomTextbox groupdescription_text;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Timer timer1;
+        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton6;
     }
 }
