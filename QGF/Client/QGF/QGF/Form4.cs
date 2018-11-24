@@ -366,7 +366,8 @@ namespace QGF
 
         private void bunifuImageButton6_Click(object sender, EventArgs e)
         {
-
+            Form6 frm = new Form6();
+            frm.Show();
         }
     }
 }
