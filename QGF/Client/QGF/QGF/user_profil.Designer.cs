@@ -39,7 +39,7 @@
             this.userprofil.AutoSize = true;
             this.userprofil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userprofil.ForeColor = System.Drawing.Color.White;
-            this.userprofil.Location = new System.Drawing.Point(43, 12);
+            this.userprofil.Location = new System.Drawing.Point(58, 11);
             this.userprofil.Name = "userprofil";
             this.userprofil.Size = new System.Drawing.Size(53, 20);
             this.userprofil.TabIndex = 0;
@@ -48,7 +48,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -63,7 +63,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.userprofil);
             this.Name = "user_profil";
-            this.Size = new System.Drawing.Size(215, 43);
+            this.Size = new System.Drawing.Size(316, 43);
+            this.Load += new System.EventHandler(this.user_profil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

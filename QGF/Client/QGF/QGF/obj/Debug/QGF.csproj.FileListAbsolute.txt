@@ -72,3 +72,6 @@ D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.F
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form7.resources
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.chat.resources
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.user_profil.resources
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.chat.resources
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form7.resources
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.user_profil.resources

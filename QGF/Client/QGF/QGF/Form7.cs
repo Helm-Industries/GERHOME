@@ -27,6 +27,13 @@ namespace QGF
                 public Form7()
         {
             InitializeComponent();
+            int i = 0;
+            while( i < 10)
+            {
+                user_profil p = new user_profil(); 
+                flowLayoutPanel2.Controls.Add(p);
+                i++;
+            }
             
         }
 
@@ -41,6 +48,21 @@ namespace QGF
         }
 
         private void Form7_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void chat1_Load(object sender, EventArgs e)
         {
 
         }

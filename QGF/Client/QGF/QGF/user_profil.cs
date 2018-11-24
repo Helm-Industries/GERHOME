@@ -16,5 +16,10 @@ namespace QGF
         {
             InitializeComponent();
         }
+
+        private void user_profil_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
