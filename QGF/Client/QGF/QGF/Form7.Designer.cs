@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.user_profil1 = new QGF.user_profil();
             this.disconect_button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.room_desc = new System.Windows.Forms.Label();
             this.room_title = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.bunifuImageButton3 = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.user_profil1 = new QGF.user_profil();
             this.chat1 = new QGF.chat();
+            this.bunifuImageButton3 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -73,14 +73,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 52);
             this.panel1.TabIndex = 0;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(964, 52);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(316, 608);
-            this.flowLayoutPanel2.TabIndex = 5;
             // 
             // bunifuImageButton2
             // 
@@ -167,6 +159,14 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "QUICK GAME FINDER - ACCEUIL";
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(964, 52);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(316, 608);
+            this.flowLayoutPanel2.TabIndex = 5;
+            // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
@@ -185,6 +185,14 @@
             this.panel2.Size = new System.Drawing.Size(316, 668);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // user_profil1
+            // 
+            this.user_profil1.BackColor = System.Drawing.Color.Transparent;
+            this.user_profil1.Location = new System.Drawing.Point(2, 0);
+            this.user_profil1.Name = "user_profil1";
+            this.user_profil1.Size = new System.Drawing.Size(215, 43);
+            this.user_profil1.TabIndex = 5;
             // 
             // disconect_button
             // 
@@ -209,13 +217,13 @@
             this.disconect_button.IdleIconRightImage = null;
             this.disconect_button.Location = new System.Drawing.Point(55, 617);
             this.disconect_button.Name = "disconect_button";
-            stateProperties1.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties1.BorderRadius = 30;
-            stateProperties1.BorderThickness = 1;
-            stateProperties1.FillColor = System.Drawing.Color.DarkGray;
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.disconect_button.onHoverState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties2.BorderRadius = 30;
+            stateProperties2.BorderThickness = 1;
+            stateProperties2.FillColor = System.Drawing.Color.DarkGray;
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.disconect_button.onHoverState = stateProperties2;
             this.disconect_button.Size = new System.Drawing.Size(210, 35);
             this.disconect_button.TabIndex = 4;
             this.disconect_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -284,6 +292,17 @@
             this.flowLayoutPanel1.TabIndex = 16;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
+            // chat1
+            // 
+            this.chat1.AutoSize = true;
+            this.chat1.BackColor = System.Drawing.Color.Gainsboro;
+            this.chat1.Location = new System.Drawing.Point(10, 10);
+            this.chat1.Margin = new System.Windows.Forms.Padding(10);
+            this.chat1.Name = "chat1";
+            this.chat1.Size = new System.Drawing.Size(517, 108);
+            this.chat1.TabIndex = 0;
+            this.chat1.Load += new System.EventHandler(this.chat1_Load);
+            // 
             // bunifuImageButton3
             // 
             this.bunifuImageButton3.ActiveImage = null;
@@ -315,24 +334,6 @@
             this.bunifuImageButton3.Zoom = 10;
             this.bunifuImageButton3.ZoomSpeed = 10;
             // 
-            // user_profil1
-            // 
-            this.user_profil1.BackColor = System.Drawing.Color.Transparent;
-            this.user_profil1.Location = new System.Drawing.Point(2, 0);
-            this.user_profil1.Name = "user_profil1";
-            this.user_profil1.Size = new System.Drawing.Size(215, 43);
-            this.user_profil1.TabIndex = 5;
-            // 
-            // chat1
-            // 
-            this.chat1.BackColor = System.Drawing.Color.Gainsboro;
-            this.chat1.Location = new System.Drawing.Point(10, 10);
-            this.chat1.Margin = new System.Windows.Forms.Padding(10);
-            this.chat1.Name = "chat1";
-            this.chat1.Size = new System.Drawing.Size(591, 94);
-            this.chat1.TabIndex = 0;
-            this.chat1.Load += new System.EventHandler(this.chat1_Load);
-            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,6 +361,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

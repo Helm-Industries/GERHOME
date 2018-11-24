@@ -52,10 +52,12 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(11, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(555, 122);
+            this.label2.Size = new System.Drawing.Size(516, 122);
             this.label2.TabIndex = 1;
             this.label2.Text = resources.GetString("label2.Text");
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -64,12 +66,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "chat";
-            this.Size = new System.Drawing.Size(577, 157);
+            this.Size = new System.Drawing.Size(541, 162);
             this.Load += new System.EventHandler(this.chat_Load);
             this.Resize += new System.EventHandler(this.chat_Resize);
             this.ResumeLayout(false);
