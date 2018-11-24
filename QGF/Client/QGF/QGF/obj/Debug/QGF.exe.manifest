@@ -270,14 +270,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QGF.exe" size="3414488">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="QGF.exe" size="3685848">
       <assemblyIdentity name="QGF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4wEZiiH/atOPV+j/HoU5RX3tW+A6Pv9jIAUdCGj2vpU=</dsig:DigestValue>
+        <dsig:DigestValue>XV+mRR/imUJxoChRMK434YCHGlQWSUMjo46KrAsrpHA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

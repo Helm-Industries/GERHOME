@@ -68,3 +68,4 @@ F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\QGF.application
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.exe.manifest
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.application
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form6.resources
+D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form6.resources

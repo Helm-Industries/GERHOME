@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QGF.Network;
 
 namespace QGF
 {
     public partial class Room : UserControl
     {
+        int room = 0;
+
         public Room(string author, int currentplayer, int maxplayer, string isprivate, string roomname, string roomdesc, string game, int RoomID, string rank)
         {
             InitializeComponent();
@@ -37,6 +40,7 @@ namespace QGF
                 ispublic = "Privé";
             }
             bunifuLabel1.Text = "Jeu: " + game + "\r\n" + currentplayers.ToString() + "/" + maxplayer.ToString() + " joueurs - " + ispublic ;
+            room = RoomID;
             switch (game)
             {
                 case "ARMA 3":
@@ -127,7 +131,7 @@ namespace QGF
                     bunifuPictureBox1.Image = Properties.Resources.LOGO_WORLD_OF_WARCRAFT;
                     break;
             }
-
+            
         }
         public static string gameID;
         public static int currentplayers;
@@ -152,8 +156,9 @@ namespace QGF
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-
+        {          
+            byte[] b = Encoding.ASCII.GetBytes("JoinRoomRequest|" + room.ToString() + "|" + Me.username);
+            SocketMain.SendData(b, SocketMain.ns);
         }
 
         private void rank_Click(object sender, EventArgs e)

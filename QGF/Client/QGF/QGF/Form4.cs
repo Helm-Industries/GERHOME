@@ -45,7 +45,11 @@ namespace QGF
             rank_label.Text = Me.rank;
             timer1.Start();
 
+            // Set the vertical scroll maximum value to be at-par with the flowlayout.
+           
 
+            
+            
             // Create();
         }
         int GroupCount = Group.g.Count();
@@ -81,16 +85,18 @@ namespace QGF
                 {
                     if (group.ranks == "premium")
                     {
-                        Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomID, group.ranks);
+                        Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomIDs, group.ranks);
                         flowLayoutPanel1.Controls.Add(room);
+                      
                     }
                 }
                 foreach (Group group in Group.g)
                 {
                     if (group.ranks == "free")
                     {
-                        Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomID, group.ranks);
+                        Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomIDs, group.ranks);
                         flowLayoutPanel1.Controls.Add(room);
+                        
                     }
                 }
                 GroupCount = Group.g.Count();
@@ -348,26 +354,28 @@ namespace QGF
             {
                 if (g.gameID.Contains(bunifuTextBox3.Text) && g.ranks == "premium") 
                 {              
-                            Room room = new Room(g.author, g.playercounter, g.desiredplayers, g._public, g.roomname, g.roomdescription, g.gameID, g.roomID, g.ranks);
+                            Room room = new Room(g.author, g.playercounter, g.desiredplayers, g._public, g.roomname, g.roomdescription, g.gameID, g.roomIDs, g.ranks);
                             flowLayoutPanel1.Controls.Add(room);                     
                 }
                 if (g.ranks == "free" && g.gameID.Contains(bunifuTextBox3.Text))
                 {
-                    Room room = new Room(g.author, g.playercounter, g.desiredplayers, g._public, g.roomname, g.roomdescription, g.gameID, g.roomID, g.ranks);
+                    Room room = new Room(g.author, g.playercounter, g.desiredplayers, g._public, g.roomname, g.roomdescription, g.gameID, g.roomIDs, g.ranks);
                     flowLayoutPanel1.Controls.Add(room);
                 }
             }
 
-            foreach (Group group in Group.g)
-            {
 
-            }
         }
 
         private void bunifuImageButton6_Click(object sender, EventArgs e)
         {
             Form6 frm = new Form6();
             frm.Show();
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            flowLayoutPanel1.AutoScrollPosition = new Point(flowLayoutPanel1.AutoScrollPosition.X, e.NewValue);
         }
     }
 }

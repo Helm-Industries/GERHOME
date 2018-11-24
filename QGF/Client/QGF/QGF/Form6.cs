@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QGF.Network;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,6 +38,13 @@ namespace QGF
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            byte[] b = Encoding.ASCII.GetBytes("MissingGame|" + bunifuTextBox1.Text + "|" + Me.username);
+            SocketMain.SendData(b, SocketMain.ns);
+            MessageBox.Show("Merci pour votre rapport");
         }
     }
 }

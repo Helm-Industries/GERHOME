@@ -16,7 +16,7 @@ namespace QGF.Network.Groups
         public int desiredplayers;
         public string gameID;
         public string _public;
-        public int roomID;
+        public int roomIDs;
         public string ranks;
         public Group(string nameroom, string descroom, string roomauthor, int players, int maxplayers, string game, string isPublic, int roomID, string rank)
         {
@@ -28,6 +28,7 @@ namespace QGF.Network.Groups
             _public = isPublic;
             gameID = game;
             ranks = rank;
+            roomIDs = roomID;
         }
         public static List<Group> g = new List<Group>();
     }

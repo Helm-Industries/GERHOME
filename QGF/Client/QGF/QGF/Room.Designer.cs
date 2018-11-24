@@ -95,7 +95,7 @@
             this.bunifuPictureBox1.BorderRadius = 47;
             this.bunifuPictureBox1.Image = global::QGF.Properties.Resources.LOGO_DIABLO;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(26, 8);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(17, 8);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(94, 94);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,7 +111,7 @@
             this.rankpic.BorderRadius = 25;
             this.rankpic.Image = global::QGF.Properties.Resources.premium;
             this.rankpic.IsCircle = true;
-            this.rankpic.Location = new System.Drawing.Point(469, 52);
+            this.rankpic.Location = new System.Drawing.Point(460, 52);
             this.rankpic.Name = "rankpic";
             this.rankpic.Size = new System.Drawing.Size(50, 50);
             this.rankpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -148,7 +148,7 @@
             this.Controls.Add(this.join_button);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Room";
-            this.Size = new System.Drawing.Size(951, 112);
+            this.Size = new System.Drawing.Size(932, 112);
             this.Load += new System.EventHandler(this.Room_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rankpic)).EndInit();

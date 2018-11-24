@@ -178,6 +178,7 @@
     <Compile Include="Network\Groups\Group.cs" />
     <Compile Include="Network\Main.cs" />
     <Compile Include="Network\Me.cs" />
+    <Compile Include="Network\Users\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room.cs">

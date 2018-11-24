@@ -1,4 +1,5 @@
 ﻿using QGF.Network.Groups;
+using QGF.Network.Users;
 using QGF.Traitement;
 using System;
 using System.Collections.Generic;
@@ -140,10 +141,30 @@ namespace QGF.Network
 
                             MessageBox.Show("Impossible de se connecter avec ces identifiants");
                         }
+                        else if (data.Contains("RoomFull"))
+                        {
+                            MessageBox.Show("Salon Plein");
+                        }
+                        else if (data.Contains("JoinSuccess"))
+                        {
+                            //JoinSuccess|user1/premium;user2/free;user3/free;|roomtitle|roomdesc|author
+                            string[] splitter = data.Split('|');
+                            string[] users = splitter[1].Split(';');
+                            string roomtitle = splitter[2];
+                            string roomdesc = splitter[3];
+                            string roomadmin = splitter[4];
+                            foreach(string u in users)
+                            {
+                                string[] ranks = u.Split('/');
+                                User user = new User(ranks[0], ranks[1]);
+                                User.users.Add(user);
+                            }
+                        }
+                                
                         else if (data.Contains("Groups"))
                         {
                             Group.g.Clear();
-                            
+                       
                             try {
                                 string[] splitter = data.Split(';'); // sépare les groupes
                                 if (splitter[0] != "Groups|")
@@ -157,7 +178,7 @@ namespace QGF.Network
                                         if (s.Contains("Groups|"))
                                         {
 
-                                            // MessageBox.Show(s);
+                                         
                                             string[] split = s.Split('|');
                                             string author = split[1];
                                             int actualplayer = int.Parse(split[2]);
@@ -169,6 +190,7 @@ namespace QGF.Network
                                             string roomdesc = split[6];
                                             int roomid = int.Parse(split[7]);
                                             string game = Game.GetNameByID(gameID);
+                                          
                                             try
                                             {
                                                 string rank = split[9];
@@ -204,6 +226,7 @@ namespace QGF.Network
                                                 string gameID = split[7];
                                                 string rank = split[8];
                                                 string game = Game.GetNameByID(gameID);
+                                             
                                                 Group g = new Group(roomname, roomdesc, author, actualplayer, maxplayers, game, ispublic, roomid, rank);
                                                 Group.g.Add(g);
                                             }
@@ -222,6 +245,7 @@ namespace QGF.Network
                                                     string roomdesc = split[6];
                                                     int roomid = int.Parse(split[7]);
                                                     string game = Game.GetNameByID(gameID);
+                                                  
                                                     try
                                                     {
                                                         string rank = split[9];
