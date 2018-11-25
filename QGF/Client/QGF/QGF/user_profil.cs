@@ -12,12 +12,22 @@ namespace QGF
 {
     public partial class user_profil : UserControl
     {
-        public user_profil()
+        public user_profil(string username, bool admin)
         {
             InitializeComponent();
+            userprofil.Text = username;
+            if(admin == true)
+            {
+                userprofil.ForeColor = Color.Red;
+            }
         }
 
         private void user_profil_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userprofil_Click(object sender, EventArgs e)
         {
 
         }

@@ -57,26 +57,6 @@ namespace QGF
         {
             online_label.Text = "Joueurs en ligne : " + SocketMain.onlineplayers.ToString();
             created_label.Text = "Groupes créés : " + SocketMain.onlinegroups.ToString();
-            //if(flowLayoutPanel1.Controls.Count > Group.g.Count())
-            //{
-            //    flowLayoutPanel1.Controls.Clear();
-            //    foreach (Group group in Group.g)
-            //    {
-            //        if (group.ranks == "premium")
-            //        {
-            //            Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomID, group.ranks);
-            //            flowLayoutPanel1.Controls.Add(room);
-            //        }
-            //    }
-            //    foreach (Group group in Group.g)
-            //    {
-            //        if (group.ranks == "free")
-            //        {
-            //            Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomID, group.ranks);
-            //            flowLayoutPanel1.Controls.Add(room);
-            //        }
-            //    }
-            //}
             if(GroupCount != Group.g.Count())
             {
                 
@@ -87,7 +67,7 @@ namespace QGF
                     {
                         Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomIDs, group.ranks);
                         flowLayoutPanel1.Controls.Add(room);
-                      
+                    
                     }
                 }
                 foreach (Group group in Group.g)
@@ -96,11 +76,15 @@ namespace QGF
                     {
                         Room room = new Room(group.author, group.playercounter, group.desiredplayers, group._public, group.roomname, group.roomdescription, group.gameID, group.roomIDs, group.ranks);
                         flowLayoutPanel1.Controls.Add(room);
-                        
+                     
                     }
                 }
                 GroupCount = Group.g.Count();
                 
+            }
+            if(SocketMain.f4todo == "destroy")
+            {
+                this.Hide();
             }
         }
 

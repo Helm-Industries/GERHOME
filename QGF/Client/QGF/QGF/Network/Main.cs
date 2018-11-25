@@ -27,7 +27,7 @@ namespace QGF.Network
         public static string todo = "keep";
         public static int onlineplayers;
         public static int onlinegroups;
-
+        public static string f4todo = "keep";
         public  void Connect()
             
         {
@@ -92,7 +92,30 @@ namespace QGF.Network
                             string[] splitter = data.Split('|');
                             MessageBox.Show(splitter[1]);
                         }
+                        //else if (data.Contains("SendMessageSuccess"))
+                        //{
+                        //    string[] splitter = data.Split('|');
 
+                        //    Form7 frm = new Form7();
+                        //    frm.addOutMessage(splitter[1], Me.username);
+                        //}
+                        else if (data.Contains("NewMessage"))
+                        {
+                            string[] splitter = data.Split('|');
+                            string content = splitter[1];
+                            string auteur = splitter[2];
+
+                            Form7 frm = new Form7();
+                            if (auteur == Me.username)
+                            {
+                                frm.addOutMessage(content, auteur);
+                            }
+                            else
+                            {
+                                frm.addIncomingMessage(content, auteur);
+                            }
+
+                        }
                         else if (data.Contains("quit") || data.Contains("quitall"))
                         {
                             Application.Exit();
@@ -147,20 +170,44 @@ namespace QGF.Network
                         }
                         else if (data.Contains("JoinSuccess"))
                         {
-                            //JoinSuccess|user1/premium;user2/free;user3/free;|roomtitle|roomdesc|author
                             string[] splitter = data.Split('|');
-                            string[] users = splitter[1].Split(';');
-                            string roomtitle = splitter[2];
-                            string roomdesc = splitter[3];
-                            string roomadmin = splitter[4];
-                            foreach(string u in users)
+                            //JoinSuccess|user1/premium;user2/free;user3/free;|roomtitle|roomdesc|author
+                            if (splitter[5] == Me.username)
                             {
-                                string[] ranks = u.Split('/');
-                                User user = new User(ranks[0], ranks[1]);
-                                User.users.Add(user);
+                                if(splitter[1] != "") {
+                                    string[] users = splitter[1].Split(';');
+                                    foreach (string u in users)
+                                    {
+                                        string[] ranks = u.Split('/');
+                                        try
+                                        {
+                                            User user = new User(ranks[0], ranks[1]);
+                                            User.users.Add(user);
+                                        }
+                                        catch
+                                        {
+
+                                        }
+                                    }
+                                }
+                               
+                                Me.currentroomname = splitter[2];
+                                Me.currentroomdesc = splitter[3];
+                                Me.currentroomadmin = splitter[4];
+
                             }
+                            Form7 frm = new Form7();
+                            f4todo = "destroy";
+                            frm.ShowDialog();
                         }
-                                
+                        else if (data.Contains("PlayerJoined"))
+                        {
+                            string[] splitter = data.Split('|');
+                            string username = splitter[1];
+                            string rank = splitter[2];
+                            User u = new User(username, rank);
+                            User.users.Add(u);
+                        }
                         else if (data.Contains("Groups"))
                         {
                             Group.g.Clear();
@@ -190,7 +237,7 @@ namespace QGF.Network
                                             string roomdesc = split[6];
                                             int roomid = int.Parse(split[7]);
                                             string game = Game.GetNameByID(gameID);
-                                          
+                                        
                                             try
                                             {
                                                 string rank = split[9];
@@ -226,7 +273,7 @@ namespace QGF.Network
                                                 string gameID = split[7];
                                                 string rank = split[8];
                                                 string game = Game.GetNameByID(gameID);
-                                             
+                                           
                                                 Group g = new Group(roomname, roomdesc, author, actualplayer, maxplayers, game, ispublic, roomid, rank);
                                                 Group.g.Add(g);
                                             }
@@ -239,7 +286,7 @@ namespace QGF.Network
                                                     int actualplayer = int.Parse(split[2]);
                                                     int maxplayers = int.Parse(split[3]);
                                                     string _public = split[4];
-
+                                             
                                                     string gameID = split[8];
                                                     string roomname = split[5];
                                                     string roomdesc = split[6];

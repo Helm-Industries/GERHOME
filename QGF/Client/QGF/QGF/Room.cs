@@ -14,7 +14,7 @@ namespace QGF
     public partial class Room : UserControl
     {
         int room = 0;
-
+        int max = 0;
         public Room(string author, int currentplayer, int maxplayer, string isprivate, string roomname, string roomdesc, string game, int RoomID, string rank)
         {
             InitializeComponent();
@@ -39,7 +39,10 @@ namespace QGF
             {
                 ispublic = "Privé";
             }
-            bunifuLabel1.Text = "Jeu: " + game + "\r\n" + currentplayers.ToString() + "/" + maxplayer.ToString() + " joueurs - " + ispublic ;
+            max = currentplayer;
+          
+            bunifuLabel1.Text = "Jeu: " + game + "\r\n" + max.ToString() + "/" + maxplayer.ToString() + " joueurs - " + ispublic ;
+           
             room = RoomID;
             switch (game)
             {
@@ -158,9 +161,9 @@ namespace QGF
         private void bunifuButton1_Click(object sender, EventArgs e)
         {          
             byte[] b = Encoding.ASCII.GetBytes("JoinRoomRequest|" + room.ToString() + "|" + Me.username);
+            Me.currentroom = room;
             SocketMain.SendData(b, SocketMain.ns);
-            Form7 frm = new Form7();
-            frm.Show();
+
         }
 
         private void rank_Click(object sender, EventArgs e)

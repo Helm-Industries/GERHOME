@@ -9,10 +9,13 @@ namespace QGF.Network.Users
     public class User
     {
         public static List<User> users = new List<User>();
-        public static string usernem;
+        public  string usernem;
+        public string rang;
+        
         public User(string username, string rank)
         {
             usernem = username;
+            rang = rank;
         }
     }
 }

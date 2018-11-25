@@ -44,6 +44,7 @@
             this.userprofil.Size = new System.Drawing.Size(53, 20);
             this.userprofil.TabIndex = 0;
             this.userprofil.Text = "label1";
+            this.userprofil.Click += new System.EventHandler(this.userprofil_Click);
             // 
             // pictureBox1
             // 

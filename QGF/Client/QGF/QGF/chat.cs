@@ -24,10 +24,15 @@ namespace QGF
             if (m == msgtype.In)
             {
                 this.BackColor = Color.Gainsboro;
+                label2.ForeColor = Color.Black;
+                label1.ForeColor = Color.Black;
+
             }
             else
             {
                 this.BackColor = Color.FromArgb(27, 73, 131);
+                label2.ForeColor = Color.White;
+                label1.ForeColor = Color.White;
             }
             SetHeight();
         }
@@ -51,9 +56,9 @@ namespace QGF
             Graphics g = CreateGraphics();
             SizeF size = g.MeasureString(label2.Text, label2.Font, label2.Width);
             label2.Height = int.Parse(Math.Round(size.Height + 2, 0).ToString());
-            label1.Top = label2.Top + 10;
-            this.Height = label2.Height + 10;
             
+            this.Height = label2.Height + label1.Height + 10;
+           
         }
 
         private void chat_Resize(object sender, EventArgs e)
