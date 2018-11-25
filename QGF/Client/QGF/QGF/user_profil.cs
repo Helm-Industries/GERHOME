@@ -19,6 +19,7 @@ namespace QGF
             if(admin == true)
             {
                 userprofil.ForeColor = Color.Red;
+                userprofil.Font = new Font(userprofil.Font, FontStyle.Bold);
             }
         }
 

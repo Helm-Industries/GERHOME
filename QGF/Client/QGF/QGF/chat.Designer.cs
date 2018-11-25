@@ -43,10 +43,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 4);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 21);
+            this.label1.Size = new System.Drawing.Size(63, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nextrie";
             // 
@@ -55,7 +55,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 25);
+            this.label2.Location = new System.Drawing.Point(11, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(516, 122);
             this.label2.TabIndex = 1;

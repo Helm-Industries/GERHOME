@@ -207,7 +207,7 @@
             this.disconect_button.IdleFillColor = System.Drawing.Color.White;
             this.disconect_button.IdleIconLeftImage = null;
             this.disconect_button.IdleIconRightImage = null;
-            this.disconect_button.Location = new System.Drawing.Point(55, 617);
+            this.disconect_button.Location = new System.Drawing.Point(53, 617);
             this.disconect_button.Name = "disconect_button";
             stateProperties1.BorderColor = System.Drawing.Color.DarkGray;
             stateProperties1.BorderRadius = 30;
@@ -245,11 +245,11 @@
             // room_title
             // 
             this.room_title.AutoSize = true;
-            this.room_title.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.room_title.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.room_title.ForeColor = System.Drawing.Color.White;
             this.room_title.Location = new System.Drawing.Point(12, 13);
             this.room_title.Name = "room_title";
-            this.room_title.Size = new System.Drawing.Size(110, 22);
+            this.room_title.Size = new System.Drawing.Size(113, 23);
             this.room_title.TabIndex = 0;
             this.room_title.Text = "description";
             this.room_title.Click += new System.EventHandler(this.room_title_Click);
