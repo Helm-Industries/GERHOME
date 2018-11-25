@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -164,7 +164,7 @@
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
             this.flowLayoutPanel2.Location = new System.Drawing.Point(964, 52);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(316, 608);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(316, 603);
             this.flowLayoutPanel2.TabIndex = 5;
             this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
@@ -209,13 +209,13 @@
             this.disconect_button.IdleIconRightImage = null;
             this.disconect_button.Location = new System.Drawing.Point(53, 617);
             this.disconect_button.Name = "disconect_button";
-            stateProperties2.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties2.BorderRadius = 30;
-            stateProperties2.BorderThickness = 1;
-            stateProperties2.FillColor = System.Drawing.Color.DarkGray;
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.disconect_button.onHoverState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties3.BorderRadius = 30;
+            stateProperties3.BorderThickness = 1;
+            stateProperties3.FillColor = System.Drawing.Color.DarkGray;
+            stateProperties3.IconLeftImage = null;
+            stateProperties3.IconRightImage = null;
+            this.disconect_button.onHoverState = stateProperties3;
             this.disconect_button.Size = new System.Drawing.Size(210, 35);
             this.disconect_button.TabIndex = 4;
             this.disconect_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -233,32 +233,32 @@
             // 
             // room_desc
             // 
-            this.room_desc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.room_desc.Font = new System.Drawing.Font("UniSansRegularItalic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.room_desc.ForeColor = System.Drawing.Color.White;
-            this.room_desc.Location = new System.Drawing.Point(12, 45);
+            this.room_desc.Location = new System.Drawing.Point(16, 45);
             this.room_desc.Name = "room_desc";
-            this.room_desc.Size = new System.Drawing.Size(946, 81);
+            this.room_desc.Size = new System.Drawing.Size(931, 81);
             this.room_desc.TabIndex = 1;
-            this.room_desc.Text = "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mis" +
-    "e en page avant impression. Le Lorem Ipsum est le faux texte ";
+            this.room_desc.Text = resources.GetString("room_desc.Text");
             // 
             // room_title
             // 
             this.room_title.AutoSize = true;
-            this.room_title.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.room_title.Font = new System.Drawing.Font("UniSansSemiBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.room_title.ForeColor = System.Drawing.Color.White;
-            this.room_title.Location = new System.Drawing.Point(12, 13);
+            this.room_title.Location = new System.Drawing.Point(14, 13);
             this.room_title.Name = "room_title";
-            this.room_title.Size = new System.Drawing.Size(121, 22);
+            this.room_title.Size = new System.Drawing.Size(109, 25);
             this.room_title.TabIndex = 0;
-            this.room_title.Text = "description";
+            this.room_title.Text = "Description";
             this.room_title.Click += new System.EventHandler(this.room_title_Click);
             // 
             // bunifuMaterialTextbox2
             // 
+            this.bunifuMaterialTextbox2.AutoSize = true;
             this.bunifuMaterialTextbox2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox2.HintText = "";
@@ -267,12 +267,12 @@
             this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(101)))), ((int)(((byte)(141)))));
             this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(26, 658);
+            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(26, 663);
             this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(834, 50);
+            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(834, 49);
             this.bunifuMaterialTextbox2.TabIndex = 5;
-            this.bunifuMaterialTextbox2.Text = "Envoyer un message";
+            this.bunifuMaterialTextbox2.Text = "Envoyer un message...";
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuMaterialTextbox2.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox2_OnValueChanged);
             this.bunifuMaterialTextbox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bunifuMaterialTextbox2_KeyDown);
@@ -294,7 +294,7 @@
             this.bunifuImageButton3.ImageSize = new System.Drawing.Size(40, 40);
             this.bunifuImageButton3.ImageZoomSize = new System.Drawing.Size(50, 50);
             this.bunifuImageButton3.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.InitialImage")));
-            this.bunifuImageButton3.Location = new System.Drawing.Point(884, 661);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(885, 662);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
             this.bunifuImageButton3.Rotation = 0;
             this.bunifuImageButton3.ShowActiveImage = true;
@@ -312,10 +312,11 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.flowLayoutPanel1.Controls.Add(this.chat1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(-1, 186);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(966, 470);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(965, 469);
             this.flowLayoutPanel1.TabIndex = 16;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint_2);
             // 
@@ -327,12 +328,13 @@
             // chat1
             // 
             this.chat1.AutoSize = true;
-            this.chat1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
-            this.chat1.Location = new System.Drawing.Point(15, 14);
+            this.chat1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.chat1.Location = new System.Drawing.Point(18, 18);
             this.chat1.Margin = new System.Windows.Forms.Padding(10);
             this.chat1.Name = "chat1";
-            this.chat1.Size = new System.Drawing.Size(582, 115);
+            this.chat1.Size = new System.Drawing.Size(620, 145);
             this.chat1.TabIndex = 1;
+            this.chat1.Load += new System.EventHandler(this.chat1_Load_1);
             // 
             // Form7
             // 
@@ -361,6 +363,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

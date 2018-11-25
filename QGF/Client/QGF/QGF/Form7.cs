@@ -223,5 +223,10 @@ namespace QGF
             }
 
         }
+
+        private void chat1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -38,11 +38,11 @@
             // userprofil
             // 
             this.userprofil.AutoSize = true;
-            this.userprofil.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userprofil.Font = new System.Drawing.Font("UniSansSemiBold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userprofil.ForeColor = System.Drawing.Color.White;
-            this.userprofil.Location = new System.Drawing.Point(70, 10);
+            this.userprofil.Location = new System.Drawing.Point(70, 9);
             this.userprofil.Name = "userprofil";
-            this.userprofil.Size = new System.Drawing.Size(65, 22);
+            this.userprofil.Size = new System.Drawing.Size(60, 25);
             this.userprofil.TabIndex = 0;
             this.userprofil.Text = "label1";
             this.userprofil.Click += new System.EventHandler(this.userprofil_Click);
@@ -50,9 +50,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(18, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 31);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -73,7 +73,7 @@
             this.bunifuImageButton1.ImageSize = new System.Drawing.Size(22, 22);
             this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(32, 32);
             this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(276, 5);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(273, 5);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Rotation = 0;
             this.bunifuImageButton1.ShowActiveImage = true;

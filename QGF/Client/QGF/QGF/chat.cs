@@ -12,7 +12,8 @@ namespace QGF
 {
     public partial class chat : UserControl
     {
-        public chat()
+       
+                public chat()
         {
             InitializeComponent();
         }
@@ -23,15 +24,15 @@ namespace QGF
             label2.Text = message;
             if (m == msgtype.In)
             {
-                this.BackColor = Color.Gainsboro;
-                label2.ForeColor = Color.Black;
-                label1.ForeColor = Color.Black;
+                this.BackColor = Color.WhiteSmoke;
+                label2.ForeColor = Color.FromArgb(64, 64, 64);
+                label1.ForeColor = Color.SteelBlue;
 
             }
             else
             {
-                this.BackColor = Color.FromArgb(27, 73, 131);
-                label2.ForeColor = Color.White;
+                this.BackColor = Color.FromArgb(71, 137, 182);
+                label2.ForeColor = Color.Silver;
                 label1.ForeColor = Color.White;
             }
             SetHeight();

@@ -19,7 +19,7 @@ namespace QGF
             userprofil.Text = username;
             if(admin == true)
             {
-                userprofil.ForeColor = Color.Red;
+                userprofil.ForeColor = Color.Orange;
                 userprofil.Font = new Font(userprofil.Font, FontStyle.Bold);
             }
             if (Me.username == Me.currentroomadmin)
