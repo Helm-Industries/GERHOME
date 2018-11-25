@@ -146,46 +146,60 @@ namespace QGF
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(SocketMain.f7todo == "destroy")
+            try
             {
-                this.Hide();
-                
-             }
-            if(i != User.users.Count)
-            {
-                
-                flowLayoutPanel2.Controls.Clear();
-                foreach(User u in User.users)
+                if (SocketMain.f7todo == "destroy")
                 {
-                    bool t = false;
-                    if(u.usernem == Me.currentroomadmin)
-                    {
-                        t = true;
-                    }
-                    user_profil p = new user_profil(u.usernem,t);
-                    flowLayoutPanel2.Controls.Add(p);
-                }
-                i = User.users.Count;
-         
-            }
-            if(j != ChatMessage.mlist.Count)
-            {
-                //flowLayoutPanel1.Controls.Clear();
-                //foreach(ChatMessage m in ChatMessage.mlist)
-                //{
-                ChatMessage m = ChatMessage.mlist[ChatMessage.mlist.Count - 1];
-                if (m.pauteur == Me.username)
-                {
-                    addOutMessage(m.pcontent, m.pauteur);
-                }
-                else
-                {
-                    addIncomingMessage(m.pcontent, m.pauteur);
-                }
-                //}
+                    this.Hide();
 
-                flowLayoutPanel1.VerticalScroll.Value = flowLayoutPanel1.VerticalScroll.Maximum;
-                j = ChatMessage.mlist.Count;
+                }
+
+                if (i != User.users.Count)
+                {
+                    try
+                    {
+                        flowLayoutPanel2.Controls.Clear();
+                        foreach (User u in User.users)
+                        {
+                            bool t = false;
+                            if (u.usernem == Me.currentroomadmin)
+                            {
+                                t = true;
+                            }
+                            user_profil p = new user_profil(u.usernem, t);
+                            flowLayoutPanel2.Controls.Add(p);
+                        }
+                        i = User.users.Count;
+                    }
+
+                    catch
+                    {
+
+                    }
+                }
+                if (j != ChatMessage.mlist.Count)
+                {
+                    //flowLayoutPanel1.Controls.Clear();
+                    //foreach(ChatMessage m in ChatMessage.mlist)
+                    //{
+                    ChatMessage m = ChatMessage.mlist[ChatMessage.mlist.Count - 1];
+                    if (m.pauteur == Me.username)
+                    {
+                        addOutMessage(m.pcontent, m.pauteur);
+                    }
+                    else
+                    {
+                        addIncomingMessage(m.pcontent, m.pauteur);
+                    }
+                    //}
+
+                    flowLayoutPanel1.VerticalScroll.Value = flowLayoutPanel1.VerticalScroll.Maximum;
+                    j = ChatMessage.mlist.Count;
+                }
+            }
+            catch
+            {
+
             }
         }
 

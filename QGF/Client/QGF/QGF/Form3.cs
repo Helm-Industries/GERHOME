@@ -121,10 +121,6 @@ namespace QGF
                 string msg = "RegisterRequest|" + identifiant + "|" + email + "|" + password;
                 byte[] bmsg = Encoding.ASCII.GetBytes(msg);
                 SocketMain.SendData(bmsg, SocketMain.ns);
-                
-                SocketMain.client.Dispose();
-                SocketMain. c.Connect(SocketMain.ip, SocketMain.port);
-                SocketMain.ns = SocketMain.c.GetStream();
             }
             else
             {

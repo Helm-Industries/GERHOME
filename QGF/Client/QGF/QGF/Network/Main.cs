@@ -406,7 +406,7 @@ namespace QGF.Network
         {
             MessageBox.Show("Inscription réussie, retournez à la connexion pour continuer");
         }
-        static int counter;
+     
         public static void SendData(byte[] b, NetworkStream nss)
         {
                 nss.Write(b, 0, b.Length);          
