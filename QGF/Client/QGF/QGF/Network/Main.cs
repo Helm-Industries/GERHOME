@@ -17,9 +17,10 @@ namespace QGF.Network
     {
  
         public static string username;
-        static IPAddress ip = IPAddress.Parse("78.114.52.238");
-        static int port = 5000;
-        TcpClient client = new TcpClient();
+        public static IPAddress ip = IPAddress.Parse("78.114.52.238");
+        public static int port = 5000;
+        public static TcpClient client = new TcpClient();
+
         Thread thread = new Thread(o => ReceiveData((TcpClient)o));
         public static NetworkStream ns;
         public static int loadingstate = 0;
@@ -28,6 +29,7 @@ namespace QGF.Network
         public static int onlineplayers;
         public static int onlinegroups;
         public static string f4todo = "keep";
+        public static string f7todo = "keep";
         public  void Connect()
             
         {
@@ -101,19 +103,13 @@ namespace QGF.Network
                         //}
                         else if (data.Contains("NewMessage"))
                         {
+                            //MessageBox.Show("nouveau message");
                             string[] splitter = data.Split('|');
                             string content = splitter[1];
                             string auteur = splitter[2];
-
-                            Form7 frm = new Form7();
-                            if (auteur == Me.username)
-                            {
-                                frm.addOutMessage(content, auteur);
-                            }
-                            else
-                            {
-                                frm.addIncomingMessage(content, auteur);
-                            }
+                            ChatMessage c = new ChatMessage(content, auteur);
+                            ChatMessage.mlist.Add(c);
+                            
 
                         }
                         else if (data.Contains("quit") || data.Contains("quitall"))
@@ -122,9 +118,16 @@ namespace QGF.Network
                         }
                         else if (data.Contains("OP"))
                         {
-                            string[] splitter = data.Split('|');
-                            onlineplayers = int.Parse(splitter[1]);
-                            onlinegroups = int.Parse(splitter[2]);
+                            try
+                            {
+                                string[] splitter = data.Split('|');
+                                onlineplayers = int.Parse(splitter[1]);
+                                onlinegroups = int.Parse(splitter[2]);
+                            }
+                            catch
+                            {
+
+                            }
                         }
                         else if (data.Contains("disconnectsuccess"))
                         {
@@ -154,6 +157,37 @@ namespace QGF.Network
                             todo = "destroy";
 
                         }
+                        else if (data.Contains("PlayerKicked"))
+                        {
+
+                            foreach(User u in User.users)
+                            {
+                                string[] splitter = data.Split('|');
+                                if (u.usernem == splitter[1])
+                                {
+                                    User.users.Remove(u);
+                                    break;
+                                }
+                            }
+                           
+                        }
+                        else if (data.Contains("RoomKicked"))
+                        {
+                            string[] splitter = data.Split('|');
+                            string admin = splitter[1];
+                            f4todo = "keep";
+                            new Thread(() =>
+                            {
+                                Form4 frm = new Form4();
+                                frm.ShowDialog();
+                            }).Start();
+
+                            
+                            byte[] b = Encoding.ASCII.GetBytes("GetGroups");
+                            SocketMain.SendData(b, SocketMain.ns);
+                            f7todo = "destroy";
+                            MessageBox.Show("Vous vous êtes fait exclure par " + admin);
+                        }
                         else if (data.Contains("authbanned"))
                         {
 
@@ -170,6 +204,7 @@ namespace QGF.Network
                         }
                         else if (data.Contains("JoinSuccess"))
                         {
+                           
                             string[] splitter = data.Split('|');
                             //JoinSuccess|user1/premium;user2/free;user3/free;|roomtitle|roomdesc|author
                             if (splitter[5] == Me.username)
@@ -194,19 +229,42 @@ namespace QGF.Network
                                 Me.currentroomname = splitter[2];
                                 Me.currentroomdesc = splitter[3];
                                 Me.currentroomadmin = splitter[4];
-
+                                Me.currentroom = int.Parse(splitter[6]);
                             }
-                            Form7 frm = new Form7();
+                            new Thread(() =>
+                            {
+                                
+                                Form7 frm = new Form7();
+                                frm.ShowDialog();
+                            }).Start();
+                         
                             f4todo = "destroy";
-                            frm.ShowDialog();
+                        
                         }
                         else if (data.Contains("PlayerJoined"))
                         {
-                            string[] splitter = data.Split('|');
-                            string username = splitter[1];
-                            string rank = splitter[2];
-                            User u = new User(username, rank);
-                            User.users.Add(u);
+                            try
+                            {
+                                string[] splitter = data.Split('|');
+                                data.Trim();
+                                int i = int.Parse(splitter[3]);
+                                if (i == Me.currentroom && splitter[1] != Me.username)
+                                {
+                                    // MessageBox.Show("oui" + Me.username);
+                                    string username = splitter[1];
+                                    string rank = splitter[2];
+                                    User u = new User(username, rank);
+                                    User.users.Add(u);
+                                }
+                                else
+                                {
+                                    //   MessageBox.Show("non" + Me.username +"|"+ Me.currentroom.ToString()+"|" + splitter[3] );
+                                }
+                            }
+                            catch
+                            {
+
+                            }
                         }
                         else if (data.Contains("Groups"))
                         {

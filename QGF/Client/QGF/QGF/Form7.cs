@@ -1,5 +1,6 @@
 ﻿using QGF.Network;
 using QGF.Network.Users;
+using QGF.Traitement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace QGF
     {
         private const int CS_dropshadow = 0x00020000;
         public List<Room> roomlist = new List<Room>();
+        
         protected override CreateParams CreateParams
         {
             get
@@ -41,6 +43,7 @@ namespace QGF
         {
             string msg = "DisconnectRequest";
             SocketMain.SendData(Encoding.ASCII.GetBytes(msg), SocketMain.ns);
+            Application.Exit();
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
@@ -116,6 +119,7 @@ namespace QGF
             byte[] b = Encoding.ASCII.GetBytes("SendMessageRequest|"+bunifuMaterialTextbox2.Text + "|" + Me.username + "|" + Me.currentroom.ToString());
             SocketMain.SendData(b, SocketMain.ns);
               flowLayoutPanel1.VerticalScroll.Value = flowLayoutPanel1.VerticalScroll.Maximum;
+            bunifuMaterialTextbox2.Text = "";
         }
 
         private void flowlayoutpanel1_Paint_1(object sender, PaintEventArgs e)
@@ -137,11 +141,19 @@ namespace QGF
         {
 
         }
+        int i = 0;
+        int j = 0;
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(flowLayoutPanel2.Controls.Count < User.users.Count)
+            if(SocketMain.f7todo == "destroy")
             {
+                this.Hide();
+                
+             }
+            if(i != User.users.Count)
+            {
+                
                 flowLayoutPanel2.Controls.Clear();
                 foreach(User u in User.users)
                 {
@@ -153,6 +165,47 @@ namespace QGF
                     user_profil p = new user_profil(u.usernem,t);
                     flowLayoutPanel2.Controls.Add(p);
                 }
+                i = User.users.Count;
+         
+            }
+            if(j != ChatMessage.mlist.Count)
+            {
+                //flowLayoutPanel1.Controls.Clear();
+                //foreach(ChatMessage m in ChatMessage.mlist)
+                //{
+                ChatMessage m = ChatMessage.mlist[ChatMessage.mlist.Count - 1];
+                if (m.pauteur == Me.username)
+                {
+                    addOutMessage(m.pcontent, m.pauteur);
+                }
+                else
+                {
+                    addIncomingMessage(m.pcontent, m.pauteur);
+                }
+                //}
+
+                flowLayoutPanel1.VerticalScroll.Value = flowLayoutPanel1.VerticalScroll.Maximum;
+                j = ChatMessage.mlist.Count;
+            }
+        }
+
+        private void bunifuMaterialTextbox2_OnValueChanged(object sender, EventArgs e)
+        {
+            if (bunifuMaterialTextbox2.Text.Contains("|"))
+            {
+                MessageBox.Show("Pas de caractère spéciaux !");
+                bunifuMaterialTextbox2.Text.Replace('|',' ');
+            }
+        }
+
+        private void bunifuMaterialTextbox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                byte[] b = Encoding.ASCII.GetBytes("SendMessageRequest|" + bunifuMaterialTextbox2.Text + "|" + Me.username + "|" + Me.currentroom.ToString());
+                SocketMain.SendData(b, SocketMain.ns);
+                flowLayoutPanel1.VerticalScroll.Value = flowLayoutPanel1.VerticalScroll.Maximum;
+                bunifuMaterialTextbox2.Text = "";
             }
 
         }

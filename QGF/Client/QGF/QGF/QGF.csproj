@@ -200,6 +200,7 @@
       <DependentUpon>Room.cs</DependentUpon>
     </Compile>
     <Compile Include="Traitement\Game.cs" />
+    <Compile Include="Traitement\Message.cs" />
     <Compile Include="user_profil.cs">
       <SubType>UserControl</SubType>
     </Compile>

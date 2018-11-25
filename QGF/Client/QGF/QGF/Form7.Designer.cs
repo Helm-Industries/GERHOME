@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -209,13 +209,13 @@
             this.disconect_button.IdleIconRightImage = null;
             this.disconect_button.Location = new System.Drawing.Point(53, 617);
             this.disconect_button.Name = "disconect_button";
-            stateProperties1.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties1.BorderRadius = 30;
-            stateProperties1.BorderThickness = 1;
-            stateProperties1.FillColor = System.Drawing.Color.DarkGray;
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.disconect_button.onHoverState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties2.BorderRadius = 30;
+            stateProperties2.BorderThickness = 1;
+            stateProperties2.FillColor = System.Drawing.Color.DarkGray;
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.disconect_button.onHoverState = stateProperties2;
             this.disconect_button.Size = new System.Drawing.Size(210, 35);
             this.disconect_button.TabIndex = 4;
             this.disconect_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -249,7 +249,7 @@
             this.room_title.ForeColor = System.Drawing.Color.White;
             this.room_title.Location = new System.Drawing.Point(12, 13);
             this.room_title.Name = "room_title";
-            this.room_title.Size = new System.Drawing.Size(113, 23);
+            this.room_title.Size = new System.Drawing.Size(121, 22);
             this.room_title.TabIndex = 0;
             this.room_title.Text = "description";
             this.room_title.Click += new System.EventHandler(this.room_title_Click);
@@ -274,6 +274,8 @@
             this.bunifuMaterialTextbox2.TabIndex = 5;
             this.bunifuMaterialTextbox2.Text = "Envoyer un message";
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMaterialTextbox2.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox2_OnValueChanged);
+            this.bunifuMaterialTextbox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bunifuMaterialTextbox2_KeyDown);
             // 
             // bunifuImageButton3
             // 
@@ -319,7 +321,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 10;
+            this.timer1.Interval = 200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // chat1
@@ -379,9 +381,8 @@
         private System.Windows.Forms.Label room_desc;
         private System.Windows.Forms.Label room_title;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-    //    private user_profil user_profil1;
-        private System.Windows.Forms.Panel flowLayoutPanel1;
         private chat chat1;
         private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Panel flowLayoutPanel1;
     }
 }

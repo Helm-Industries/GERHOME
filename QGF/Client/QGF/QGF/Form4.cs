@@ -46,8 +46,8 @@ namespace QGF
             timer1.Start();
 
             // Set the vertical scroll maximum value to be at-par with the flowlayout.
-           
 
+            GroupCount = 0;
             
             
             // Create();
@@ -55,6 +55,7 @@ namespace QGF
         int GroupCount = Group.g.Count();
         public void Handler()
         {
+            
             online_label.Text = "Joueurs en ligne : " + SocketMain.onlineplayers.ToString();
             created_label.Text = "Groupes créés : " + SocketMain.onlinegroups.ToString();
             if(GroupCount != Group.g.Count())
@@ -85,6 +86,7 @@ namespace QGF
             if(SocketMain.f4todo == "destroy")
             {
                 this.Hide();
+                this.Close();
             }
         }
 
@@ -154,6 +156,7 @@ namespace QGF
         {
             byte[] b = Encoding.ASCII.GetBytes("DisconnectRequest");
             SocketMain.SendData(b, SocketMain.ns);
+            
             Application.Exit();
          
         }
@@ -253,7 +256,11 @@ namespace QGF
 
         private void username_text_TextChange(object sender, EventArgs e)
         {
-
+            if (groupname_text.Text.Contains("|"))
+            {
+                MessageBox.Show("Pas de caractère spéciaux !");
+                groupname_text.Text.Replace('|', ' ');
+            }
         }
 
         private void combobox_game_SelectedIndexChanged(object sender, EventArgs e)
@@ -303,6 +310,8 @@ namespace QGF
                     {
                         string msg = "CreateGroupRequest|" + Me.username + "|" + "1" + "|" + maxplayers.ToString() + "|" + ispb + "|" + gameID + "|" + groupname + "|" + groupdesc;
                         SocketMain.SendData(Encoding.ASCII.GetBytes(msg), SocketMain.ns);
+                        string msgs = "JoinCreatedGroup|" + Me.username;
+                        SocketMain.SendData(Encoding.ASCII.GetBytes(msgs), SocketMain.ns);
                     }
                 }
                 else
@@ -360,6 +369,15 @@ namespace QGF
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
             flowLayoutPanel1.AutoScrollPosition = new Point(flowLayoutPanel1.AutoScrollPosition.X, e.NewValue);
+        }
+
+        private void groupdescription_text_TextChanged(object sender, EventArgs e)
+        {
+            if (groupdescription_text.Text.Contains("|"))
+            {
+                MessageBox.Show("Pas de caractère spéciaux !");
+                groupdescription_text.Text.Replace('|', ' ');
+            }
         }
     }
 }
