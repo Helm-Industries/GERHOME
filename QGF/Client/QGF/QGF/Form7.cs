@@ -146,6 +146,7 @@ namespace QGF
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+
             try
             {
                 if (SocketMain.f7todo == "destroy")
@@ -166,8 +167,10 @@ namespace QGF
                             {
                                 t = true;
                             }
-                            user_profil p = new user_profil(u.usernem, t);
-                            flowLayoutPanel2.Controls.Add(p);
+
+                                user_profil p = new user_profil(u.usernem, t);
+                                flowLayoutPanel2.Controls.Add(p);
+                         
                         }
                         i = User.users.Count;
                     }
@@ -201,6 +204,30 @@ namespace QGF
             {
 
             }
+            if (flowLayoutPanel2.Controls.Count > User.users.Count)
+            {
+                flowLayoutPanel2.Controls.Clear();
+                try
+                {
+                    foreach (User u in User.users)
+                    {
+                        bool t = false;
+                        if (u.usernem == Me.currentroomadmin)
+                        {
+                            t = true;
+                        }
+
+                        user_profil p = new user_profil(u.usernem, t);
+                        flowLayoutPanel2.Controls.Add(p);
+                        i = User.users.Count;
+                       
+                    }
+                }
+                catch
+                {
+
+                }
+            }
         }
 
         private void bunifuMaterialTextbox2_OnValueChanged(object sender, EventArgs e)
@@ -210,6 +237,7 @@ namespace QGF
                 MessageBox.Show("Pas de caractère spéciaux !");
                 bunifuMaterialTextbox2.Text.Replace('|',' ');
             }
+
         }
 
         private void bunifuMaterialTextbox2_KeyDown(object sender, KeyEventArgs e)
@@ -220,6 +248,8 @@ namespace QGF
                 SocketMain.SendData(b, SocketMain.ns);
                 flowLayoutPanel1.VerticalScroll.Value = flowLayoutPanel1.VerticalScroll.Maximum;
                 bunifuMaterialTextbox2.Text = "";
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
 
         }

@@ -13,8 +13,10 @@ namespace QGF
 {
     public partial class user_profil : UserControl
     {
+        public  string profil;
         public user_profil(string username, bool admin)
         {
+           
             InitializeComponent();
             userprofil.Text = username;
             if(admin == true)
@@ -30,6 +32,7 @@ namespace QGF
             {
                 bunifuImageButton1.Visible = false;
             }
+            profil = username;
         }
 
         private void user_profil_Load(object sender, EventArgs e)

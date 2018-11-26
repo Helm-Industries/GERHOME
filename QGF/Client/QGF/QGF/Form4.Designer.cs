@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.ToggleSwitch.ToggleState toggleState1 = new Bunifu.ToggleSwitch.ToggleState();
-            Bunifu.ToggleSwitch.ToggleState toggleState2 = new Bunifu.ToggleSwitch.ToggleState();
-            Bunifu.ToggleSwitch.ToggleState toggleState3 = new Bunifu.ToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.ToggleSwitch.ToggleState toggleState4 = new Bunifu.ToggleSwitch.ToggleState();
+            Bunifu.ToggleSwitch.ToggleState toggleState5 = new Bunifu.ToggleSwitch.ToggleState();
+            Bunifu.ToggleSwitch.ToggleState toggleState6 = new Bunifu.ToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -309,13 +309,13 @@
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.Location = new System.Drawing.Point(488, 618);
             this.bunifuButton1.Name = "bunifuButton1";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
-            stateProperties1.BorderRadius = 20;
-            stateProperties1.BorderThickness = 1;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties1;
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            stateProperties5.BorderRadius = 20;
+            stateProperties5.BorderThickness = 1;
+            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            stateProperties5.IconLeftImage = null;
+            stateProperties5.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties5;
             this.bunifuButton1.Size = new System.Drawing.Size(414, 35);
             this.bunifuButton1.TabIndex = 5;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -344,13 +344,13 @@
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.Location = new System.Drawing.Point(50, 618);
             this.bunifuButton2.Name = "bunifuButton2";
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(33)))));
-            stateProperties2.BorderRadius = 20;
-            stateProperties2.BorderThickness = 1;
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(33)))));
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.bunifuButton2.onHoverState = stateProperties2;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(33)))));
+            stateProperties6.BorderRadius = 20;
+            stateProperties6.BorderThickness = 1;
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(33)))));
+            stateProperties6.IconLeftImage = null;
+            stateProperties6.IconRightImage = null;
+            this.bunifuButton2.onHoverState = stateProperties6;
             this.bunifuButton2.Size = new System.Drawing.Size(414, 35);
             this.bunifuButton2.TabIndex = 4;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -415,28 +415,28 @@
             "BLACK OPS 2",
             "BLACK OPS 3",
             "BLACK OPS 4",
-            "BUSINESS TOUR ",
+            "BUSINESS TOUR",
             "COUNTER STRIKE GLOBAL OFFENSIVE",
-            "DESTINY 2 ",
-            "DIABLO",
+            "DESTINY 2",
+            "DIABLO 3",
             "DOOM",
             "FALLOUT 4",
             "FIFA 18",
             "FIFA 19",
             "FORTNITE",
-            "GARRY\'S MOD ",
+            "GARRY\'S MOD",
             "GRAND THEFT AUTO 5",
             "LEAGUE OF LEGEND",
             "MINECRAFT",
             "NBA 2K18",
-            "OVERWATCH ",
+            "OVERWATCH",
             "PAYDAY 2",
-            "PLAYER UNKNOWN\'S BATLLEGROUNDS ",
+            "PLAYER UNKNOWN\'S BATLLEGROUNDS",
             "RED DEAD REDEMPTION 2",
             "ROCKET LEAGUE",
             "SPEEDRUNNERS",
             "THE CREW 2",
-            "TOM CLANCY\'S RAINBOW SIX SIEGE ",
+            "TOM CLANCY\'S RAINBOW SIX SIEGE",
             "WORLD OF WARCRAFT"});
             this.gameid_combobox.Location = new System.Drawing.Point(147, 224);
             this.gameid_combobox.MaxDropDownItems = 100;
@@ -472,33 +472,33 @@
             this.bunifuToggleSwitch1.Size = new System.Drawing.Size(35, 20);
             this.bunifuToggleSwitch1.TabIndex = 4;
             this.bunifuToggleSwitch1.TabStop = false;
-            toggleState1.BackColor = System.Drawing.Color.Empty;
-            toggleState1.BackColorInner = System.Drawing.Color.Empty;
-            toggleState1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            toggleState1.BorderColorInner = System.Drawing.Color.Empty;
-            toggleState1.BorderRadius = 1;
-            toggleState1.BorderRadiusInner = 1;
-            toggleState1.BorderThickness = 1;
-            toggleState1.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateDisabled = toggleState1;
-            toggleState2.BackColor = System.Drawing.Color.DarkGray;
-            toggleState2.BackColorInner = System.Drawing.Color.White;
-            toggleState2.BorderColor = System.Drawing.Color.DarkGray;
-            toggleState2.BorderColorInner = System.Drawing.Color.White;
-            toggleState2.BorderRadius = 17;
-            toggleState2.BorderRadiusInner = 15;
-            toggleState2.BorderThickness = 1;
-            toggleState2.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateOff = toggleState2;
-            toggleState3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            toggleState3.BackColorInner = System.Drawing.Color.White;
-            toggleState3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            toggleState3.BorderColorInner = System.Drawing.Color.White;
-            toggleState3.BorderRadius = 17;
-            toggleState3.BorderRadiusInner = 15;
-            toggleState3.BorderThickness = 1;
-            toggleState3.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateOn = toggleState3;
+            toggleState4.BackColor = System.Drawing.Color.Empty;
+            toggleState4.BackColorInner = System.Drawing.Color.Empty;
+            toggleState4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            toggleState4.BorderColorInner = System.Drawing.Color.Empty;
+            toggleState4.BorderRadius = 1;
+            toggleState4.BorderRadiusInner = 1;
+            toggleState4.BorderThickness = 1;
+            toggleState4.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateDisabled = toggleState4;
+            toggleState5.BackColor = System.Drawing.Color.DarkGray;
+            toggleState5.BackColorInner = System.Drawing.Color.White;
+            toggleState5.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState5.BorderColorInner = System.Drawing.Color.White;
+            toggleState5.BorderRadius = 17;
+            toggleState5.BorderRadiusInner = 15;
+            toggleState5.BorderThickness = 1;
+            toggleState5.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateOff = toggleState5;
+            toggleState6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            toggleState6.BackColorInner = System.Drawing.Color.White;
+            toggleState6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            toggleState6.BorderColorInner = System.Drawing.Color.White;
+            toggleState6.BorderRadius = 17;
+            toggleState6.BorderRadiusInner = 15;
+            toggleState6.BorderThickness = 1;
+            toggleState6.BorderThicknessInner = 1;
+            this.bunifuToggleSwitch1.ToggleStateOn = toggleState6;
             this.bunifuToggleSwitch1.Value = false;
             this.bunifuToggleSwitch1.OnValuechange += new System.EventHandler(this.bunifuToggleSwitch1_OnValuechange);
             // 
@@ -751,13 +751,13 @@
             this.disconect_button.IdleIconRightImage = null;
             this.disconect_button.Location = new System.Drawing.Point(60, 598);
             this.disconect_button.Name = "disconect_button";
-            stateProperties3.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties3.BorderRadius = 30;
-            stateProperties3.BorderThickness = 1;
-            stateProperties3.FillColor = System.Drawing.Color.DarkGray;
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.disconect_button.onHoverState = stateProperties3;
+            stateProperties7.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties7.BorderRadius = 30;
+            stateProperties7.BorderThickness = 1;
+            stateProperties7.FillColor = System.Drawing.Color.DarkGray;
+            stateProperties7.IconLeftImage = null;
+            stateProperties7.IconRightImage = null;
+            this.disconect_button.onHoverState = stateProperties7;
             this.disconect_button.Size = new System.Drawing.Size(210, 35);
             this.disconect_button.TabIndex = 3;
             this.disconect_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -786,13 +786,13 @@
             this.creategroup_button.IdleIconRightImage = null;
             this.creategroup_button.Location = new System.Drawing.Point(60, 347);
             this.creategroup_button.Name = "creategroup_button";
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties4.BorderRadius = 34;
-            stateProperties4.BorderThickness = 1;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties4.IconLeftImage = null;
-            stateProperties4.IconRightImage = null;
-            this.creategroup_button.onHoverState = stateProperties4;
+            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties8.BorderRadius = 34;
+            stateProperties8.BorderThickness = 1;
+            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties8.IconLeftImage = null;
+            stateProperties8.IconRightImage = null;
+            this.creategroup_button.onHoverState = stateProperties8;
             this.creategroup_button.Size = new System.Drawing.Size(210, 35);
             this.creategroup_button.TabIndex = 2;
             this.creategroup_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

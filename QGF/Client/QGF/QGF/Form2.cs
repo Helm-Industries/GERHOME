@@ -1,4 +1,5 @@
 ﻿using QGF.Network;
+using QGF.Traitement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,7 +96,7 @@ namespace QGF
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+                
         }
 
         private void timer2_Tick(object sender, EventArgs e)

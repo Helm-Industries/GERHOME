@@ -12,7 +12,7 @@ namespace QGF.Traitement
     public static string GetNameByID(string name)
         {
             string toreturn = "";
-            
+            name.TrimEnd();
             switch (name)
             {
                 case "AR3":
@@ -37,7 +37,7 @@ namespace QGF.Traitement
                     toreturn = "BUSINESS TOUR";
                     break;
                 case "CGO": // CSGO
-                    toreturn = "COUNTER STRIKE: GLOBAL OFFENSIVE";
+                    toreturn = "CSGO";
                     break;
                 case "DS2": // DESTINY 2
                     toreturn = "DESTINY 2";
@@ -49,7 +49,7 @@ namespace QGF.Traitement
                     toreturn = "DOOM";
                     break;
                 case "FL4":
-                    toreturn = "FALLOUT4";
+                    toreturn = "FALLOUT 4";
                     break;
                 case "F18":
                     toreturn = "FIFA 18";
@@ -109,7 +109,7 @@ namespace QGF.Traitement
     public static string GetIDByGame(string name)
         {
             string toreturn = "";
-
+            name.TrimEnd();
             switch (name)
             {
                 case "ARMA 3":
@@ -133,7 +133,7 @@ namespace QGF.Traitement
                 case "BUSINESS TOUR": // business tour
                     toreturn = "BST";
                     break;
-                case "COUNTER STRIKE: GLOBAL OFFENSIVE": // CSGO
+                case "COUNTER STRIKE GLOBAL OFFENSIVE": // CSGO
                     toreturn = "CGO";
                     break;
                 case "DESTINY 2": // DESTINY 2
@@ -145,7 +145,7 @@ namespace QGF.Traitement
                 case "DOOM": // DOOM
                     toreturn = "DOO";
                     break;
-                case "FALLOUT4":
+                case "FALLOUT 4":
                     toreturn = "FL4";
                     break;
                 case "FIFA 18":

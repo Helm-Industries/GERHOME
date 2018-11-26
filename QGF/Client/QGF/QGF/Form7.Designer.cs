@@ -275,6 +275,7 @@
             this.bunifuMaterialTextbox2.Text = "Envoyer un message...";
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuMaterialTextbox2.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox2_OnValueChanged);
+
             this.bunifuMaterialTextbox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bunifuMaterialTextbox2_KeyDown);
             // 
             // bunifuImageButton3

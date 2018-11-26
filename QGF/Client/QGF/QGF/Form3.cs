@@ -33,6 +33,7 @@ namespace QGF
         {
             InitializeComponent();
             panel1.Select();
+            timer1.Start();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -111,7 +112,7 @@ namespace QGF
             string email = bunifuTextBox3.Text;
             string password = bunifuTextBox2.Text;
             string confirm = bunifuTextBox4.Text;
-
+         
             if(bunifuCheckBox2.Checked != true)
             {
                 MessageBox.Show("Veuillez accepter les CGU");
@@ -155,6 +156,16 @@ namespace QGF
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (SocketMain.f3todo == "destroy")
+            {
+                MessageBox.Show("destroyed");
+                this.Hide();
+                this.Close();
+            }
         }
     }
 }

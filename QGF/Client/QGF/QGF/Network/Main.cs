@@ -30,6 +30,7 @@ namespace QGF.Network
         public static int onlinegroups;
         public static string f4todo = "keep";
         public static string f7todo = "keep";
+        public static string f3todo = "keep";
         public  void Connect()
             
         {
@@ -88,7 +89,7 @@ namespace QGF.Network
 
                         string data = Encoding.ASCII.GetString(receivedBytes, 0, byte_count);
 
-                 
+
                         if (data.Contains("notif"))
                         {
                             string[] splitter = data.Split('|');
@@ -101,6 +102,8 @@ namespace QGF.Network
                         //    Form7 frm = new Form7();
                         //    frm.addOutMessage(splitter[1], Me.username);
                         //}
+
+
                         else if (data.Contains("NewMessage"))
                         {
                             //MessageBox.Show("nouveau message");
@@ -109,7 +112,6 @@ namespace QGF.Network
                             string auteur = splitter[2];
                             ChatMessage c = new ChatMessage(content, auteur);
                             ChatMessage.mlist.Add(c);
-                            
 
                         }
                         else if (data.Contains("quit") || data.Contains("quitall"))
@@ -132,11 +134,16 @@ namespace QGF.Network
                         else if (data.Contains("disconnectsuccess"))
                         {
                             break;
-                            
+
                         }
                         else if (data.Contains("regsuccess"))
                         {
-                            SendToConnect();
+                          
+                        
+                                SendToConnect();
+                            f3todo = "destroy";
+                            
+                           
                         }
                         else if (data.Contains("regfailed"))
                         {
@@ -160,7 +167,7 @@ namespace QGF.Network
                         else if (data.Contains("PlayerKicked"))
                         {
 
-                            foreach(User u in User.users)
+                            foreach (User u in User.users)
                             {
                                 string[] splitter = data.Split('|');
                                 if (u.usernem == splitter[1])
@@ -169,8 +176,9 @@ namespace QGF.Network
                                     break;
                                 }
                             }
-                           
+
                         }
+                    
                         else if (data.Contains("RoomKicked"))
                         {
                             string[] splitter = data.Split('|');
@@ -182,7 +190,7 @@ namespace QGF.Network
                                 frm.ShowDialog();
                             }).Start();
 
-                            
+
                             byte[] b = Encoding.ASCII.GetBytes("GetGroups");
                             SocketMain.SendData(b, SocketMain.ns);
                             f7todo = "destroy";
@@ -204,12 +212,12 @@ namespace QGF.Network
                         }
                         else if (data.Contains("JoinSuccess"))
                         {
-                           
+                    
                             string[] splitter = data.Split('|');
                             //JoinSuccess|user1/premium;user2/free;user3/free;|roomtitle|roomdesc|author
                             if (splitter[5] == Me.username)
                             {
-                                if(splitter[1] != "") {
+                                if (splitter[1] != "") {
                                     string[] users = splitter[1].Split(';');
                                     foreach (string u in users)
                                     {
@@ -221,7 +229,7 @@ namespace QGF.Network
                                         }
                                         catch
                                         {
-
+                                            
                                         }
                                     }
                                 }
@@ -233,18 +241,20 @@ namespace QGF.Network
                             }
                             new Thread(() =>
                             {
-                                
+
                                 Form7 frm = new Form7();
                                 frm.ShowDialog();
                             }).Start();
-                         
+
                             f4todo = "destroy";
-                        
+
                         }
                         else if (data.Contains("PlayerJoined"))
                         {
+                            bool got = false;
                             try
                             {
+
                                 string[] splitter = data.Split('|');
                                 data.Trim();
                                 int i = int.Parse(splitter[3]);
@@ -254,13 +264,26 @@ namespace QGF.Network
                                     string username = splitter[1];
                                     string rank = splitter[2];
                                     User u = new User(username, rank);
-                                    User.users.Add(u);
+                                    foreach (User us in User.users)
+                                    {
+                                        if (us.usernem.Contains(username))
+                                        {
+                                            got = true;
+                                        }
+
+                                    }
+                                    if (got == false)
+                                    {
+                                        User.users.Add(u);
+                                    }
                                 }
-                                else
-                                {
-                                    //   MessageBox.Show("non" + Me.username +"|"+ Me.currentroom.ToString()+"|" + splitter[3] );
-                                }
+
+                            
+
+
                             }
+                            
+                            
                             catch
                             {
 
@@ -404,7 +427,10 @@ namespace QGF.Network
 
         static void SendToConnect()
         {
-            MessageBox.Show("Inscription réussie, retournez à la connexion pour continuer");
+            Form1 frm = new Form1();
+         
+            frm.ShowDialog();
+            f3todo = "destroy";
         }
      
         public static void SendData(byte[] b, NetworkStream nss)
