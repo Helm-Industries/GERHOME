@@ -201,7 +201,7 @@ namespace QGF
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
-            Process.Start("https://twitter.com/T_Jze");
+            Process.Start("https://twitter.com/qgf_off");
         }
 
         private void bunifuImageButton4_Click(object sender, EventArgs e)

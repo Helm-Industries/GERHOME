@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -47,8 +47,8 @@
             this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuImageButton3 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.chat1 = new QGF.chat();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -155,9 +155,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(55, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 23);
+            this.label1.Size = new System.Drawing.Size(258, 23);
             this.label1.TabIndex = 13;
-            this.label1.Text = "QUICK GAME FINDER - ACCEUIL";
+            this.label1.Text = "QUICK GAME FINDER - SALON";
             // 
             // flowLayoutPanel2
             // 
@@ -209,13 +209,13 @@
             this.disconect_button.IdleIconRightImage = null;
             this.disconect_button.Location = new System.Drawing.Point(53, 617);
             this.disconect_button.Name = "disconect_button";
-            stateProperties3.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties3.BorderRadius = 30;
-            stateProperties3.BorderThickness = 1;
-            stateProperties3.FillColor = System.Drawing.Color.DarkGray;
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.disconect_button.onHoverState = stateProperties3;
+            stateProperties1.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties1.BorderRadius = 30;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.DarkGray;
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.disconect_button.onHoverState = stateProperties1;
             this.disconect_button.Size = new System.Drawing.Size(210, 35);
             this.disconect_button.TabIndex = 4;
             this.disconect_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -275,7 +275,6 @@
             this.bunifuMaterialTextbox2.Text = "Envoyer un message...";
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuMaterialTextbox2.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox2_OnValueChanged);
-
             this.bunifuMaterialTextbox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bunifuMaterialTextbox2_KeyDown);
             // 
             // bunifuImageButton3
@@ -321,11 +320,6 @@
             this.flowLayoutPanel1.TabIndex = 16;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint_2);
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 200;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // chat1
             // 
             this.chat1.AutoSize = true;
@@ -336,6 +330,11 @@
             this.chat1.Size = new System.Drawing.Size(620, 145);
             this.chat1.TabIndex = 1;
             this.chat1.Load += new System.EventHandler(this.chat1_Load_1);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form7
             // 
