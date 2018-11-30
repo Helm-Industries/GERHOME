@@ -40,7 +40,7 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.disconect_button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.disconnect_button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.room_desc = new System.Windows.Forms.Label();
             this.room_title = new System.Windows.Forms.Label();
@@ -178,7 +178,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            this.panel2.Controls.Add(this.disconect_button);
+            this.panel2.Controls.Add(this.disconnect_button);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(964, 52);
             this.panel2.Name = "panel2";
@@ -186,39 +186,40 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // disconect_button
+            // disconnect_button
             // 
-            this.disconect_button.BackColor = System.Drawing.Color.Transparent;
-            this.disconect_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("disconect_button.BackgroundImage")));
-            this.disconect_button.ButtonText = "Quitter";
-            this.disconect_button.ButtonTextMarginLeft = 0;
-            this.disconect_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.disconect_button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.disconect_button.DisabledFillColor = System.Drawing.Color.Gray;
-            this.disconect_button.DisabledForecolor = System.Drawing.Color.White;
-            this.disconect_button.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.disconect_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
-            this.disconect_button.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.disconect_button.IconPadding = 10;
-            this.disconect_button.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.disconect_button.IdleBorderColor = System.Drawing.Color.White;
-            this.disconect_button.IdleBorderRadius = 30;
-            this.disconect_button.IdleBorderThickness = 0;
-            this.disconect_button.IdleFillColor = System.Drawing.Color.White;
-            this.disconect_button.IdleIconLeftImage = null;
-            this.disconect_button.IdleIconRightImage = null;
-            this.disconect_button.Location = new System.Drawing.Point(53, 617);
-            this.disconect_button.Name = "disconect_button";
+            this.disconnect_button.BackColor = System.Drawing.Color.Transparent;
+            this.disconnect_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("disconnect_button.BackgroundImage")));
+            this.disconnect_button.ButtonText = "Quitter";
+            this.disconnect_button.ButtonTextMarginLeft = 0;
+            this.disconnect_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.disconnect_button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.disconnect_button.DisabledFillColor = System.Drawing.Color.Gray;
+            this.disconnect_button.DisabledForecolor = System.Drawing.Color.White;
+            this.disconnect_button.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.disconnect_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(50)))), ((int)(((byte)(89)))));
+            this.disconnect_button.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.disconnect_button.IconPadding = 10;
+            this.disconnect_button.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.disconnect_button.IdleBorderColor = System.Drawing.Color.White;
+            this.disconnect_button.IdleBorderRadius = 30;
+            this.disconnect_button.IdleBorderThickness = 0;
+            this.disconnect_button.IdleFillColor = System.Drawing.Color.White;
+            this.disconnect_button.IdleIconLeftImage = null;
+            this.disconnect_button.IdleIconRightImage = null;
+            this.disconnect_button.Location = new System.Drawing.Point(53, 617);
+            this.disconnect_button.Name = "disconnect_button";
             stateProperties1.BorderColor = System.Drawing.Color.DarkGray;
             stateProperties1.BorderRadius = 30;
             stateProperties1.BorderThickness = 1;
             stateProperties1.FillColor = System.Drawing.Color.DarkGray;
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
-            this.disconect_button.onHoverState = stateProperties1;
-            this.disconect_button.Size = new System.Drawing.Size(210, 35);
-            this.disconect_button.TabIndex = 4;
-            this.disconect_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.disconnect_button.onHoverState = stateProperties1;
+            this.disconnect_button.Size = new System.Drawing.Size(210, 35);
+            this.disconnect_button.TabIndex = 4;
+            this.disconnect_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.disconnect_button.Click += new System.EventHandler(this.disconnect_button_Click);
             // 
             // panel3
             // 
@@ -379,7 +380,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton3;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton disconect_button;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton disconnect_button;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
         private System.Windows.Forms.Label room_desc;
         private System.Windows.Forms.Label room_title;

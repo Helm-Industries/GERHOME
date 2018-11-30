@@ -162,8 +162,9 @@ namespace QGF
         {          
             byte[] b = Encoding.ASCII.GetBytes("JoinRoomRequest|" + room.ToString() + "|" + Me.username);
             Me.currentroom = room;
+            SocketMain.f7todo = "keep";
             SocketMain.SendData(b, SocketMain.ns);
-
+     
         }
 
         private void rank_Click(object sender, EventArgs e)

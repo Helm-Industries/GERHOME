@@ -41,9 +41,12 @@ namespace QGF
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            string msg = "DisconnectRequest";
-            SocketMain.SendData(Encoding.ASCII.GetBytes(msg), SocketMain.ns);
-            Application.Exit();
+            if(Me.currentroomadmin == Me.username)
+            {
+                SocketMain.SendData(Encoding.ASCII.GetBytes("RemoveRoom|" + Me.currentroom.ToString()), SocketMain.ns);
+            }
+            SocketMain.EndSession();
+           //Application.Exit();
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
@@ -257,6 +260,20 @@ namespace QGF
         private void chat1_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void disconnect_button_Click(object sender, EventArgs e)
+        {
+            if(Me.username == Me.currentroomadmin)
+            {
+                byte[] b = Encoding.ASCII.GetBytes("RemoveRoom|" + Me.currentroom.ToString());
+                SocketMain.SendData(b, SocketMain.ns);
+            }
+            else
+            {
+                byte[] b = Encoding.ASCII.GetBytes("LeaveRoom|" + Me.currentroom.ToString());
+                SocketMain.SendData(b, SocketMain.ns);
+            }
         }
     }
 }

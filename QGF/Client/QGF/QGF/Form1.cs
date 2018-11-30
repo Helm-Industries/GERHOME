@@ -125,7 +125,7 @@ namespace QGF
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            SocketMain.EndSession(); 
         }
 
         private void timer1_Tick(object sender, EventArgs e)

@@ -21,7 +21,7 @@ namespace QGF.Network
         public static int port = 5000;
         public static TcpClient client = new TcpClient();
 
-        Thread thread = new Thread(o => ReceiveData((TcpClient)o));
+        public static Thread thread = new Thread(o => ReceiveData((TcpClient)o));
         public static NetworkStream ns;
         public static int loadingstate = 0;
         public static bool connected = false;
@@ -133,7 +133,10 @@ namespace QGF.Network
                         }
                         else if (data.Contains("disconnectsuccess"))
                         {
-                            break;
+                            f3todo = "destroy";
+                            todo = "destroy";
+                            f4todo = "destroy";
+                            f7todo = "destroy";
 
                         }
                         else if (data.Contains("regsuccess"))
@@ -178,7 +181,20 @@ namespace QGF.Network
                             }
 
                         }
-                    
+                    else if (data.Contains("RoomDisbanded"))
+                        {
+                            User.users.Clear();
+                            f4todo = "keep";
+                            new Thread(() =>
+                            {
+                                Form4 frm = new Form4();
+                                frm.ShowDialog();
+                            }).Start();
+                            byte[] b = Encoding.ASCII.GetBytes("GetGroups");
+                            SocketMain.SendData(b, SocketMain.ns);
+                            f7todo = "destroy";
+
+                        }
                         else if (data.Contains("RoomKicked"))
                         {
                             string[] splitter = data.Split('|');
@@ -248,6 +264,23 @@ namespace QGF.Network
 
                             f4todo = "destroy";
 
+                        }
+                        else if (data.Contains("PlayerDisconnect"))
+                        {
+                            string[] splitter = data.Split('|');
+                            string username = splitter[1];
+                            foreach(User u in User.users)
+                            {
+                                if(u.usernem == username)
+                                {
+                                    if (u.usernem == Me.currentroomadmin)
+                                    {
+
+                                    }
+                                        User.users.Remove(u);
+                                    
+                                }
+                            }
                         }
                         else if (data.Contains("PlayerJoined"))
                         {
@@ -438,6 +471,12 @@ namespace QGF.Network
                 nss.Write(b, 0, b.Length);          
         }
 
-
+    public static void EndSession()
+        {
+         
+            string msg = "DisconnectRequest|" + Me.username;
+           SendData(Encoding.ASCII.GetBytes(msg), ns);
+            //thread.Join();
+        }
     }
 }

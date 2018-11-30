@@ -178,19 +178,7 @@ namespace QGF
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            //new Thread(() =>
-            //{
-            //    try
-            //    {
-                    string msg = "DisconnectRequest";
-                    SocketMain.SendData(Encoding.ASCII.GetBytes(msg), SocketMain.ns);
-            //    }
-            //    catch
-            //    {
-
-            //    }
-            //}).Start();
-           
+            SocketMain.EndSession();
             
         }
 
