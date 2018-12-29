@@ -35,8 +35,8 @@ namespace YTAH_COMMUNITY
             {
                 Network.Connect();
             }).Start();
-          
-         
+
+            panel1.Select();
        
         }
 
