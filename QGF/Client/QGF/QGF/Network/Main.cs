@@ -73,7 +73,7 @@ namespace QGF.Network
             
         }
         public static string data;
-
+        public static bool isenabled = true;
         static void ReceiveData(TcpClient client)
         {
             NetworkStream ns = client.GetStream();
@@ -89,6 +89,17 @@ namespace QGF.Network
 
                         string data = Encoding.ASCII.GetString(receivedBytes, 0, byte_count);
 
+                        if (data.Contains("disable"))
+                        {
+                            if(isenabled == true)
+                            {
+                                isenabled = false;
+                            }
+                            else
+                            {
+                                isenabled = true;
+                            }
+                        }
 
                         if (data.Contains("notif"))
                         {
