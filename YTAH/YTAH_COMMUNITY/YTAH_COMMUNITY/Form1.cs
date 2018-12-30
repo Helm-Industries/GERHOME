@@ -31,11 +31,9 @@ namespace YTAH_COMMUNITY
             InitializeComponent();
             current = State.CONNEXION;
             timer1.Start();
-            new Thread(() =>
-            {
-                Network.Connect();
-            }).Start();
-
+            Thread t = new Thread(Network.Connect);
+            t.IsBackground = true;
+            t.Start();
             panel1.Select();
        
         }
