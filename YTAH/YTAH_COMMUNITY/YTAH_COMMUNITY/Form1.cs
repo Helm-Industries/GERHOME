@@ -97,5 +97,10 @@ namespace YTAH_COMMUNITY
                 state_label.ForeColor = Color.LightGreen;
             }
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

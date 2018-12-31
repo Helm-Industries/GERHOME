@@ -119,9 +119,10 @@ namespace YTAH_COMMUNITY
                     }
                     if (d.Contains("USERS"))
                     {
+                        User.users.Clear();
                         string[] global =  d.Split(';'); //USERS;dzqd|qdoqzd|zqdpqokz|qzqzdp;
                         string reqid = global[0];
-                        MessageDisplayer.LoadUsers();
+                        //MessageDisplayer.LoadUsers();
                         foreach (string s in global)
                         {
                             if (!s.Contains("USERS"))
@@ -144,7 +145,9 @@ namespace YTAH_COMMUNITY
                                         if (!User.users.Contains(u))
                                         {
                                             User.users.Add(u);
+
                                         }
+                                        MessageDisplayer.UserConnected(user);
                                     }
                                     catch
                                     {
@@ -154,7 +157,7 @@ namespace YTAH_COMMUNITY
                             }
                             
                         }
-                        MessageDisplayer.UsersLoaded();
+                       // MessageDisplayer.UsersLoaded();
                     }
                  
                 }

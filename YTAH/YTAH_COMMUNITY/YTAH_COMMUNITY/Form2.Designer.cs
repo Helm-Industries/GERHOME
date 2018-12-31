@@ -42,23 +42,26 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 16);
+            this.label1.Location = new System.Drawing.Point(10, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 39);
+            this.label1.Size = new System.Drawing.Size(600, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "USERNAME";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // logConsole
             // 
+            this.logConsole.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.logConsole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.logConsole.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.logConsole.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logConsole.ForeColor = System.Drawing.Color.White;
-            this.logConsole.Location = new System.Drawing.Point(651, 61);
+            this.logConsole.Location = new System.Drawing.Point(651, 63);
             this.logConsole.Name = "logConsole";
             this.logConsole.ReadOnly = true;
             this.logConsole.Size = new System.Drawing.Size(600, 606);
@@ -68,14 +71,17 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(652, 29);
+            this.label2.Location = new System.Drawing.Point(651, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(597, 25);
+            this.label2.Size = new System.Drawing.Size(600, 39);
             this.label2.TabIndex = 3;
-            this.label2.Text = "ACTIVITE EN TEMPS REEL";
+            this.label2.Text = "ACTIVITÉE EN TEMPS REEL";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // timer1
             // 
@@ -84,6 +90,8 @@
             // 
             // UserList
             // 
+            this.UserList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.UserList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.UserList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UserList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -98,6 +106,7 @@
             this.UserList.MultiSelect = false;
             this.UserList.Name = "UserList";
             this.UserList.Size = new System.Drawing.Size(600, 606);
+            this.UserList.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.UserList.TabIndex = 4;
             this.UserList.UseCompatibleStateImageBehavior = false;
             this.UserList.View = System.Windows.Forms.View.Details;
@@ -107,25 +116,25 @@
             // 
             this.session_user.Text = "Nom d\'utilisateur";
             this.session_user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.session_user.Width = 130;
+            this.session_user.Width = 136;
             // 
             // session_postID
             // 
             this.session_postID.Text = "Poste";
             this.session_postID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.session_postID.Width = 130;
+            this.session_postID.Width = 145;
             // 
             // session_hasAdminRights
             // 
             this.session_hasAdminRights.Text = "Admin Rights";
             this.session_hasAdminRights.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.session_hasAdminRights.Width = 81;
+            this.session_hasAdminRights.Width = 96;
             // 
             // session_IP
             // 
             this.session_IP.Text = "Adresse IP";
             this.session_IP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.session_IP.Width = 180;
+            this.session_IP.Width = 223;
             // 
             // Form2
             // 
@@ -142,7 +151,6 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -17,7 +17,11 @@ namespace YTAH_COMMUNITY.IO
             toreturn = toreturn + "] - ";
             return toreturn;
         }
-        static string hour = GetHour();
+        public static string hour = GetHour();
+        public static void UserConnected(string username)
+        {
+            todisplay.Add(hour + "Utilisateur " + username + " connecté !");
+        }
         public static void Log(string log)
         {
             todisplay.Add(log);

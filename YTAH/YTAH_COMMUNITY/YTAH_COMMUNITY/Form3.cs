@@ -34,5 +34,20 @@ namespace YTAH_COMMUNITY
 
             }
         }
+
+        private void dToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripComboBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

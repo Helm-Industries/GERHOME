@@ -17,7 +17,7 @@ namespace YTAH_COMMUNITY
         {
             InitializeComponent();
             this.Text = Perso.Me.username + " | YTAH PROJECT";
-            label1.Text = Perso.Me.username;
+            label1.Text = "Compte : " + Perso.Me.username;
             logConsole.AppendText("Bienvenue sur YTAH " + Perso.Me.username);
             logConsole.ScrollToCaret();
             timer1.Start();
@@ -44,7 +44,7 @@ namespace YTAH_COMMUNITY
             {
                 foreach(string s in MessageDisplayer.todisplay)
                 {
-                    if (s.Contains("connecté"))
+                    if (s.Contains("connecté")&&s.Contains("admin"))
                     {
                         logConsole.SelectionColor = Color.Coral;
                     }
@@ -53,6 +53,10 @@ namespace YTAH_COMMUNITY
                         logConsole.SelectionColor = Color.Cyan;
                     }
                     else if (s.Contains("Chargement"))
+                    {
+                        logConsole.SelectionColor = Color.White;
+                    }
+                    else if (s.Contains("Utilisateur") && s.Contains("connecté"))
                     {
                         logConsole.SelectionColor = Color.White;
                     }
@@ -76,6 +80,7 @@ namespace YTAH_COMMUNITY
                 }
                
             }
+            MessageDisplayer.hour = MessageDisplayer.GetHour();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -98,6 +103,11 @@ namespace YTAH_COMMUNITY
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
