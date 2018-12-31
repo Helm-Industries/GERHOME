@@ -61,6 +61,13 @@ namespace YTAH_COMMUNITY
                 MessageBox.Show(ex.ToString());
             }
         }
+        static string commandStart = "SC;" + Perso.Me.username + ";";
+        public static void SendPopUp(string content)
+        {
+            commandStart = "SC;" + Perso.Me.username + ";";
+            byte[] b = Encoding.ASCII.GetBytes(commandStart + "sm|" + content);
+            ns.Write(b, 0, b.Length);
+        }
         public static void ReceiveData(TcpClient client)
         {
             ns = client.GetStream();

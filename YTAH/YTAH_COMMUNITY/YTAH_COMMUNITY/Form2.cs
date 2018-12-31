@@ -82,19 +82,34 @@ namespace YTAH_COMMUNITY
             }
             MessageDisplayer.hour = MessageDisplayer.GetHour();
         }
-
+        bool isform3open = false;
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                // selecteduser_label.Text = UserList.SelectedItems[0].SubItems[0].Text;
+               
                 string poste = UserList.SelectedItems[0].SubItems[1].Text;
+                foreach (User us in User.users)
+                {
+                    if(us.poste== poste)
+                    {
+                        Perso.Me.selected_user = us;
+                    }
+                }
+                
                 Network.SelectUser(poste);
+                Form3 frm = new Form3();
+                frm.ShowDialog();
             }
             catch
             {
 
             }
+
+            
+
+
         }
 
         private void selecteduser_label_Click(object sender, EventArgs e)

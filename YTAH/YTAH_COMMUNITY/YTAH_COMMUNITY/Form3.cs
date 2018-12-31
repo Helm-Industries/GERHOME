@@ -15,6 +15,17 @@ namespace YTAH_COMMUNITY
         public Form3()
         {
             InitializeComponent();
+            
+            try
+            {
+                this.Text = Perso.Me.username + " Contrôle : " + Perso.Me.selected_user.username ;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                
+            }
+           
             timer1.Start();
         }
 
@@ -27,7 +38,8 @@ namespace YTAH_COMMUNITY
         {
             try
             {
-                this.Text = "Contrôle de : " + Perso.Me.selected_user.username + " (" + Perso.Me.selected_user.poste + ")";
+                this.Text = Perso.Me.username + " Contrôle : " + Perso.Me.selected_user.username;
+                
             }
             catch
             {
@@ -78,6 +90,20 @@ namespace YTAH_COMMUNITY
         private void listerLesProcessusToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void toolStripTextBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripTextBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Return)
+            {
+                Network.SendPopUp(toolStripTextBox3.Text);
+                
+            }
         }
     }
 }
