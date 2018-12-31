@@ -61,7 +61,7 @@
             this.logConsole.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.logConsole.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logConsole.ForeColor = System.Drawing.Color.White;
-            this.logConsole.Location = new System.Drawing.Point(651, 63);
+            this.logConsole.Location = new System.Drawing.Point(650, 63);
             this.logConsole.Name = "logConsole";
             this.logConsole.ReadOnly = true;
             this.logConsole.Size = new System.Drawing.Size(600, 606);

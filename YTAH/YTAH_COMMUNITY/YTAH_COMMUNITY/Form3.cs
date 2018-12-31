@@ -49,5 +49,35 @@ namespace YTAH_COMMUNITY
         {
 
         }
+
+        private void seDeconnecterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void demarrerUnPrrocesusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lancerUneAttaqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void listerLesProcessusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
