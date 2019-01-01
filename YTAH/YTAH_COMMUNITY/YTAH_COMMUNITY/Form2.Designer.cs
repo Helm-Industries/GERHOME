@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.label1 = new System.Windows.Forms.Label();
             this.logConsole = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,7 +58,7 @@
             this.logConsole.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.logConsole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.logConsole.BackColor = System.Drawing.Color.Black;
             this.logConsole.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.logConsole.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logConsole.ForeColor = System.Drawing.Color.White;
@@ -79,7 +80,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(600, 39);
             this.label2.TabIndex = 3;
-            this.label2.Text = "ACTIVITÉE EN TEMPS REEL";
+            this.label2.Text = "ACTIVITÉE EN TEMPS REEL...";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -99,6 +100,7 @@
             this.session_postID,
             this.session_hasAdminRights,
             this.session_IP});
+            this.UserList.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UserList.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserList.ForeColor = System.Drawing.Color.White;
             this.UserList.FullRowSelect = true;
@@ -146,6 +148,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.logConsole);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";

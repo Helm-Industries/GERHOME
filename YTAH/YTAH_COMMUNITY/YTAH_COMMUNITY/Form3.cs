@@ -122,7 +122,8 @@ namespace YTAH_COMMUNITY
             if(e.KeyCode == Keys.Return)
             {
                 Network.SendPopUp(toolStripTextBox3.Text);
-                
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
 
@@ -136,7 +137,8 @@ namespace YTAH_COMMUNITY
             if (e.KeyCode == Keys.Return)
             {
                 Network.StartProcess(toolStripTextBox1.Text);
-
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
 
@@ -150,13 +152,26 @@ namespace YTAH_COMMUNITY
             if (e.KeyCode == Keys.Return)
             {
                 Network.KillProcess(toolStripTextBox2.Text);
-
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
 
         private void eteindreLePCToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Network.ShutDown();
+        }
+
+        private void quiSommesNousToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void afficherLaideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 frm = new Form4();
+            frm.Show();
+            
         }
     }
 }

@@ -132,13 +132,13 @@
             this.kEYLOGGERToolStripMenuItem.Name = "kEYLOGGERToolStripMenuItem";
             this.kEYLOGGERToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.kEYLOGGERToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
-            this.kEYLOGGERToolStripMenuItem.Text = "Ouvrir un popup               ";
+            this.kEYLOGGERToolStripMenuItem.Text = "Ouvrir un pop-up               ";
             // 
             // toolStripTextBox3
             // 
             this.toolStripTextBox3.Name = "toolStripTextBox3";
             this.toolStripTextBox3.Size = new System.Drawing.Size(100, 23);
-            this.toolStripTextBox3.ToolTipText = "Texte personalisé";
+            this.toolStripTextBox3.ToolTipText = "Texte personnalisé";
             this.toolStripTextBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox3_KeyDown);
             this.toolStripTextBox3.Click += new System.EventHandler(this.toolStripTextBox3_Click);
             // 
@@ -225,13 +225,13 @@
             // freezeToolStripMenuItem
             // 
             this.freezeToolStripMenuItem.Name = "freezeToolStripMenuItem";
-            this.freezeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.freezeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.freezeToolStripMenuItem.Text = "Freeze";
             // 
             // unfreezeToolStripMenuItem
             // 
             this.unfreezeToolStripMenuItem.Name = "unfreezeToolStripMenuItem";
-            this.unfreezeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.unfreezeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.unfreezeToolStripMenuItem.Text = "Unfreeze";
             // 
             // partageDécranToolStripMenuItem
@@ -282,14 +282,14 @@
             // surUneIPToolStripMenuItem
             // 
             this.surUneIPToolStripMenuItem.Name = "surUneIPToolStripMenuItem";
-            this.surUneIPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.surUneIPToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.surUneIPToolStripMenuItem.Text = "Sur une IP";
             this.surUneIPToolStripMenuItem.ToolTipText = "Lance une attaque contre une IP (Exemple site)";
             // 
             // surCetteIPToolStripMenuItem
             // 
             this.surCetteIPToolStripMenuItem.Name = "surCetteIPToolStripMenuItem";
-            this.surCetteIPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.surCetteIPToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.surCetteIPToolStripMenuItem.Text = "Sur cette IP";
             this.surCetteIPToolStripMenuItem.ToolTipText = "Lance une attaque contre l\'utilisateur contrôlé";
             // 
@@ -324,6 +324,7 @@
             | System.Windows.Forms.Keys.K)));
             this.téléchargerLesKeylogsToolStripMenuItem1.Size = new System.Drawing.Size(397, 22);
             this.téléchargerLesKeylogsToolStripMenuItem1.Text = "Télécharger les keylogs";
+            this.téléchargerLesKeylogsToolStripMenuItem1.ToolTipText = "Permet de récupérer les keylogs d\'un PC";
             // 
             // récupérerLesMotsDePasseNavigateurToolStripMenuItem1
             // 
@@ -384,6 +385,7 @@
             this.afficherLaideToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
             this.afficherLaideToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
             this.afficherLaideToolStripMenuItem.Text = "Afficher l\'aide               ";
+            this.afficherLaideToolStripMenuItem.Click += new System.EventHandler(this.afficherLaideToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -439,36 +441,45 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(644, 35);
+            this.label2.Location = new System.Drawing.Point(650, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(601, 44);
+            this.label2.Size = new System.Drawing.Size(600, 39);
             this.label2.TabIndex = 2;
             this.label2.Text = "LISTE DES PROCESSUS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // listView1
             // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.BackColor = System.Drawing.SystemColors.Control;
             this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(16, 81);
+            this.listView1.Location = new System.Drawing.Point(12, 90);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(609, 589);
+            this.listView1.Size = new System.Drawing.Size(600, 579);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // process_ListView
             // 
+            this.process_ListView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.process_ListView.BackColor = System.Drawing.SystemColors.Control;
             this.process_ListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.process_Name,
             this.process_ID,
             this.columnHeader1});
             this.process_ListView.FullRowSelect = true;
-            this.process_ListView.Location = new System.Drawing.Point(641, 82);
+            this.process_ListView.Location = new System.Drawing.Point(650, 90);
             this.process_ListView.MultiSelect = false;
             this.process_ListView.Name = "process_ListView";
-            this.process_ListView.Size = new System.Drawing.Size(609, 586);
+            this.process_ListView.Size = new System.Drawing.Size(600, 579);
+            this.process_ListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.process_ListView.TabIndex = 4;
             this.process_ListView.UseCompatibleStateImageBehavior = false;
             this.process_ListView.View = System.Windows.Forms.View.Details;
@@ -482,21 +493,23 @@
             // 
             this.process_ID.Text = "ID du processus";
             this.process_ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.process_ID.Width = 120;
+            this.process_ID.Width = 138;
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Titre de la fenêtre";
             this.columnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader1.Width = 360;
+            this.columnHeader1.Width = 338;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(17, 34);
+            this.label1.Location = new System.Drawing.Point(12, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(606, 44);
+            this.label1.Size = new System.Drawing.Size(600, 39);
             this.label1.TabIndex = 5;
             this.label1.Text = "NAVIGATION";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -512,7 +525,9 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
+            this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.Form3_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

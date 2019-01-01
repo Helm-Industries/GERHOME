@@ -34,31 +34,14 @@ D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.p
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu_UI_v1.5.3.dll
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.csproj.CopyComplete
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.csproj.CopyComplete
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form3.resources
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form3.resources
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form4.resources
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form4.resources
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.dll
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.dll
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Room.resources
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Room.resources
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
 F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form5.resources
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.Form5.resources
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
-F:\GITHUB\GERHOME\QGF\Client\QGF\QGF\bin\Debug\Bunifu.UI.WinForms.ToggleSwitch.dll
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\bin\Debug\QGF.exe.manifest
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\bin\Debug\QGF.application
 D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Client\QGF\QGF\obj\Debug\QGF.exe.manifest
