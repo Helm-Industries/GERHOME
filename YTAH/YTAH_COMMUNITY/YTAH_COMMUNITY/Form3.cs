@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YTAH_COMMUNITY.IO;
 using System.Windows.Forms;
 
 namespace YTAH_COMMUNITY
@@ -25,7 +26,7 @@ namespace YTAH_COMMUNITY
                 MessageBox.Show(ex.ToString());
                 
             }
-           
+            this.BringToFront();
             timer1.Start();
         }
 
@@ -40,6 +41,24 @@ namespace YTAH_COMMUNITY
             {
                 this.Text = Perso.Me.username + " CONTRÔLE : " + Perso.Me.selected_user.username;
                 
+            }
+            catch
+            {
+
+            }
+            try
+            {
+                if(CustomProcess.customProcesses.Count > 0)
+                {
+                    foreach(CustomProcess p in CustomProcess.customProcesses)
+                    {
+                        ListViewItem li = new ListViewItem(p.processname);
+                        li.SubItems.Add(p.processid);
+                        li.SubItems.Add(p.processtitle);
+                        process_ListView.Items.Add(li);
+                        CustomProcess.customProcesses.Remove(p);
+                    }
+                }
             }
             catch
             {
@@ -89,7 +108,8 @@ namespace YTAH_COMMUNITY
 
         private void listerLesProcessusToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            process_ListView.Items.Clear();
+            Network.ListProcess();
         }
 
         private void toolStripTextBox3_Click(object sender, EventArgs e)
@@ -104,6 +124,39 @@ namespace YTAH_COMMUNITY
                 Network.SendPopUp(toolStripTextBox3.Text);
                 
             }
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                Network.StartProcess(toolStripTextBox1.Text);
+
+            }
+        }
+
+        private void toolStripTextBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripTextBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                Network.KillProcess(toolStripTextBox2.Text);
+
+            }
+        }
+
+        private void eteindreLePCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Network.ShutDown();
         }
     }
 }

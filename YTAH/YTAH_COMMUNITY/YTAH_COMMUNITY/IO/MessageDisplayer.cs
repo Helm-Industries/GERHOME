@@ -24,7 +24,7 @@ namespace YTAH_COMMUNITY.IO
         }
         public static void Log(string log)
         {
-            todisplay.Add(log);
+            todisplay.Add(hour + log);
         }
         public static void AdminConnect(string name)
         {

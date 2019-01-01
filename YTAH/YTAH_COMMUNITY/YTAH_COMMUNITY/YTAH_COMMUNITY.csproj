@@ -65,6 +65,7 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="IO\CustomProcess.cs" />
     <Compile Include="IO\MessageDisplayer.cs" />
     <Compile Include="IO\User.cs" />
     <Compile Include="Network.cs" />

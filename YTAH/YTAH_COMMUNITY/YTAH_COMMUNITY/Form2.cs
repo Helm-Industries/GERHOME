@@ -60,6 +60,10 @@ namespace YTAH_COMMUNITY
                     {
                         logConsole.SelectionColor = Color.White;
                     }
+                    else if (s.Contains("envoye"))
+                    {
+                        logConsole.SelectionColor = Color.Magenta;
+                    }
                     logConsole.AppendText("\r\n" + s);
 
                     logConsole.ScrollToCaret();
@@ -81,8 +85,8 @@ namespace YTAH_COMMUNITY
                
             }
             MessageDisplayer.hour = MessageDisplayer.GetHour();
+            Network.RefreshVar();
         }
-        bool isform3open = false;
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -97,14 +101,29 @@ namespace YTAH_COMMUNITY
                         Perso.Me.selected_user = us;
                     }
                 }
+                FormCollection fc = Application.OpenForms;
+                bool hasform = false;
+                foreach (Form frm in fc)
+                {
+                    if(frm.Name == "Form3")
+                    {
+                        hasform = true;
+                    }
+                }
+                if(hasform == false)
+                {
+                    Form3 frms = new Form3();
+                    frms.Show();
+                }
+
+                    Network.SelectUser(poste);
+
                 
-                Network.SelectUser(poste);
-                Form3 frm = new Form3();
-                frm.ShowDialog();
+
             }
             catch
             {
-
+                
             }
 
             
