@@ -89,7 +89,11 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="IO\CustomDirectory.cs" />
     <Compile Include="IO\CustomProcess.cs" />
+    <Compile Include="IO\CustomThing.cs" />
+    <Compile Include="IO\DiskDirectory.cs" />
+    <Compile Include="IO\FileDirectory.cs" />
     <Compile Include="IO\MessageDisplayer.cs" />
     <Compile Include="IO\User.cs" />
     <Compile Include="Network.cs" />

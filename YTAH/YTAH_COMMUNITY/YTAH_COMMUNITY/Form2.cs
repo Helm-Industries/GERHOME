@@ -42,32 +42,39 @@ namespace YTAH_COMMUNITY
         {
             if(MessageDisplayer.todisplay.Count != 0)
             {
-                foreach(string s in MessageDisplayer.todisplay)
+                try
                 {
-                    if (s.Contains("connecté")&&s.Contains("admin"))
+                    foreach (string s in MessageDisplayer.todisplay)
                     {
-                        logConsole.SelectionColor = Color.Coral;
-                    }
-                    else if (s.Contains("contrô"))
-                    {
-                        logConsole.SelectionColor = Color.Cyan;
-                    }
-                    else if (s.Contains("Chargement"))
-                    {
-                        logConsole.SelectionColor = Color.White;
-                    }
-                    else if (s.Contains("Utilisateur") && s.Contains("connecté"))
-                    {
-                        logConsole.SelectionColor = Color.White;
-                    }
-                    else if (s.Contains("envoye"))
-                    {
-                        logConsole.SelectionColor = Color.Magenta;
-                    }
-                    logConsole.AppendText("\r\n" + s);
+                        if (s.Contains("connecté") && s.Contains("admin"))
+                        {
+                            logConsole.SelectionColor = Color.Coral;
+                        }
+                        else if (s.Contains("contrô"))
+                        {
+                            logConsole.SelectionColor = Color.Cyan;
+                        }
+                        else if (s.Contains("Chargement"))
+                        {
+                            logConsole.SelectionColor = Color.White;
+                        }
+                        else if (s.Contains("Utilisateur") && s.Contains("connecté"))
+                        {
+                            logConsole.SelectionColor = Color.White;
+                        }
+                        else if (s.Contains("envoye"))
+                        {
+                            logConsole.SelectionColor = Color.Magenta;
+                        }
+                        logConsole.AppendText("\r\n" + s);
 
-                    logConsole.ScrollToCaret();
-                    
+                        logConsole.ScrollToCaret();
+
+                    }
+                }
+                catch
+                {
+
                 }
                 MessageDisplayer.todisplay.Clear();
             }

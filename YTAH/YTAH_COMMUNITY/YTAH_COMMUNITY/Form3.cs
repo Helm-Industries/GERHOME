@@ -13,6 +13,7 @@ namespace YTAH_COMMUNITY
 {
     public partial class Form3 : Form
     {
+        public static string currentPath = "";
         public Form3()
         {
             InitializeComponent();
@@ -28,6 +29,8 @@ namespace YTAH_COMMUNITY
             }
             this.BringToFront();
             timer1.Start();
+            timer2.Start();
+            Network.GetDrives();
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -59,6 +62,22 @@ namespace YTAH_COMMUNITY
                         CustomProcess.customProcesses.Remove(p);
                     }
                 }
+            }
+            catch
+            {
+
+            }
+            try
+            {
+                foreach(DiskDirectory dd in DiskDirectory.diskDirectories)
+                {
+                    string disk = dd.DiskName.Replace(@"\", "/");
+                    ListViewItem li = new ListViewItem(dd.DiskName);
+                    li.SubItems.Add("Disque");
+                    Browser_ListView.Items.Add(li);
+                    DiskDirectory.diskDirectories.Remove(dd);
+                }
+            
             }
             catch
             {
@@ -172,6 +191,95 @@ namespace YTAH_COMMUNITY
             Form4 frm = new Form4();
             frm.Show();
             
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Browser_ListView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            //Entrer dans le dossier                                           0    1   2
+            if (Browser_ListView.SelectedItems[0].SubItems[0].Text == "..") // C:\Test\Lol
+            {
+                if(currentPath != "")
+                {
+                    string[] splitter = currentPath.Split('\\');
+                    int count = splitter.Length;
+                    currentPath = "";
+                    for(int i = 0; i == count - 1; i++)
+                    {
+                        if(i != count - 1)
+                        {
+                            currentPath = currentPath + splitter[i] + @"\";
+                        }
+                        else
+                        {
+                            currentPath = currentPath + splitter[i];
+                        }
+                    }
+                    Browser_ListView.Items.Clear();
+                    if(currentPath != "")
+                    {
+                        ListViewItem lvi = new ListViewItem("..");
+                        lvi.SubItems.Add("Retour");
+                        Browser_ListView.Items.Add(lvi);
+                        Network.ChangePath(currentPath);
+                    }
+                    else
+                    {
+                        Network.GetDrives();
+                    }
+                   
+                }
+            }
+            else
+            {
+                currentPath = Browser_ListView.SelectedItems[0].SubItems[0].Text;
+                Browser_ListView.Items.Clear();
+                ListViewItem lvi = new ListViewItem("..");
+                lvi.SubItems.Add("Retour");
+                Browser_ListView.Items.Add(lvi);
+                Network.ChangePath(currentPath);
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            path_label.Text = "Chemin : " + currentPath;
+            try
+            {
+                foreach (CustomThing cs in CustomThing.customThings)
+                {
+                    try
+                    {
+                        string[] splitter = cs.name.Split('.');
+                        ListViewItem li = new ListViewItem(splitter[0]);
+                        li.SubItems.Add(splitter[1]);
+                        Browser_ListView.Items.Add(li);
+                        CustomThing.customThings.Remove(cs);
+                    }
+                    catch
+                    {
+                        ListViewItem li = new ListViewItem(cs.name);
+                        li.SubItems.Add("Folder");
+                        Browser_ListView.Items.Add(li);
+                        CustomThing.customThings.Remove(cs);
+                    }
+
+
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

