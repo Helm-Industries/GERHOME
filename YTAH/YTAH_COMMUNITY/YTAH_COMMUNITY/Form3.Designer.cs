@@ -82,6 +82,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.path_label = new System.Windows.Forms.Label();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.activerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.désactiverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -312,7 +316,9 @@
             this.téléchargerLesKeylogsToolStripMenuItem1,
             this.récupérerLesMotsDePasseNavigateurToolStripMenuItem1,
             this.toolStripSeparator6,
-            this.uploadUnFichierToolStripMenuItem});
+            this.uploadUnFichierToolStripMenuItem,
+            this.toolStripSeparator7,
+            this.toolStripMenuItem2});
             this.sPYTOOLSToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sPYTOOLSToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.sPYTOOLSToolStripMenuItem.Name = "sPYTOOLSToolStripMenuItem";
@@ -357,14 +363,14 @@
             // avecExécutionToolStripMenuItem
             // 
             this.avecExécutionToolStripMenuItem.Name = "avecExécutionToolStripMenuItem";
-            this.avecExécutionToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.avecExécutionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.avecExécutionToolStripMenuItem.Text = "Avec exécution";
             this.avecExécutionToolStripMenuItem.ToolTipText = "Va s\'exécuter une fois téléchargé sur le PC de la victime";
             // 
             // sansExécutionToolStripMenuItem
             // 
             this.sansExécutionToolStripMenuItem.Name = "sansExécutionToolStripMenuItem";
-            this.sansExécutionToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.sansExécutionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sansExécutionToolStripMenuItem.Text = "Sans exécution";
             this.sansExécutionToolStripMenuItem.ToolTipText = "Ne va pas s\'exécuter une fois téléchargé sur le PC de la victime";
             // 
@@ -451,7 +457,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(600, 39);
             this.label2.TabIndex = 2;
-            this.label2.Text = "LISTE DES PROCESSUS";
+            this.label2.Text = "≡ LISTE DES PROCESSUS ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Browser_ListView
@@ -531,7 +537,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(600, 39);
             this.label1.TabIndex = 5;
-            this.label1.Text = "NAVIGATION";
+            this.label1.Text = "▪ NAVIGATION ▪";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer2
@@ -541,14 +547,41 @@
             // path_label
             // 
             this.path_label.AutoSize = true;
-            this.path_label.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.path_label.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.path_label.ForeColor = System.Drawing.Color.White;
-            this.path_label.Location = new System.Drawing.Point(13, 68);
+            this.path_label.Location = new System.Drawing.Point(13, 70);
             this.path_label.Name = "path_label";
-            this.path_label.Size = new System.Drawing.Size(73, 20);
+            this.path_label.Size = new System.Drawing.Size(67, 17);
             this.path_label.TabIndex = 6;
             this.path_label.Text = "Chemin :";
             this.path_label.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(394, 6);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.activerToolStripMenuItem,
+            this.désactiverToolStripMenuItem});
+            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(397, 22);
+            this.toolStripMenuItem2.Text = "Task Managers / CMD / Regedit";
+            // 
+            // activerToolStripMenuItem
+            // 
+            this.activerToolStripMenuItem.Name = "activerToolStripMenuItem";
+            this.activerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.activerToolStripMenuItem.Text = "Activer";
+            // 
+            // désactiverToolStripMenuItem
+            // 
+            this.désactiverToolStripMenuItem.Name = "désactiverToolStripMenuItem";
+            this.désactiverToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.désactiverToolStripMenuItem.Text = "Désactiver";
             // 
             // Form3
             // 
@@ -627,5 +660,9 @@
         private System.Windows.Forms.ColumnHeader dir_Type;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label path_label;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem activerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem désactiverToolStripMenuItem;
     }
 }

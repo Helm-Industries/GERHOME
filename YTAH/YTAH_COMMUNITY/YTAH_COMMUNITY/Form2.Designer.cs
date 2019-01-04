@@ -49,7 +49,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(600, 39);
             this.label1.TabIndex = 1;
-            this.label1.Text = "USERNAME";
+            this.label1.Text = "♀ USERNAME";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -80,7 +80,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(600, 39);
             this.label2.TabIndex = 3;
-            this.label2.Text = "ACTIVITÉE EN TEMPS REEL...";
+            this.label2.Text = "✎ ACTIVITÉE EN TEMPS REEL...";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
