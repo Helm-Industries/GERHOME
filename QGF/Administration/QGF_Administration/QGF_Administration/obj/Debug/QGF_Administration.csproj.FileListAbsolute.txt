@@ -1,9 +1,0 @@
-D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Administration\QGF_Administration\QGF_Administration\bin\Debug\QGF_Administration.exe.config
-D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Administration\QGF_Administration\QGF_Administration\bin\Debug\QGF_Administration.exe
-D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Administration\QGF_Administration\QGF_Administration\bin\Debug\QGF_Administration.pdb
-D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Administration\QGF_Administration\QGF_Administration\bin\Debug\MySql.Data.dll
-D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Administration\QGF_Administration\QGF_Administration\obj\Debug\QGF_Administration.csprojAssemblyReference.cache
-D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Administration\QGF_Administration\QGF_Administration\obj\Debug\QGF_Administration.csproj.CoreCompileInputs.cache
-D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Administration\QGF_Administration\QGF_Administration\obj\Debug\QGF_Administration.csproj.CopyComplete
-D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Administration\QGF_Administration\QGF_Administration\obj\Debug\QGF_Administration.exe
-D:\Projets\[VisualStudio]\11. GERHOME\GERHOME\QGF\Administration\QGF_Administration\QGF_Administration\obj\Debug\QGF_Administration.pdb

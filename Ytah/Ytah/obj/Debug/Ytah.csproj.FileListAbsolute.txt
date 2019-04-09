@@ -1,0 +1,7 @@
+C:\Users\Alex\Desktop\YTAH\Ytah\Ytah\bin\Debug\Ytah.exe.config
+C:\Users\Alex\Desktop\YTAH\Ytah\Ytah\bin\Debug\Ytah.exe
+C:\Users\Alex\Desktop\YTAH\Ytah\Ytah\bin\Debug\Ytah.pdb
+C:\Users\Alex\Desktop\YTAH\Ytah\Ytah\obj\Debug\Ytah.csprojAssemblyReference.cache
+C:\Users\Alex\Desktop\YTAH\Ytah\Ytah\obj\Debug\Ytah.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\YTAH\Ytah\Ytah\obj\Debug\Ytah.exe
+C:\Users\Alex\Desktop\YTAH\Ytah\Ytah\obj\Debug\Ytah.pdb

@@ -1,0 +1,10 @@
+C:\Users\Alex\Desktop\YTAH\YtahUI\YtahUI\YtahUI\bin\Debug\YtahUI.exe.config
+C:\Users\Alex\Desktop\YTAH\YtahUI\YtahUI\YtahUI\bin\Debug\YtahUI.exe
+C:\Users\Alex\Desktop\YTAH\YtahUI\YtahUI\YtahUI\bin\Debug\YtahUI.pdb
+C:\Users\Alex\Desktop\YTAH\YtahUI\YtahUI\YtahUI\obj\Debug\YtahUI.csprojAssemblyReference.cache
+C:\Users\Alex\Desktop\YTAH\YtahUI\YtahUI\YtahUI\obj\Debug\YtahUI.Form1.resources
+C:\Users\Alex\Desktop\YTAH\YtahUI\YtahUI\YtahUI\obj\Debug\YtahUI.Properties.Resources.resources
+C:\Users\Alex\Desktop\YTAH\YtahUI\YtahUI\YtahUI\obj\Debug\YtahUI.csproj.GenerateResource.cache
+C:\Users\Alex\Desktop\YTAH\YtahUI\YtahUI\YtahUI\obj\Debug\YtahUI.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\YTAH\YtahUI\YtahUI\YtahUI\obj\Debug\YtahUI.exe
+C:\Users\Alex\Desktop\YTAH\YtahUI\YtahUI\YtahUI\obj\Debug\YtahUI.pdb
